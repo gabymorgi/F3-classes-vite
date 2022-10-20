@@ -6,7 +6,7 @@ export interface GameI {
   id: string
   name: string
   playedTime: number | null
-  imgUrl: String
+  imgUrl: string
   tags: Array<string>
   score: number
   achievements?: Array<{
