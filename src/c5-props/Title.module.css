@@ -1,0 +1,16 @@
+.title > div {
+  color: red;
+}
+
+.desc {
+  color: blue;
+}
+
+.price {
+  color: green;
+}
+
+/* no puedo usar modules con atributos ni ids, solo clases */
+h2 {
+  color: blue;
+}
