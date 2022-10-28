@@ -1,0 +1,13 @@
+.title {
+  color: green;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list > * {
+  width: 25%;
+  box-sizing: border-box;
+}
