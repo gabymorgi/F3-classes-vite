@@ -1,45 +1,71 @@
 import React from 'react'
 import styles from './Menu.module.css'
 
+const menues = ['hamburguesa', 'milanesa', 'empanadas', 'ensalada']
+
+const initialValues = {
+  name: '',
+  valor: 10,
+  select: menues[0],
+}
+
 export const Menu = ({ agregarAlPedido }) => {
-  const [formValues, setFormValues] = React.useState({
-    nombre: '',
-    precio: '',
-  })
-  function handleSubmit(e) {
+  //podemos controlar los inputs con individualmente o con un objeto
+  //si necesitamos algun tipo de validacion, quizas es mejor manejarlos por separado
+  // const [inputValue, setInputValue] = React.useState(initialValues.name) // string
+  // const [numberValue, setNumberValue] = React.useState(initialValues.valor) //number
+  // const [selectValue, setSelectValue] = React.useState(initialValues.select) //string
+  const [formValues, setFormValues] = React.useState(initialValues) // object
+
+  function handleFormSubmit(e) {
     e.preventDefault()
-    agregarAlPedido(formValues.nombre)
+    agregarAlPedido(formValues.name)
+    setFormValues(initialValues)
   }
-  function handleChangeValue(e) {
-    setFormValues((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
+
+  function handleInputChange(e) {
+    console.log(e.target.name, e.target.value)
+    const newFormValues = { ...formValues }
+    //modifico el valor de la propiedad que corresponda
+    newFormValues[e.target.name] = e.target.value
+    setFormValues(newFormValues)
   }
+
   return (
     <div className={styles.menu}>
       <h3>Menu</h3>
-      <h5>Pide lo que quieras!!!!</h5>
       <div className='flex'>
-        <form id='menu-form' onSubmit={handleSubmit}>
+        <form onSubmit={handleFormSubmit}>
+          <label htmlFor='menu'>Pedi lo que quieras!!</label>
           <input
-            name='nombre'
-            value={formValues.nombre}
-            onChange={handleChangeValue}
+            name='name'
             type='text'
+            id='menu'
+            onChange={handleInputChange}
+            //si hay value, el componente es controlado
+            value={formValues.name}
           />
           <input
-            name='precio'
-            value={formValues.precio}
-            onChange={handleChangeValue}
             type='number'
-            min={10}
-            max={90}
+            name='valor'
+            onChange={handleInputChange}
+            value={formValues.valor}
           />
+          <select
+            name='select'
+            onChange={handleInputChange}
+            value={formValues.select}
+          >
+            {menues.map((menu) => {
+              return (
+                <option key={menu} value={menu}>
+                  {menu}
+                </option>
+              )
+            })}
+          </select>
+          <button type='submit'>Agregar</button>
         </form>
-        <button type='submit' form='menu-form'>
-          agregar
-        </button>
       </div>
     </div>
   )

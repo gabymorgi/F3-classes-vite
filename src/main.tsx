@@ -9,6 +9,7 @@ import 'antd/dist/antd.dark.css';
 // import App from './c7-state/App.jsx'
 // import App from './c8-state/App.jsx'
 import App from './c9-form/App.jsx'
+// import App from './c10-preparcial/App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
