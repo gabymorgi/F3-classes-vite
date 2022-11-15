@@ -1,52 +1,33 @@
 import React from 'react'
 
 const Color = (props) => {
-  const [selected, setSelected] = React.useState(false)
-  const [prevColor, setPrevColor] = React.useState()
-  const [timer, setTimer] = React.useState(0)
+  const [boolState, setBoolState] = React.useState(false)
 
-  const toggle = () => {
-    setSelected(!selected)
+  function toggleBoolState() {
+    setBoolState(!boolState)
+    console.log("toggle", boolState)
   }
 
-  React.useEffect(() => {
-    console.log('after every render')
+  React.useEffect(
+    () => {
+      console.log("effect", boolState)
 
-    return () => {
-      console.log('clean up')
-    }
-  })
+      return () => {
+        console.log("cleanup", boolState)
+      }
+    },
+  )
 
-  React.useEffect(() => {
-    console.log('mount')
-    const interval = setInterval(() => {
-      setTimer((timer) => timer + 1)
-    }, 1000);
-    //login
-
-    return () => {
-      //logout
-      clearInterval(interval)
-      console.log('unmount')
-    }
-  }, [])
-
-  React.useEffect(() => {
-    console.log('use effect')
-
-    return () => {
-      setPrevColor(props.selectedColor)
-      console.log('saneamiento', props.selectedColor)
-    }
-  }, [props.selectedColor])
-
-  console.log('render', prevColor)
+  console.log("color render", boolState)
 
   return (
     <div className='flex'>
-      <div>{prevColor || 'none'} -&gt; {props.selectedColor}</div>
-      <div>{timer} segundos</div>
-      <button onClick={toggle}>{selected ? 'seleccionado' : 'Seleccionar'}</button>
+      <div>
+        {props.selectedColor}
+      </div>
+      <button onClick={toggleBoolState}>
+        {boolState ? 'Si' : 'No'}
+      </button>
     </div>
   )
 }
