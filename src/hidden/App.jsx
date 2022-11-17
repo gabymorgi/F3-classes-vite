@@ -82,7 +82,7 @@ const App = () => {
         ))}
         <Select
           onChange={(value) => setSelectedName(value)}
-          style={{ width: '100px' }}
+          style={{ width: '200px' }}
           defaultValue={selectedName}
         >
           {names.map((name) => (
