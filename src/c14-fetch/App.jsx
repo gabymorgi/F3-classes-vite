@@ -8,28 +8,24 @@ const App = () => {
   const [repoData, setRepoData] = useState()
 
   async function handleFetchRepo(repo) {
-    console.log("app", repo)
-
     const response = await fetch(`https://api.github.com/repos/gabymorgi/${repo}`)
     const repoDataJson = await response.json()
 
-    const responseLanguajes = await fetch(repoDataJson.languages_url)
-    const languajesJson = await responseLanguajes.json()
+    const responseLanguages = await fetch(repoDataJson.languages_url)
+    const languagesJson = await responseLanguages.json()
 
-    console.log(languajesJson)
+    console.log(languagesJson)
 
     setRepoData({
       ...repoDataJson,
-      languajes: languajesJson
+      languages: languagesJson
     })
   }
-
-  console.log(repoData)
 
   return (
     <div>
       <Select onChange={handleFetchRepo} />
-      <RepoDetail repo={repoData} />
+      {repoData ? <RepoDetail repo={repoData} /> : undefined}
     </div>
   )
 }

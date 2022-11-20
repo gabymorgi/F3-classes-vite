@@ -1,6 +1,18 @@
-import { sum } from './sum'
-import { jest, test, expect } from '@jest/globals'
+import { numberToRoman } from './sum'
+import { test, expect } from 'vitest'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('1 = I', () => {
+  expect(numberToRoman(1)).toBe("I");
+});
+
+test('2 = II', () => {
+  expect(numberToRoman(2)).toBe("II");
+});
+
+test('4 = IV', () => {
+  expect(numberToRoman(4)).toBe("IV");
+});
+
+test('14 = XIV', () => {
+  expect(numberToRoman(14)).toBe("XIV");
 });

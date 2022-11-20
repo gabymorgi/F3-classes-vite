@@ -38,8 +38,6 @@ export const Select = (props) => {
     getData()
   }, [])
 
-  console.log(repos)
-
   function handleSelect(event) {
     props.onChange(event.target.value)
   }
