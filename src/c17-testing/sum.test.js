@@ -1,18 +1,24 @@
-import { numberToRoman } from './sum'
-import { test, expect } from 'vitest'
+import { describe, expect, test } from "vitest"
+import { numberToRoman } from "./sum"
 
-test('1 = I', () => {
-  expect(numberToRoman(1)).toBe("I");
-});
-
-test('2 = II', () => {
-  expect(numberToRoman(2)).toBe("II");
-});
-
-test('4 = IV', () => {
-  expect(numberToRoman(4)).toBe("IV");
-});
-
-test('14 = XIV', () => {
-  expect(numberToRoman(14)).toBe("XIV");
-});
+describe("test number to roman", () => {
+  test("number 1 return I", () => {
+    const returnValue = numberToRoman(1)
+    expect(returnValue).toBe("I")
+  })
+  
+  test("number 2 return II", () => {
+    const returnValue = numberToRoman(2)
+    expect(returnValue).toBe("II")
+  })
+  
+  test("number 4 return IV", () => {
+    const returnValue = numberToRoman(4)
+    expect(returnValue).toBe("IV")
+  })
+  
+  test("number 14 return XIV", () => {
+    const returnValue = numberToRoman(14)
+    expect(returnValue).toBe("XIV")
+  })
+})

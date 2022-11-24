@@ -1,16 +1,28 @@
 export function numberToRoman(number) {
-  let roman = "";
-  const romanNumList = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
-  let a;
-  for (let key in romanNumList) {
-    a = Math.floor(number / romanNumList[key]);
-    if (a >= 0) {
-      for (let i = 0; i < a; i++) {
-        roman += key;
-      }
-    }
-    number = number % romanNumList[key];
-  }
-  return roman;
+  const romanNumbers = [
+    { number: 1000, roman: "M" },
+    { number: 900, roman: "CM" },
+    { number: 500, roman: "D" },
+    { number: 400, roman: "CD" },
+    { number: 100, roman: "C" },
+    { number: 90, roman: "XC" },
+    { number: 50, roman: "L" },
+    { number: 40, roman: "XL" },
+    { number: 10, roman: "X" },
+    { number: 9, roman: "IX" },
+    { number: 5, roman: "V" },
+    { number: 4, roman: "IV" },
+    { number: 1, roman: "I" },
+  ]
 
+  let roman = ""
+
+  for (let i = 0; i < romanNumbers.length; i++) {
+    while (number >= romanNumbers[i].number) {
+      roman += romanNumbers[i].roman
+      number -= romanNumbers[i].number
+    }
+  }
+
+  return roman
 }
