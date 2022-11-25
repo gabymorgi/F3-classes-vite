@@ -13,8 +13,9 @@ import { BrowserRouter } from 'react-router-dom'
 // import App from './c10-preparcial/App.jsx'
 // import App from './c13-useEffect/App.jsx'
 // import App from './c14-fetch/App.jsx'
-import App from './c16-router/App.jsx'
+// import App from './c16-router/App.jsx'
 // import App from './c17-testing/App.jsx'
+import App from './c18-repaso/App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>

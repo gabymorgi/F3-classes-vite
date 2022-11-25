@@ -67,3 +67,9 @@ input, select {
 .items-center {
   align-items: center;
 }
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+}

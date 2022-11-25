@@ -16,7 +16,7 @@ describe("App test", () => {
         const button = screen.getByRole("button");
         expect(button.textContent).toBe("click me");
     })
-    test("click button inckrement value", () => {
+    test("click button increment value", () => {
         render(<App />);
         const button = screen.getByRole("button");
         fireEvent.click(button);
