@@ -28,9 +28,9 @@ button[disabled] {
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
-  font-size: 54px;
   padding: 16px;
   font-weight: bolder;
   border-bottom: 1px solid #333;
@@ -66,6 +66,10 @@ input, select {
 
 .items-center {
   align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .card {
