@@ -1,0 +1,29 @@
+
+
+.light {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.dark {
+  background-color: #333;
+  color: #f7f7f7;
+}
+
+.light h1 {
+  color: #333;
+}
+
+.dark h1 {
+  color: #f7f7f7;
+}
+
+.light button {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.dark button {
+  background-color: #333;
+  color: #f7f7f7;
+}
