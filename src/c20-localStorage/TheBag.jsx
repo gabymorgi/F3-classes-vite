@@ -20,7 +20,7 @@ const actionTypes = {
 //recibe el segundo param del useReducer
 function init(initialValue) {
   return localStorage.getItem('bag')
-    ? [JSON.parse(localStorage.getItem('bag'))]
+    ? JSON.parse(localStorage.getItem('bag'))
     : initialValue
 }
 
