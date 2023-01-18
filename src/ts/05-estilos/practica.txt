@@ -1,0 +1,28 @@
+cree un componente lista y un componente item
+que rendericen un ul y li respectivamente
+
+usando css modules, agregue los estilos necesarios
+para eliminar los estilos por defecto y
+y que los elementos de la lista se dispongan en 3 columnas
+con una separacion entre si.
+
+pueden corroborar que funcione mostrando en la app algo por el estilo
+
+<Lista>
+  <Item>item 1</Item>
+  <Item>item 2</Item>
+  <Item>item 3</Item>
+  <Item>item 4</Item>
+  <Item>item 5</Item>
+  <Item>item 6</Item>
+  <Item>item 7</Item>
+  <Item>item 8</Item>
+</Lista>
+
++--------+--------+--------+
+| item 1 | item 2 | item 3 |
++--------+--------+--------+
+| item 4 | item 5 | item 6 |
++--------+--------+--------+
+| item 7 | item 8 |
++--------+--------+

@@ -1,11 +1,20 @@
-#root {
+:root {
   background-color: black;
   color: white;
   font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+hr {
+  width: 100%;
+  border-color: #888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 button {
@@ -40,17 +49,17 @@ header img {
   width: 75px;
 }
 
-hr {
-  width: 100%;
-  border-color: #888;
+.min-h-full {
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+.p-10 {
+  padding: 10px;
 }
 
 input, select {
   background-color: #222;
+  color: #fff;
 }
 
 .flex {
@@ -70,10 +79,4 @@ input, select {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.card {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid white;
 }

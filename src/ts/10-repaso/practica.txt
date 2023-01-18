@@ -1,0 +1,11 @@
+Haga una aplicacion de gestion de pedidos de comida
+el mismo tendra un header con el nombre de la aplicacion
+y un formulario con un campo donde el usuario agregue lo que va a consumir:
+ej: hamburguesa, pizza, empanadas, etc
+cuando se apreta en el boton agregar,
+se debe agregar el item al pedido
+
+abajo del formulario se muestra el pedido
+cada item del pedido tiene un boton para eliminarlo
+al final hay un boton para confirmar el pedido
+(que muestra por consola el mismo)

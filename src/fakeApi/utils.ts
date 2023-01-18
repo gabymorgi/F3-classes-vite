@@ -1,4 +1,4 @@
-import { FiltersI, GameI, SorterI } from "./games";
+import { FiltersI, GameI, SorterI } from "./types";
 
 export function filter(data: GameI[], filters: FiltersI): GameI[] {
   const { name, tags } = filters;

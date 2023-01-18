@@ -10,11 +10,11 @@ const App = () => {
 
   return (
     <>
-      {/* <MotivationApp /> */}
-      <NoContext />
+      <MotivationApp />
+      {/* <NoContext />
       <ChangoProvider>
         <WithContext />
-      </ChangoProvider>
+      </ChangoProvider> */}
     </>
   )
 }

@@ -1,28 +1,14 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { makeServer } from './fakeApi/server'
 import './index.css'
-import 'antd/dist/antd.dark.css';
-import { BrowserRouter } from 'react-router-dom'
-// import App from './c2-Intro/App.jsx'
-// import App from './c3-repaso/App.jsx'
-// import App from './c5-props/App.jsx'
-// import App from './c6-repaso/App.jsx'
-// import App from './c7-state/App.jsx'
-// import App from './c8-state/App.jsx'
-// import App from './c9-form/App.jsx'
-// import App from './c10-preparcial/App.jsx'
-// import App from './c13-useEffect/App.jsx'
-// import App from './c14-fetch/App.jsx'
-// import App from './c16-router/App.jsx'
-// import App from './c17-testing/App.jsx'
-// import App from './c18-repaso/App.jsx'
-// import App from './c19-context/App.jsx'
-import App from './c20-localStorage/App.jsx'
+import MainLayout from './mainLayout/MainLayout'
 
+makeServer()
+
+// punto de entrada de la aplicación
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  // comento el StrictMode para evitar dobles renderizados
   // <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <MainLayout />
   // </React.StrictMode>
 )
