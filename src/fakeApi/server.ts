@@ -1,6 +1,6 @@
 import { createServer, Model, Registry } from 'miragejs'
 import { GameI } from './types'
-import data from './data.json'
+import data from './detailedData.json'
 import { ModelDefinition } from 'miragejs/-types';
 import Schema from 'miragejs/orm/schema';
 
@@ -22,7 +22,6 @@ export function makeServer() {
       this.get('/games', (schema) => {
         const games = schema.all('game')
         // returns only name, imgUrl and id
-        console.log(games)
         return games.models.map((game) => {
           const attrs = game.attrs as GameI
           return {
@@ -35,13 +34,13 @@ export function makeServer() {
 
       this.get('/games/:id', (schema, request) => {
         const id = request.params.id
-
+        
         return schema.find('game', id)
       })
 
       this.post('/games/add', (schema, request) => {
         const attrs = JSON.parse(request.requestBody)
-
+        console.log(attrs)
         return schema.create('game', attrs)
       })
 

@@ -6,6 +6,8 @@ import Checkout from './Components/Checkout'
 import GameList from './Components/Gamelist'
 import NewGameForm from './Components/NewGameForm'
 import GameDetail from './Components/GameDetail'
+import { createBrowserRouter, Route, RouterProvider, Routes, useRoutes } from 'react-router-dom'
+import Header from './Components/Header'
 
 interface GamesChartItem {
   chartId: number
@@ -28,20 +30,21 @@ const App = () => {
     const newChart = chart.filter((item) => item.chartId !== chartId)
     setChart(newChart)
   }
+
+  // estas son rutas anidadas, por eso uso useRoutes + {router}
+  // y no createBrowserRouter + <RouterProvider>
+  // para ver ese ejemplo, mirar MainLayout (es mas complejo)
+  const router = useRoutes([
+    { path: '/', element: <GameList onBuy={handleBuy} /> },
+    { path: '/chart', element: <Chart chart={chart} onDelete={handleDelete} /> },
+    { path: '/game/:id', element: <GameDetail /> },
+    { path: '*', element: <div>Not Found</div> },
+  ])
+
   return (
     <>
-      <h1>Chart ({chart.length})</h1>
-      <Chart chart={chart} onDelete={handleDelete} />
-      {chart.length > 0 ? (
-        <>
-          <hr />
-          <Checkout />
-        </>
-      ) : null}
-      <hr />
-      <GameDetail />
-      <h1>Games</h1>
-      <GameList onBuy={handleBuy} />
+      <Header />
+      {router}
     </>
   )
 }
