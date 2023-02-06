@@ -11,6 +11,7 @@ const Components = () => {
   return (
     <>{/* React.Fragment */}
       {/** nos permite devolver varios elementos sin envolverlos en un div */}
+
       <Header />
       <Tag>Platformer</Tag>
       <Card title="Card title">

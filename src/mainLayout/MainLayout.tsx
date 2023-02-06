@@ -4,14 +4,16 @@ import { TSClass2 } from '../ts/02-jsxMotivation/App';
 import Components from '../ts/04-components/App';
 import Estilos from '../ts/05-estilos/App';
 import Keys from '../ts/06-keys/App';
-import State from '../ts/07-state/App';
-import Forms from '../ts/08-forms/App';
+import StateI from '../ts/07-state-I/App';
+import StateII from '../ts/08-state-II/App';
+import Forms from '../ts/09-forms/App';
 import Repaso from '../ts/10-repaso/App';
 import UseEffect from '../ts/13-useEffect/App';
 import Fetch from '../ts/14-fetch/App';
 import Memo from '../ts/15-memo/App';
-import Router from '../ts/16-router/App';
-import Testing from '../ts/17-testing/App';
+import RouterI from '../ts/16-router-I/App';
+import RouterII from '../ts/17-router-II/App';
+import Testing from '../ts/18-testing/App';
 import Context from '../ts/19-context/App';
 import LocalStorage from '../ts/20-localStorage/App';
 import Reducer from '../ts/21-reducer/App';
@@ -43,10 +45,14 @@ const routesData = [
         component: <Keys />,
       },{
         path: '07',
-        name: 'State',
-        component: <State />,
+        name: 'State I',
+        component: <StateI />,
       },{
         path: '08',
+        name: 'State II',
+        component: <StateII />,
+      },{
+        path: '09',
         name: 'Forms',
         component: <Forms />,
       },{
@@ -67,10 +73,14 @@ const routesData = [
         component: <Memo />,
       },{
         path: '16',
-        name: 'router',
-        component: <Router />,
+        name: 'router I',
+        component: <RouterI />,
       },{
         path: '17',
+        name: 'router II',
+        component: <RouterII />,
+      }{
+        path: '18',
         name: 'testing',
         component: <Testing game='Cave Story' />,
       },{

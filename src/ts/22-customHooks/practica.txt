@@ -1,0 +1,75 @@
+crea un hook useSquare
+  el mismo guardara
+    posX
+    posY
+    width
+    height
+  
+  el hook expondra lo siguiente
+    [square, setSquare, { perimeter, area, isSquare }]
+
+    siendo:
+      square = { posX, posY, width, height }
+      setSquare = ({ posX, posY, width, height }) => { ... }
+      perimeter = width * 2 + height * 2
+      area = width * height
+      isSquare = width === height
+
+
+TIP: puedes testear el hook con un componente como el siguiente
+const App = (props) => {
+  const [square, setSquare, { perimeter, area, isSquare }] = useSquare({
+    posX: 0,
+    posY: 0,
+    width: 100,
+    height: 100
+  })
+  return (
+    <div>
+      <FormComponent setSquare={setSquare} />
+      <div styles={{ position: 'relative' }}>
+        <div style={{
+          position: 'absolute',
+          top: square.posY,
+          left: square.posX,
+          width: square.width,
+          height: square.height,
+          border: '1px solid black'
+        }}>
+          <div>Perimeter: {perimeter}</div>
+          <div>Area: {area}</div>
+          <div>Is Square: {isSquare ? 'Yes' : 'No'}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const FormComponent = ({ setSquare }) => {
+  const [posX, setPosX] = useState(0)
+  const [posY, setPosY] = useState(0)
+  const [width, setWidth] = useState(100)
+  const [height, setHeight] = useState(100)
+  return (
+    <div>
+      <div>
+        <label>posX</label>
+        <input type="number" value={posX} onChange={(e) => setPosX(e.target.value)} />
+      </div>
+      <div>
+        <label>posY</label>
+        <input type="number" value={posY} onChange={(e) => setPosY(e.target.value)} />
+      </div>
+      <div>
+        <label>width</label>
+        <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
+      </div>
+      <div>
+        <label>height</label>
+        <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
+      </div>
+      <button onClick={() => setSquare({ posX, posY, width, height })}>Set Square</button>
+    </div>
+  )
+}
+

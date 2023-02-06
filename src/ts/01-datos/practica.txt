@@ -1,27 +1,27 @@
-importar la lista de juegos ubicada en fakeApi/data.json
+importa la lista de juegos ubicada en fakeApi/data.json
 (los json estan exportados como default)
 
-mostrar por consola:
+muestra por consola:
 el id del primer Juego
 el nombre del tercer juego
 el nombre del quinto achievement del segundo juego
 
 usando desestructuracion:
-extraer en variables el primer y cuarto elemento
-usando lo obtenido arriba extraer en variables el tiempo jugado y los tags del perimer elemento
+extrae en variables el primer y cuarto elemento
+usando lo obtenido arriba extrae en variables el tiempo jugado y los tags del perimer elemento
 
 spread operator:
-hacer una copia de los tags obtenidos arriba y agregarle el tag "2D"
+haz una copia de los tags obtenidos arriba y agregale el tag "2D"
 (usar console log para mostrar que no se modifico el original)
 
-crear una funcion que reciba por props un objeto con las siguientes keys
+crea una funcion que reciba por props un objeto con las siguientes keys
 name, playedTime
 y que retorne un string con el siguiente formato
 "El juego {name} se jugo por {playedTime} horas"
 
-usando la operacion filter, crear un array con los juegos que tengan score mayor o igual a 9
+usando la operacion filter, crea un array con los juegos que tengan score mayor o igual a 9
 
-usando la operacion map y la funcion anterior, crear un array de strings con el nombre y tiempo jugado de cada juego filtrado anteriormente
+usando la operacion map y la funcion anterior, crea un array de strings con el nombre y tiempo jugado de cada juego filtrado anteriormente
 Ej:
 [
   "El juego Super Meat Boy se jugo por 10 horas",

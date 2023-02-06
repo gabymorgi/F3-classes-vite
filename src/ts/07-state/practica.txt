@@ -1,7 +1,0 @@
-cree un componente que muestre un texto con un valor inicial en 0
-cree botones con la siguiente funcionalidad:
-- al presionar el botón “+” el valor del texto aumenta en 1
-- al presionar el botón “-” el valor del texto disminuye en 1
-- al presionar el botón “*” el valor del texto se duplica
-- al presionar el botón “/” el valor del texto se divide en 2
-- al presionar el botón “reset” el valor del texto se pone en 0

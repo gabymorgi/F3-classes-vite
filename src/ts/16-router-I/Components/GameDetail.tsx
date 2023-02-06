@@ -3,31 +3,14 @@ import { GameI } from '../../../fakeApi/types'
 
 const GameDetail = () => {
   const [game, setGame] = useState<GameI>() 
-  const [loading, setLoading] = useState<boolean>(true)
-  const [error, setError] = useState<string>()
 
   useEffect(() => {
     const getGame = async () => {
-      setLoading(true)
-      try {
-        const game = await (await fetch('/api/games/eObG8qSEgz1MuPPxG34X')).json()
-        setGame(game.game)
-      } catch (error: unknown) {
-        setError((error as Error).message)
-      }
-      console.log(game)
-      setLoading(false)
+      const game = await (await fetch(`/api/games/eObG8qSEgz1MuPPxG34X`)).json()
+      setGame(game.game)
     }
     getGame()
   }, [])
-
-  if (loading) {
-    return <p>Loading...</p>
-  }
-
-  if (error) {
-    return <p>{error}</p>
-  }
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import { List, ListItem } from "./UI/List";
 import data from '../../fakeApi/data.json'
-import Game from "./Components/Game";
+import Card from "./UI/Card";
 
 const App = () => {
   return (
@@ -10,7 +10,10 @@ const App = () => {
           <ListItem key={item.id}>
             {/* key must be unique between its siblings */}
             {/* but also should be identitary of elements */}
-            <Game game={item} />
+
+            <Card title={item.name}>
+              <img width="100%" src={item.imgUrl} alt={item.name} />
+            </Card>
           </ListItem>
         )
       })}

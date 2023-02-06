@@ -1,4 +1,4 @@
-crear un componente card (se puede partir del visto en la clase)
+crea un componente card (se puede partir del visto en la clase)
 con las siguientes props
 title: string | undefined
 children: JSX

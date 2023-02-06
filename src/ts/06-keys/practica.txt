@@ -1,5 +1,5 @@
-muestre las siguiente lista de elementos.
-intente utilizar en cada caso, la key que considere mas apropiada en cada caso
+muestra las siguiente lista de elementos utilizando el metodo map
+intenta utilizar en cada caso, la key que consideras mas apropiada en cada caso
 
 const productos = [
   { id: 0, name: "aspiradora" },

@@ -1,0 +1,22 @@
+crea una app con lo siguiente
+  un boton con el texto "buscar datos"
+    onClick llama a una async function
+      utilizando la api https://cat-fact.herokuapp.com/facts
+      obtiene una lista de hechos
+      guarda en un estado el _id y text de cada hecho
+  
+  una lista que muestre los datos guardados en el estado
+
+mientras se esten cargando los datos, muestra un texto "cargando datos"
+
+
+
+cree una app con lo siguiente
+  un boton con el texto "siguiente hecho"
+    onClick llama a una async function
+      utilizando la api https://cat-fact.herokuapp.com/facts/random
+      guarda en un estado el text del hecho
+  
+  un texto que muestre el hecho guardado en el estado
+
+  ni bien inicia la app, se llama a la api y se guarda el hecho en el estado (usa useEffect)

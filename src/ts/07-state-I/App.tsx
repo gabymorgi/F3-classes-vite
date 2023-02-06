@@ -1,0 +1,79 @@
+import { List, ListItem } from './UI/List'
+import data from '../../fakeApi/data.json'
+import Game from './Components/Game'
+import { useState } from 'react'
+
+const App = () => {
+  const [cant, setCant] = useState<number>(0)
+
+  function handleBuy() {
+    setCant(cant + 1)
+  }
+
+  function handleDelete() {
+    setCant(cant - 1)
+  }
+  return (
+    <>
+      <h1>Elementos en el carrito ({cant})</h1>
+      <button onClick={handleDelete}>Eliminar juego</button>
+      <hr />
+      <h1>Games</h1>
+      <List>
+        {data.map((item) => {
+          return (
+            <ListItem key={item.id}>
+              <Game game={item} onBuy={handleBuy} />
+            </ListItem>
+          )
+        })}
+      </List>
+    </>
+  )
+}
+
+export default App
+
+/**
+  * que pasa si usamos index como key?
+  * 
+  * <Pedido key={0} pedido="Ham" /> // estado true
+  * <Pedido key={1} pedido="ens" /> // estado false
+  * <Pedido key={2} pedido="emp" /> // estado true
+  * <Pedido key={3} pedido="ham" /> // estado false
+  * 
+  * y eliminamos el tercer elemento
+  * 
+  * <Pedido key={0} pedido="Ham" /> // estado true
+  * <Pedido key={1} pedido="ens" /> // estado false
+  * <Pedido key={2} pedido="ham" /> // estado true
+  * 
+  * React solo ve las keys. Y piensa que entre un estado y el otro
+  * se elimino el componente con key={3}
+  * y que el componente con key={2} cambio su prop pedido de emp a ham
+  */
+  /**
+  * que pasa si usamos un numero aleatorio como key?
+  * asumimos que estadisticamente no se repiten
+  * por lo tanto no sucederia lo de arriba
+  * 
+  * <Pedido key={25} pedido="Ham" /> // estado true
+  * <Pedido key={32} pedido="ens" /> // estado false
+  * <Pedido key={69} pedido="nice" /> // estado true
+  * <Pedido key={100} pedido="ham" /> // estado false
+  * 
+  * eliminamos el tercer elemento
+  * el estado se modifica, ocurre un nuevo render,
+  * por lo tanto, se vuelve a calcular el valor key
+  * 
+  * <Pedido key={10} pedido="Ham" /> // estado false
+  * <Pedido key={48} pedido="ens" /> // estado false
+  * <Pedido key={79} pedido="ham" /> // estado false
+  * 
+  * React ve que los componentes con key 25, 32, 68 y 100 se eliminaron
+  * y que aparecieron nuevos componentes con key 10, 48 y 79
+  * por eso se pierde el estado de los componentes que se eliminaron
+  * y se resetean los nuevos
+  * 
+  * idealmente, los keys deberian ser unicas e ""intrinsecas"" a cada componente
+*/

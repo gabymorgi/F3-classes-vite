@@ -1,23 +1,23 @@
-cree un nuevo proyecto con vite
+crea un nuevo proyecto con vite
 https://vitejs.dev/guide/
 
-cree un nuevo repositorio en github
-asegurese de que el gitingore contenga node_modules
+crea un nuevo repositorio en github
+asegurate de que el gitingore contenga node_modules
 
-suba el proyecto a github
+sube el proyecto a github
 
-realice cambios en algun archivo y fijese como se visualiza
+realiza cambios en algun archivo y fijate como se visualiza
 en el source control de vscode
-agregue un nuevo archivo .env en el src y vuelva a observar los cambios
-ahora agregue .env al gitingore y vuelva a observar los cambios
+agrega un nuevo archivo .env en el src y vuelve a observar los cambios
+ahora agrega .env al gitingore y vuelve a observar los cambios
 
-instale la siguiente dependencia
+instala la siguiente dependencia
 https://www.npmjs.com/package/is-odd
 npm i is-odd
-utilicela en el proyecto
+utilizala en el proyecto
 import isOdd from 'is-odd';
 console.log(isOdd(1)); //=> true
 
-observe nuevamente los cambios en el source control de vscode
+observa nuevamente los cambios en el source control de vscode
 
-suba los cambios a github
+sube los cambios a github

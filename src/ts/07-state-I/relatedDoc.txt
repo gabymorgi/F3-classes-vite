@@ -1,0 +1,5 @@
+https://beta.reactjs.org/learn/state-a-components-memory
+https://beta.reactjs.org/learn/render-and-commit
+https://beta.reactjs.org/learn/state-as-a-snapshot
+https://beta.reactjs.org/learn/queueing-a-series-of-state-updates
+https://beta.reactjs.org/reference/react/useState

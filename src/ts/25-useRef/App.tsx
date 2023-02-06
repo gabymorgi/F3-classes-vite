@@ -1,14 +1,30 @@
-const App = () => {
-  return (
-    <div>
-      <h1>useRef</h1>
-      <h2>useRef</h2>
-      <h3>useRef</h3>
-      <h4>useRef</h4>
-      <h5>useRef</h5>
-      <h6>useRef</h6>
-    </div>
-  );
-};
+import { useRef } from "react"
+import BigSection from "./BigSection"
+import Clock from "./Clock"
 
-export default App;
+const App = () => {
+  const ref = useRef<HTMLImageElement>(null)
+
+  function handleClick() {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  return (
+    <>
+      <Clock />
+      <BigSection />
+      <img
+        ref={ref}
+        src="https://en.wikipedia.org/wiki/Kitten#/media/File:Juvenile_Ragdoll.jpg"
+      />
+      <BigSection />
+      <BigSection />
+      <BigSection />
+      <button onClick={handleClick}>Go back to kitten</button>
+    </>
+  )
+}
+
+export default App
