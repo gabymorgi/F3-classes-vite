@@ -1,0 +1,14 @@
+crea un formulario que solicite al usuario los datos para realizar una reserva:
+  - nombre
+  - DNI (debe ser un numero de 8 digitos)
+  - edad
+
+cuando se hace click en submit, se debe validar
+  que todos los campos esten completos
+  que el usuario sea mayor de edad
+  que el DNI sea un numero de 8 digitos
+  
+mostrar los errores con console.error
+
+si esta todo ok, mostrar datos con console.log
+resetear el formulario

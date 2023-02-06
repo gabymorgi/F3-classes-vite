@@ -58,7 +58,7 @@ header img {
 }
 
 input, select {
-  background-color: #222;
+  background-color: #333;
   color: #fff;
 }
 
@@ -79,4 +79,21 @@ input, select {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.light {
+  background-color: #666;
+  color: #0F0;
+}
+
+.light button {
+  background-color: #666;
+  color: #0F0;
 }

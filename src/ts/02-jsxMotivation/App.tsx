@@ -21,7 +21,7 @@ function Button(props: ButtonProps) {
   return <button onClick={props.onClick}>{props.children}</button>
 }
 
-export function TSClass2() {
+function JSX() {
   const isMateOk = 1 + 1 === 2
   function handleClick() {
     console.log('click')
@@ -54,3 +54,5 @@ export function TSClass2() {
     </div>
   )
 }
+
+export default JSX

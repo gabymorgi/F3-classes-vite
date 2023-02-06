@@ -25,7 +25,7 @@ export const useFetch = <T,>(url: string) => {
 
 export const  useLazyFetch = <T,>(url: string) => {
   const [data, setData] = useState<T>()
-  const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string>()
 
   const getData = async () => {

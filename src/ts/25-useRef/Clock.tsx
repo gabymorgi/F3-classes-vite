@@ -8,6 +8,7 @@ const Clock = () => {
   function handleClick() {
     if (playing) {
       clearInterval(intervalRef.current || undefined)
+      setPlaying(false)
     } else {
       setSeconds(0)
       setPlaying(true)

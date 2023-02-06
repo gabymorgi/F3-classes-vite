@@ -1,0 +1,9 @@
+Cree una aplicacion con el siguiente contenido
+un titulo con el texto (condiciones de uso)
+un boton con el texto (ir a firmar)
+  al presionar el boton mostrar en pantalla el boton para firmar (use scrollIntoView)
+una seccion con un texto muy largo (puedes setearle un height de 1000px para simularlo)
+Un boton con el texto (firmar)
+  al presionar el boton 3 veces. Mostrar un mensaje en consola
+    el componente no debe hacer rerender al presionar el boton
+

@@ -1,0 +1,9 @@
+crea una web con lo siguientes
+  en el index se mostrara una lista de post traidos de aqui
+    https://jsonplaceholder.typicode.com/posts
+
+  cuando se clicka en un post, se redirigira la web a /posts/:id
+    donde se mostrara el post con el id :id
+    un boton para ir hacia atras
+    traer la data de
+      https://jsonplaceholder.typicode.com/posts/:id

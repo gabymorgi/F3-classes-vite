@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const NewGameForm = () => {
+  const navigate = useNavigate()
   const [name, setName] = useState('')
   const [imgUrl, setImgUrl] = useState('')
   const [score, setScore] = useState('')
@@ -18,9 +20,9 @@ const NewGameForm = () => {
       },
       body: JSON.stringify(game),
     })
-  }
 
-  console.log(name, imgUrl, score)
+    navigate('/ts/17')
+  }
 
   return (
     <form onSubmit={handleSubmit}>

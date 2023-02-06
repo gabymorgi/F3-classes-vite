@@ -26,7 +26,7 @@ const NewGameForm = () => {
       body: JSON.stringify(game),
     })
 
-    navigate('./')
+    navigate('/ts/16')
   }
 
   return (

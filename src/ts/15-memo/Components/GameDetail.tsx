@@ -1,17 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { GameI } from '../../../fakeApi/types'
 
-const GameDetail = () => {
+interface GameDetailProps {
+  gameId: string
+}
+
+const GameDetail = (props: GameDetailProps) => {
   const [game, setGame] = useState<GameI>() 
 
   useEffect(() => {
+    if (!props.gameId) return
     const getGame = async () => {
-      const game = await (await fetch('/api/games/eObG8qSEgz1MuPPxG34X')).json()
-      console.log(game)
+      const game = await (await fetch(`/api/games/${props.gameId}`)).json()
       setGame(game.game)
     }
     getGame()
-  }, [])
+  }, [props.gameId])
+
+  const achievementsUnlocked = useMemo(() => {
+    return game?.achievements?.filter((a) => a.unlocktime).length
+  }, [game])
 
   return (
     <div>
@@ -19,7 +27,7 @@ const GameDetail = () => {
       {game && (
         <div>
           <h2>{game.name}</h2>
-          <p>{game.achievements?.filter((a) => a.unlocktime).length} - {game.achievements?.length}</p>
+          <p>{achievementsUnlocked} - {game.achievements?.length}</p>
         </div>
       )}
     </div>

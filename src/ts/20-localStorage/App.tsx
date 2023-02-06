@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 
 const colors = [
   'red',
@@ -47,6 +46,12 @@ const App = () => {
           </button>
         ))}
       </div>
+      {sequence.map((color, i) => (
+        <div
+          key={i} // warning: not a good key
+          style={{ width: '20px', height: '20px', backgroundColor: color, display: 'inline-block' }}
+        />
+      ))}
     </div>
   )
 }

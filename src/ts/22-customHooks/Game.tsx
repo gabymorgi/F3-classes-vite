@@ -6,7 +6,7 @@ interface GameProps {
 }
 
 const Game = (props: GameProps) => {
-  const { data, loading, error, getData } = useLazyFetch<GameI>(
+  const { data, loading, error, getData } = useLazyFetch<{ game: GameI }>(
     `/api/games/${props.game.id}`
   )
 
@@ -25,7 +25,7 @@ const Game = (props: GameProps) => {
           show details
         </button>
       ) : (
-        data.playedTime
+        data.game.playedTime
       )}
     </div>
   )

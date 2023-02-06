@@ -17,7 +17,7 @@ const App = () => {
       <BigSection />
       <img
         ref={ref}
-        src="https://en.wikipedia.org/wiki/Kitten#/media/File:Juvenile_Ragdoll.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1024px-Juvenile_Ragdoll.jpg"
       />
       <BigSection />
       <BigSection />

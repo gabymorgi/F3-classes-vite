@@ -1,47 +1,21 @@
-import { GameI } from '../../fakeApi/types'
 import { useState } from 'react'
-import { getId } from './utils/idUtils'
-import Chart from './Components/Chart'
-import Checkout from './Components/Checkout'
-import GameList from './Components/Gamelist'
-import NewGameForm from './Components/NewGameForm'
 import GameDetail from './Components/GameDetail'
-
-interface GamesChartItem {
-  chartId: number
-  game: GameI
-}
+import data from '../../fakeApi/data.json'
 
 const App = () => {
-  const [chart, setChart] = useState<GamesChartItem[]>([])
-
-  function handleBuy(game: GameI) {
-    const chartItem: GamesChartItem = {
-      chartId: getId(),
-      game,
-    }
-    const newChart = [...chart, chartItem]
-    setChart(newChart)
-  }
-
-  function handleDelete(chartId: number) {
-    const newChart = chart.filter((item) => item.chartId !== chartId)
-    setChart(newChart)
-  }
+  const [isTrue, setIsTrue] = useState<boolean>(false)
+  const [selectedId, setSelectedId] = useState<string>('')
   return (
     <>
-      <h1>Chart ({chart.length})</h1>
-      <Chart chart={chart} onDelete={handleDelete} />
-      {chart.length > 0 ? (
-        <>
-          <hr />
-          <Checkout />
-        </>
-      ) : null}
-      <hr />
-      <GameDetail />
-      <h1>Games</h1>
-      <GameList onBuy={handleBuy} />
+      <button onClick={() => setIsTrue(!isTrue)}>{isTrue ? 'yes' : 'no'}</button>
+      <GameDetail gameId={selectedId} />
+      <div className='flex-column'>
+        {data.map((game) => (
+          <div className='card' key={game.id} onClick={() => setSelectedId(game.id)}>
+            {game.name}
+          </div>
+        ))}
+      </div>
     </>
   )
 }

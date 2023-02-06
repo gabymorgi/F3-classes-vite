@@ -44,7 +44,7 @@ function calcReducer(state: number, action: actionI) {
       break
     }
     case actionTypes.dividir: {
-      newState = state / (action.payload || 0)
+      newState = state / (action.payload || 1)
       break
     }
     case actionTypes.reset: {
