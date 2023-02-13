@@ -20,6 +20,8 @@
   border-bottom-right-radius: 8px;
 }
 
+/* :global provoca que el selector no sea hasheado por css modules */
+
 :global(.green-theme) .card h1 {
   color: green;
 }

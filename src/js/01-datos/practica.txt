@@ -1,3 +1,9 @@
+recorda que para correr un script js con nodejs,
+y poder utilizar las caracteristicas de ES6 como import y export
+la extension del archivo debe ser .mjs
+y para correrlo se debe usar el comando 
+node --experimental-modules --experimental-json-modules script.mjs
+
 importa la lista de juegos ubicada en fakeApi/data.json
 (los json estan exportados como default)
 
