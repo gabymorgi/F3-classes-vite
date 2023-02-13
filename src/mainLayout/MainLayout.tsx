@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom'
 import { ConfigProvider, Layout, Menu, theme } from 'antd'
 
+// the following warnings are expected
+// because we are mixing JS and TS
 import JsJSX from '../js/02-jsxMotivation/App.jsx'
 import JsComponents from '../js/04-components/App.jsx'
 import JsEstilos from '../js/05-estilos/App.jsx'

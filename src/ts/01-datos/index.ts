@@ -10,7 +10,7 @@ import alfabeto from "./fn"
 import { names, trollNames } from "./fn"
 // debemos usar el mismo nombre que el exportado
 
-const TsApp01 = () => {
+const TsData = () => {
   //constante
   const nombre = "dave"
   //no la puedo modificar
@@ -227,4 +227,4 @@ const TsApp01 = () => {
   )
 };
 
-export default TsApp01
+export default TsData
