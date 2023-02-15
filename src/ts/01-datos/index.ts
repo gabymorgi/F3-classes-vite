@@ -114,6 +114,19 @@ const TsData = () => {
 
   sumaConDecimales({ a: 1, b: 2, decimals: 2 }) // "3.00"
 
+  //puedo enviar funciones como parametros
+  const fnConCallback = (callback: (a: number, b: number) => number) => {
+    return callback(1, 2)
+  }
+
+  fnConCallback(suma) // 3
+
+  function multiplicacion(a, b) {
+    return a * b
+  }
+
+  fnConCallback(multiplicacion) // 2
+
   // necesitamos saber que props quiere recibir la funcion
   // para poder utilizarla correctamente
   // pero no necesitamos saber como esta implementada :D

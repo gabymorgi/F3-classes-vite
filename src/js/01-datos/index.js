@@ -119,6 +119,19 @@ const JsData = () => {
   }
   functions.suma(1, 2) // 3
 
+  //puedo enviar funciones como parametros
+  const fnConCallback = (callback) => {
+    return callback(1, 2)
+  }
+
+  fnConCallback(suma) // 3
+
+  function multiplicacion(a, b) {
+    return a * b
+  }
+
+  fnConCallback(multiplicacion) // 2
+
   // si me da pereza escribir
   pokimon.id
   // puedo usar destructuring
