@@ -121,7 +121,7 @@ const TsData = () => {
 
   fnConCallback(suma) // 3
 
-  function multiplicacion(a, b) {
+  function multiplicacion(a: number, b: number) {
     return a * b
   }
 
