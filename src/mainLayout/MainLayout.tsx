@@ -33,21 +33,20 @@ import PractEntorno from '../practicas/03-entorno/App.jsx'
 import PractComponents from '../practicas/04-components/App.jsx'
 import PractEstilos from '../practicas/05-estilos/App.jsx'
 import PractKeys from '../practicas/06-keys/App.jsx'
-// import JsStateI from '../practicas/07-state-I/App.jsx'
-// import JsStateII from '../practicas/08-state-II/App.jsx'
-// import JsForms from '../practicas/09-forms/App.jsx'
-// import JsRepaso from '../practicas/10-repaso/App.jsx'
-// import JsUseEffect from '../practicas/13-useEffect/App.jsx'
-// import JsFetch from '../practicas/14-fetch/App.jsx'
-// import JsMemo from '../practicas/15-memo/App.jsx'
-// import JsRouterI from '../practicas/16-router-I/App.jsx'
-// import JsRouterII from '../practicas/17-router-II/App.jsx'
-// import JsTesting from '../practicas/18-testing/App.jsx'
-// import JsContext from '../practicas/19-context/App.jsx'
-// import JsLocalStorage from '../practicas/20-localStorage/App.jsx'
-// import JsReducer from '../practicas/21-reducer/App.jsx'
-// import JsCustomHooks from '../practicas/22-customHooks/App.jsx'
-// import JsUseRef from '../practicas/25-useRef/App.jsx'
+import PractStateI from '../practicas/07-state-I/App.jsx'
+import PractStateII from '../practicas/08-state-II/App.jsx'
+import PractForms from '../practicas/09-forms/App.jsx'
+import PractUseEffect from '../practicas/13-useEffect/App.jsx'
+import PractFetch from '../practicas/14-fetch/App.jsx'
+import PractMemo from '../practicas/15-memo/App.jsx'
+import PractRouterI from '../practicas/16-router-I/App.jsx'
+import PractRouterII from '../practicas/17-router-II/App.jsx'
+import PractTesting from '../practicas/18-testing/App.jsx'
+import PractContext from '../practicas/19-context/App.jsx'
+import PractLocalStorage from '../practicas/20-localStorage/App.jsx'
+import PractReducer from '../practicas/21-reducer/App.jsx'
+import PractCustomHooks from '../practicas/22-customHooks/App.jsx'
+import PractUseRef from '../practicas/25-useRef/App.jsx'
 
 import TsJSX from '../ts/02-jsxMotivation/App'
 import TsComponents from '../ts/04-components/App'
@@ -215,81 +214,76 @@ const routesData = [
         name: 'Keys',
         component: <PractKeys />,
       },
-      // {
-      //   path: '07',
-      //   name: 'State I',
-      //   component: <PractStateI />,
-      // },
-      // {
-      //   path: '08',
-      //   name: 'State II',
-      //   component: <PractStateII />,
-      // },
-      // {
-      //   path: '09',
-      //   name: 'Forms',
-      //   component: <PractForms />,
-      // },
-      // {
-      //   path: '10',
-      //   name: 'Repaso',
-      //   component: <PractRepaso />,
-      // },
-      // {
-      //   path: '13',
-      //   name: 'useEffect',
-      //   component: <PractUseEffect />,
-      // },
-      // {
-      //   path: '14',
-      //   name: 'fetch',
-      //   component: <PractFetch />,
-      // },
-      // {
-      //   path: '15',
-      //   name: 'memo',
-      //   component: <PractMemo />,
-      // },
-      // {
-      //   path: '16',
-      //   name: 'router I',
-      //   component: <PractRouterI />,
-      // },
-      // {
-      //   path: '17',
-      //   name: 'router II',
-      //   component: <PractRouterII />,
-      // },
-      // {
-      //   path: '18',
-      //   name: 'testing',
-      //   component: <PractTesting game='Cave Story' />,
-      // },
-      // {
-      //   path: '19',
-      //   name: 'context',
-      //   component: <PractContext />,
-      // },
-      // {
-      //   path: '20',
-      //   name: 'localStorage',
-      //   component: <PractLocalStorage />,
-      // },
-      // {
-      //   path: '21',
-      //   name: 'reducer',
-      //   component: <PractReducer />,
-      // },
-      // {
-      //   path: '22',
-      //   name: 'customHooks',
-      //   component: <PractCustomHooks />,
-      // },
-      // {
-      //   path: '25',
-      //   name: 'useRef',
-      //   component: <PractUseRef />,
-      // },
+      {
+        path: '07',
+        name: 'State I',
+        component: <PractStateI />,
+      },
+      {
+        path: '08',
+        name: 'State II',
+        component: <PractStateII />,
+      },
+      {
+        path: '09',
+        name: 'Forms',
+        component: <PractForms />,
+      },
+      {
+        path: '13',
+        name: 'useEffect',
+        component: <PractUseEffect />,
+      },
+      {
+        path: '14',
+        name: 'fetch',
+        component: <PractFetch />,
+      },
+      {
+        path: '15',
+        name: 'memo',
+        component: <PractMemo />,
+      },
+      {
+        path: '16',
+        name: 'router I',
+        component: <PractRouterI />,
+      },
+      {
+        path: '17',
+        name: 'router II',
+        component: <PractRouterII />,
+      },
+      {
+        path: '18',
+        name: 'testing',
+        component: <PractTesting game='Cave Story' />,
+      },
+      {
+        path: '19',
+        name: 'context',
+        component: <PractContext />,
+      },
+      {
+        path: '20',
+        name: 'localStorage',
+        component: <PractLocalStorage />,
+      },
+      {
+        path: '21',
+        name: 'reducer',
+        component: <PractReducer />,
+      },
+      {
+        path: '22',
+        name: 'customHooks',
+        component: <PractCustomHooks />,
+      },
+      {
+        path: '25',
+        name: 'useRef',
+        component: <PractUseRef />,
+      },
     ],
   },
   {

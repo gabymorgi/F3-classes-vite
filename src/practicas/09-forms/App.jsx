@@ -2,24 +2,36 @@ import { useState } from 'react'
 
 const App = () => {
   const [name, setName] = useState('')
-  const [imgUrl, setImgUrl] = useState('')
-  const [score, setScore] = useState(0)
+  const [dni, setDni] = useState(0)
+  const [edad, setEdad] = useState(0)
 
   async function handleSubmit(e) {
     e.preventDefault()
-    if (!name || !imgUrl) {
+    //validate form
+    if (!name || !dni || !edad) {
       console.error('Please fill out all fields')
       return
     }
-    const game = {
-      name,
-      imgUrl,
-      score
+    // if dni doesnt has 8 digits
+    if (!(dni.toString().length === 8)) {
+      console.error('DNI must have 8 digits')
+      return
     }
-    console.log(game)
+    if (edad < 18) {
+      console.error('You must be 18 years old')
+      return
+    }
+    const user = {
+      name,
+      dni,
+      edad
+    }
+    console.log(user)
+    //reset form
+    setName('')
+    setDni(0)
+    setEdad(0)
   }
-
-  console.log(name, imgUrl, score)
 
   return (
     <>
@@ -35,26 +47,24 @@ const App = () => {
           />
         </div>
         <div>
-          <label htmlFor='imgUrl'>imgUrl</label>
+          <label htmlFor='dni'>DNI</label>
           <input
             type='text'
-            id='imgUrl'
-            value={imgUrl}
-            onChange={(e) => setImgUrl(e.target.value)}
+            id='dni'
+            value={dni}
+            onChange={(e) => setDni(e.target.value)}
           />
         </div>
         <div>
-          <label htmlFor='score'>Score</label>
+          <label htmlFor='edad'>Edad</label>
           <input
             type='number'
-            id='score'
-            min={0}
-            max={10}
-            value={score}
-            onChange={(e) => setScore(Number(e.target.value))}
+            id='edad'
+            value={edad}
+            onChange={(e) => setEdad(Number(e.target.value))}
           />
         </div>
-        <button type='submit'>Add Game</button>
+        <button type='submit'>Reservar</button>
       </form>
     </>
   )

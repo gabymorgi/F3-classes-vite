@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import Timer from './Components/Timer'
+import Ejercicio1 from './e1/Ejercicio1'
+import Ejercicio2 from './e2/Ejercicio2'
 
 const App = () => {
-  const [showTimer, setShowTimer] = useState(false)
-
-  function toggleTimer() {
-    setShowTimer(!showTimer)
-  }
-  
   return (
     <>
-      <button onClick={toggleTimer}>{showTimer ? 'stop': 'start'}</button>
-      {showTimer && <Timer />}
+      <Ejercicio1 />
+      <hr />
+      <Ejercicio2 />
     </>
   )
 }

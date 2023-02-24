@@ -1,25 +1,13 @@
-import GameList from './Components/Gamelist'
-import GameDetail from './Components/GameDetail'
-import { useEffect, useState } from 'react';
-import NewGameForm from './Components/NewGameForm';
+import Ejercicio1 from './Ejercicio1'
+import Ejercicio2 from './Ejercicio2'
 
 const App = () => {
-  const [games, setGames] = useState([])
-  async function fetchGames() {
-    const response = await (await fetch('/api/games')).json();
-    setGames(response);
-  }
-  useEffect(() => {
-    fetchGames();
-  }, []);
   return (
     <>
-      <NewGameForm onFinish={fetchGames} />
+      <h1>comment src\main.tsx L6 to make this to work</h1>
+      <Ejercicio1 />
       <hr />
-      <GameDetail />
-      <hr />
-      <h1>Games</h1>
-      <GameList games={games} />
+      <Ejercicio2 />
     </>
   )
 }
