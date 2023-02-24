@@ -392,7 +392,7 @@ const routesData = [
 const MainLayout = () => {
   return (
     <Layout className='min-h-full'>
-      <Layout.Sider trigger={null}>
+      <Layout.Sider className='max-h-full overflow-y' trigger={null}>
         <div className='flex p-10 items-center'>
           <img
             src='/sburb.svg'

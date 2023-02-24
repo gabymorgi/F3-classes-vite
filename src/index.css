@@ -35,6 +35,14 @@ button[disabled] {
   color: #666;
 }
 
+.max-h-full {
+  max-height: 100vh;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;

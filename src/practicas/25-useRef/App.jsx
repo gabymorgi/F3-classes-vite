@@ -1,28 +1,40 @@
-import { useRef } from "react"
-import BigSection from "./BigSection"
-import Clock from "./Clock"
+import { useRef, useState } from 'react'
+import BigSection from './BigSection'
 
 const App = () => {
   const ref = useRef(null)
+  const clickAmount = useRef(0)
+  const [signed, setSigned] = useState(false)
 
-  function handleClick() {
+  function goToSign() {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" })
+      ref.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  function handleSign() {
+    clickAmount.current++
+    if (clickAmount.current === 3) {
+      console.log('Firmado')
+      setSigned(true)
     }
   }
 
   return (
     <>
-      <Clock />
-      <BigSection />
-      <img
-        ref={ref}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1024px-Juvenile_Ragdoll.jpg"
-      />
+      <h1>Condiciones de uso</h1>
+      <button onClick={goToSign}>Ir a firmar</button>
       <BigSection />
       <BigSection />
       <BigSection />
-      <button onClick={handleClick}>Go back to kitten</button>
+      <BigSection />
+      {signed ? (
+        'FIRMDOOOOO!!!'
+      ) : (
+        <button ref={ref} onClick={handleSign}>
+          Firmar
+        </button>
+      )}
     </>
   )
 }

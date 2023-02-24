@@ -27,14 +27,16 @@ const App = (props) => {
   return (
     <div>
       <FormComponent setSquare={setSquare} />
-      <div styles={{ position: 'relative' }}>
+      <div style={{ position: 'relative' }}>
         <div style={{
           position: 'absolute',
-          top: square.posY,
-          left: square.posX,
-          width: square.width,
-          height: square.height,
-          border: '1px solid black'
+          zIndex: 1,
+          top: `${square.posY}px`,
+          left: `${square.posX}px`,
+          width: `${square.width}px`,
+          height: `${square.height}px`,
+          border: '10px solid green',
+          backgroundColor: 'red'
         }}>
           <div>Perimeter: {perimeter}</div>
           <div>Area: {area}</div>

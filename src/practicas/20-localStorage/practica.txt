@@ -1,2 +1,4 @@
 1. Crea una app que muestre una lista de peliculas
 cuando se hace click, se agrega a favoritos si es que no esta, si no. Se elimina
+
+// pueden usar lada data de videojueguito de fakeapi si andan faltos de creatividad
