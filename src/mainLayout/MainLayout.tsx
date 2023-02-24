@@ -28,6 +28,27 @@ import JsReducer from '../js/21-reducer/App.jsx'
 import JsCustomHooks from '../js/22-customHooks/App.jsx'
 import JsUseRef from '../js/25-useRef/App.jsx'
 
+import PractJSX from '../practicas/02-jsxMotivation/App.jsx'
+import PractEntorno from '../practicas/03-entorno/App.jsx'
+import PractComponents from '../practicas/04-components/App.jsx'
+import PractEstilos from '../practicas/05-estilos/App.jsx'
+import PractKeys from '../practicas/06-keys/App.jsx'
+// import JsStateI from '../practicas/07-state-I/App.jsx'
+// import JsStateII from '../practicas/08-state-II/App.jsx'
+// import JsForms from '../practicas/09-forms/App.jsx'
+// import JsRepaso from '../practicas/10-repaso/App.jsx'
+// import JsUseEffect from '../practicas/13-useEffect/App.jsx'
+// import JsFetch from '../practicas/14-fetch/App.jsx'
+// import JsMemo from '../practicas/15-memo/App.jsx'
+// import JsRouterI from '../practicas/16-router-I/App.jsx'
+// import JsRouterII from '../practicas/17-router-II/App.jsx'
+// import JsTesting from '../practicas/18-testing/App.jsx'
+// import JsContext from '../practicas/19-context/App.jsx'
+// import JsLocalStorage from '../practicas/20-localStorage/App.jsx'
+// import JsReducer from '../practicas/21-reducer/App.jsx'
+// import JsCustomHooks from '../practicas/22-customHooks/App.jsx'
+// import JsUseRef from '../practicas/25-useRef/App.jsx'
+
 import TsJSX from '../ts/02-jsxMotivation/App'
 import TsComponents from '../ts/04-components/App'
 import TsEstilos from '../ts/05-estilos/App'
@@ -48,9 +69,22 @@ import TsReducer from '../ts/21-reducer/App'
 import TsCustomHooks from '../ts/22-customHooks/App'
 import TsUseRef from '../ts/25-useRef/App'
 
+import AppClase from '../clase/App.jsx'
+
 const { darkAlgorithm } = theme
 
 const routesData = [
+  {
+    path: 'clase',
+    name: 'Clase',
+    sub: [
+      {
+        path: 'clase-04',
+        name: 'Clase 04',
+        component: <AppClase />,
+      }
+    ]
+  },
   {
     path: 'js',
     name: 'JS',
@@ -150,6 +184,112 @@ const routesData = [
         name: 'useRef',
         component: <JsUseRef />,
       },
+    ],
+  },
+  {
+    path: 'practicas',
+    name: 'Practicas',
+    sub: [
+      {
+        path: '02',
+        name: 'JSX',
+        component: <PractJSX />,
+      },
+      {
+        path: '03',
+        name: 'Entorno',
+        component: <PractEntorno />,
+      },
+      {
+        path: '04',
+        name: 'Components',
+        component: <PractComponents />,
+      },
+      {
+        path: '05',
+        name: 'Estilos',
+        component: <PractEstilos />,
+      },
+      {
+        path: '06',
+        name: 'Keys',
+        component: <PractKeys />,
+      },
+      // {
+      //   path: '07',
+      //   name: 'State I',
+      //   component: <PractStateI />,
+      // },
+      // {
+      //   path: '08',
+      //   name: 'State II',
+      //   component: <PractStateII />,
+      // },
+      // {
+      //   path: '09',
+      //   name: 'Forms',
+      //   component: <PractForms />,
+      // },
+      // {
+      //   path: '10',
+      //   name: 'Repaso',
+      //   component: <PractRepaso />,
+      // },
+      // {
+      //   path: '13',
+      //   name: 'useEffect',
+      //   component: <PractUseEffect />,
+      // },
+      // {
+      //   path: '14',
+      //   name: 'fetch',
+      //   component: <PractFetch />,
+      // },
+      // {
+      //   path: '15',
+      //   name: 'memo',
+      //   component: <PractMemo />,
+      // },
+      // {
+      //   path: '16',
+      //   name: 'router I',
+      //   component: <PractRouterI />,
+      // },
+      // {
+      //   path: '17',
+      //   name: 'router II',
+      //   component: <PractRouterII />,
+      // },
+      // {
+      //   path: '18',
+      //   name: 'testing',
+      //   component: <PractTesting game='Cave Story' />,
+      // },
+      // {
+      //   path: '19',
+      //   name: 'context',
+      //   component: <PractContext />,
+      // },
+      // {
+      //   path: '20',
+      //   name: 'localStorage',
+      //   component: <PractLocalStorage />,
+      // },
+      // {
+      //   path: '21',
+      //   name: 'reducer',
+      //   component: <PractReducer />,
+      // },
+      // {
+      //   path: '22',
+      //   name: 'customHooks',
+      //   component: <PractCustomHooks />,
+      // },
+      // {
+      //   path: '25',
+      //   name: 'useRef',
+      //   component: <PractUseRef />,
+      // },
     ],
   },
   {

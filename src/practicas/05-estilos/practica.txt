@@ -1,0 +1,33 @@
+crea un componente lista y un componente item
+que rendericen un ul y li respectivamente
+
+usando css modules:
+  elimina los por defecto de la lista y el item
+  haz que el item tenga un borde
+  haz que el item tenga un padding de 16px
+  si el item se encuentra dentro de una clase global compact-theme
+    que el item tenga un padding de 4px
+  haz que los elementos de la lista se dispongan en 3 columnas
+
+pueden corroborar que funcione mostrando en la app algo por el estilo
+
+<div className="compact-theme">
+  <Lista>
+    <Item>item 1</Item>
+    <Item>item 2</Item>
+    <Item>item 3</Item>
+    <Item>item 4</Item>
+    <Item>item 5</Item>
+    <Item>item 6</Item>
+    <Item>item 7</Item>
+    <Item>item 8</Item>
+  </Lista>
+</div>
+
++--------+--------+--------+
+| item 1 | item 2 | item 3 |
++--------+--------+--------+
+| item 4 | item 5 | item 6 |
++--------+--------+--------+
+| item 7 | item 8 |
++--------+--------+

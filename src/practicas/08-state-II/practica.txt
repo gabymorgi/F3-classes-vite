@@ -1,0 +1,15 @@
+crea una app que muestra
+  un componente con todas las cuentas que estas siguiendo
+  un componente con todas las cuentas disponibles:
+    puedes usar las que quieras, o estas
+      const twitterAccounts = ["@john","@rose","@dave","@jade","@karkat","@tavros","@sollux","@nepeta","@kanaya","@terezi","@vriska","@equius","@gamzee","@eridan","@feferi","@aradia"]
+    TIP: sabemos que todas las cuentas tienen un nombre unico
+
+
+cuando haces click en una cuenta, se agrega a la lista de cuentas que estas siguiendo
+  si la cuenta no esta en la lista, se agrega 
+  si la cuenta ya esta en la lista, no se agrega
+  TIP: puedes user el metodo includes para saber si la cuenta ya esta en la lista
+
+cuando se hace click en una cuenta que estas siguiendo, se elimina de la lista de cuentas que estas siguiendo
+  TIP: puedes usar el metodo filter para eliminar un elemento de la lista

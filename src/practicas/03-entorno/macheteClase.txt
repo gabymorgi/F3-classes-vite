@@ -1,0 +1,30 @@
+crear proyecto en vite
+package.json vs package-lock.json
+node_modules folder
+src
+  index.html
+    title
+    favicon
+      public folder
+    root
+    script
+  main.js
+    get root elementos
+    create root
+    StrictMode
+
+github
+  crear proyecto
+  source control
+  gitignore
+  add commit y push
+  install https://github.com/newtykins/owoifyx
+  use owoifyx("hello world and everyone else!")
+  see package.json
+
+herramientas
+  prettier
+  eslint
+  typescript
+
+

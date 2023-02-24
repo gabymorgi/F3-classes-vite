@@ -1,0 +1,29 @@
+.card {
+  border-radius: 8px;
+  border: 1px solid #fff;
+}
+
+.card h1 {
+  font-size: 24px;
+  color: white;
+  border-bottom: 1px solid #fff;
+  padding: 8px 16px;
+  background-color: #222;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card .card-body {
+  padding: 8px 16px;
+  background-color: #111;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+:global(.green-theme) .card h1 {
+  color: green;
+}
+
+:global(.blue-theme) .card h1 {
+  color: cyan;
+}

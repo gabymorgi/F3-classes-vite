@@ -1,0 +1,11 @@
+.item {
+  list-style: none;
+  padding: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+:global(.compact-theme) .item {
+  padding: 4px;
+}
+

@@ -1,0 +1,51 @@
+crea un componente card (se puede partir del visto en la clase)
+con las siguientes props
+title: string | undefined
+children: JSX
+footer: JSX | undefined
+
+y que se vea así
+
+<Card>
+  card children
+</Card>
++-----------------------+
+|                       |
+|     card children     |
+|                       |
++-----------------------+
+
+<Card title="card title">
+  card children
+</Card>
++-----------------------+
+|       card title      |
++-----------------------+
+|                       |
+|     card children     |
+|                       |
++-----------------------+
+
+<Card footer="card footer">
+  card children
+</Card>
++-----------------------+
+|                       |
+|     card children     |
+|                       |
++-----------------------+
+|      card footer      |
++-----------------------+
+
+<Card title="card title" footer="card footer">
+  card children
+</Card>
++-----------------------+
+|       card title      |
++-----------------------+
+|                       |
+|     card children     |
+|                       |
++-----------------------+
+|      card footer      |
++-----------------------+
