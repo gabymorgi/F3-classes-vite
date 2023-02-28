@@ -1,22 +1,39 @@
 import { useState } from 'react'
 
 const App = () => {
+  const [submitted, setSubmitted] = useState()
+  const [error, setError] = useState('')
   const [name, setName] = useState('')
   const [imgUrl, setImgUrl] = useState('')
   const [score, setScore] = useState(0)
+  const [color, setColor] = useState('')
 
   async function handleSubmit(e) {
     e.preventDefault()
-    if (!name || !imgUrl) {
+    console.log(name.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/))
+    if (!name || !imgUrl || !color) {
       console.error('Please fill out all fields')
+      setError('Please fill out all fields')
+      return
+    }
+    if (!color.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/)) {
+      console.error('Please set a valid color')
+      setError('Please set a valid color')
       return
     }
     const game = {
       name,
       imgUrl,
-      score
+      score,
+      color,
     }
     console.log(game)
+    setSubmitted(game)
+    setName('')
+    setImgUrl('')
+    setScore(0)
+    setColor('')
+    setError('')
   }
 
   console.log(name, imgUrl, score)
@@ -54,8 +71,27 @@ const App = () => {
             onChange={(e) => setScore(Number(e.target.value))}
           />
         </div>
+        <div>
+          <label htmlFor='score'>color</label>
+          <input
+            type='text'
+            id='color'
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
+        </div>
         <button type='submit'>Add Game</button>
       </form>
+      {error && <p>{error}</p>}
+      {submitted && (
+        <div>
+          <h2>Game added!</h2>
+          <p>Name: {submitted.name}</p>
+          <p>imgUrl: {submitted.imgUrl}</p>
+          <p>Score: {submitted.score}</p>
+          <p>Color: {submitted.color}</p>
+        </div>
+      )}
     </>
   )
 }
