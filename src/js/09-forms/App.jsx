@@ -10,6 +10,7 @@ const App = () => {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    console.log(e)
     console.log(name.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/))
     if (!name || !imgUrl || !color) {
       console.error('Please fill out all fields')
@@ -46,7 +47,7 @@ const App = () => {
           <label htmlFor='name'>Name</label>
           <input
             type='text'
-            id='name'
+            name='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -55,7 +56,7 @@ const App = () => {
           <label htmlFor='imgUrl'>imgUrl</label>
           <input
             type='text'
-            id='imgUrl'
+            name='imgUrl'
             value={imgUrl}
             onChange={(e) => setImgUrl(e.target.value)}
           />
@@ -64,7 +65,7 @@ const App = () => {
           <label htmlFor='score'>Score</label>
           <input
             type='number'
-            id='score'
+            name='score'
             min={0}
             max={10}
             value={score}
@@ -75,7 +76,7 @@ const App = () => {
           <label htmlFor='score'>color</label>
           <input
             type='text'
-            id='color'
+            name='color'
             value={color}
             onChange={(e) => setColor(e.target.value)}
           />
