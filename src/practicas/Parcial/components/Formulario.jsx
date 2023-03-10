@@ -4,6 +4,7 @@ function Formulario(props) {
   const [name, setName] = useState("");
   const [pet, setPet] = useState("");
   const [error, setError] = useState("");
+  //just for testing
   const isMobile = window.innerWidth < 768;
 
   function handleChangeName(e) {
@@ -36,6 +37,8 @@ function Formulario(props) {
   if (error !== "") {
     errorJSX = <p className="pclass">{error}</p>;
   }
+  //si necesitamos logica compleja para mostrar algo en el DOM
+  // podemos usar un switch y una variable
   switch (error) {
     case "Name must be longer than 3 characters":
       errorJSX = <p className="pclass">{error}</p>;
@@ -64,9 +67,11 @@ function Formulario(props) {
           />
           <button type="submit">Submit</button>
         </form>
-        {null}
-        {error !== "" ? <p>{error}</p> : <form></form>}
+        <p>{error}</p> {/**el p queda siempre en el DOM */}
+        {/**no es una forma correcta de render condicional */}
+        {null} {/**react lo ignora, como ella a ti :( */}
         {errorJSX}
+        {/**asi se haria un switch, es medio feo */}
         {error === "Name must be longer than 3 characters"
           ? "a"
           : error === "pet"
@@ -76,7 +81,10 @@ function Formulario(props) {
           : "d"}
       </div>
       {isMobile ? (
-        <div className="mobile">{errorJSX}</div>
+        <div className="mobile">
+          {/**reutilizo el componenete en distintos lugares */}
+          {errorJSX}
+        </div>
       ) : (
         <div className="desktop">
           <div>Menu</div>
