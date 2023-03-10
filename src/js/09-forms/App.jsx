@@ -8,7 +8,7 @@ const App = () => {
   const [score, setScore] = useState(0)
   const [color, setColor] = useState('')
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault()
     console.log(e)
     console.log(name.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/))

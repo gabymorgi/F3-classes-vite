@@ -28,6 +28,7 @@ import JsReducer from '../js/21-reducer/App.jsx'
 import JsCustomHooks from '../js/22-customHooks/App.jsx'
 import JsUseRef from '../js/25-useRef/App.jsx'
 
+import Parcial from '../practicas/Parcial/App.jsx'
 import PractJSX from '../practicas/02-jsxMotivation/App.jsx'
 import PractEntorno from '../practicas/03-entorno/App.jsx'
 import PractComponents from '../practicas/04-components/App.jsx'
@@ -78,9 +79,13 @@ const routesData = [
     name: 'Clase',
     sub: [
       {
-        path: 'clase-04',
-        name: 'Clase 04',
+        path: 'clase',
+        name: 'Clase',
         component: <AppClase />,
+      },{
+        path: 'parcial',
+        name: 'Parcial',
+        component: <Parcial />,
       }
     ]
   },
