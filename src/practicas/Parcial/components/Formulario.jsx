@@ -67,6 +67,8 @@ function Formulario(props) {
           />
           <button type="submit">Submit</button>
         </form>
+        {error && <p>{error}</p>}
+        {/** de aca en adelante esta fuera del enunciado */}
         <p>{error}</p> {/**el p queda siempre en el DOM */}
         {/**no es una forma correcta de render condicional */}
         {null} {/**react lo ignora, como ella a ti :( */}
