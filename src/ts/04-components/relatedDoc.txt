@@ -1,2 +1,0 @@
-https://beta.reactjs.org/learn/passing-props-to-a-component
-https://beta.reactjs.org/learn/conditional-rendering

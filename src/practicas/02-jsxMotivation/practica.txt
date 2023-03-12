@@ -8,16 +8,18 @@ un p con la descripcion de la pelicula
 un botton para darle like a la pelicula
     (cuando se hace click tiene que mostrar 'like' por consola)
 
+----------------------------------------------------------------
+
 crea una funcion/componente que reciba title como props y
     renderice un h3 con la prop recibida
-
 prueba el comportamiento de la funcion/componente anterior
     <NombreComponente title="Generos" />
     <NombreComponente title="Actores" />
 
+----------------------------------------------------------------
+
 crea una funcion/componente que reciba children como props
     y lo muestre dentro de un 'ul'
-
 prueba el comportamiento de la funcion/componente anterior
     <NombreComponenteLista>
       <li>Accion</li>

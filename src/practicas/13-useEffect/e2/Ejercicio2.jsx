@@ -1,19 +1,18 @@
 import { useState } from "react"
-import Pedido from "./Pedido"
+import TestComponent from "./TestComponent"
 
 function Ejercicio2() {
-  const [inProgress, setInProgress] = useState(false)
+  const [isActive, setIsActive] = useState(false)
   return (
     <div>
-      {!inProgress ? (
         <button
-          onClick={() => setInProgress(true)}
+          onClick={() => setIsActive(!isActive)}
         >
-          Hacer pedido
+          Toggle Active
         </button>
-      ) : (
-        <Pedido onCancel={() => setInProgress(false)} />
-      )}
+      {!isActive ? (
+        <TestComponent onCancel={() => setIsActive(false)} />
+      ) : null}
     </div>
   )
 }

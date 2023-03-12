@@ -1,13 +1,19 @@
 crea una App con lo siguiente
-  un boton que alterne entre modo claro y oscuro
+  tres inputs type number controlados
+
+  utiliza use memo que muestre la suma de los primeros 2 inputs
+    el memo no se debe recalcular si el tercer input se modifica
   
   un componente que muestre lo siguiente
     importar los datos de https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/data.json
-    un select con las siguientes opciones:
+    con memo:
+    muestra en pantalla todos los nombres de juegos cuyo score es mayor o igual a 9
+      el memo no debe recalcularse
+
+    agrega un select con las siguientes opciones:
       "Roguelike", "Platformer", "Metroidvania"
 
-    con useMemo
-    muestra todos los nombres de juegos cuyo score es mayor o igual a 9
+    con memo:
     muestra todos los nombres de juegos que tenga algun tag que coincida con el seleccionado en el select
 
-usa el boton de alternar modo para testear que no se recalculen los datos en el memo
+    el memos solo deben recalcularse si el select cambia

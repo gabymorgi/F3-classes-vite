@@ -1,3 +1,13 @@
+crea una App que imprima por consola "hola mundo" cuando se monta
+
+cree una App con lo siguiente
+  un estado isActive de tipo booleano
+  un boton que alterna el valor de isActive
+  un componente que solo se muestra si isActive es true
+    el componente muestra por pantalla "activo"
+    el componente muestra por consola "activo" cuando se monta
+    el componente muestra por consola "desactivo" cuando se desmonta
+
 crea una App con lo siguiente
   un input para ingresar un nombre
   un boton de submit que va a copiar el contenido del input en un nuevo estado (submitedValue)

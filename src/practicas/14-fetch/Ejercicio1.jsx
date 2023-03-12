@@ -1,28 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Ejercicio1() {
-  const [loading, setLoading] = useState(false)
-  const [facts, setFacts] = useState([])
+  const [title, setTitle] = useState('')
 
   async function handleFetch() {
-    setLoading(true)
     const response = await (
-      await fetch('https://cat-fact.herokuapp.com/facts')
+      await fetch('https://jsonplaceholder.typicode.com/posts/1')
     ).json()
-    setFacts(
-      response.map((fact) => ({ id: fact['_id'], text: fact.text }))
-    )
-    setLoading(false)
+    setTitle(response.title)
   }
+  
+  useEffect(() => {
+    handleFetch()
+  }, [])
   return (
     <div>
-      <button onClick={handleFetch}>Buscar Datos</button>
-      {loading && <div>Cargando...</div>}
-      <div className='flex'>
-        {facts.map((fact) => (
-          <div key={fact.id}>{fact.text}</div>
-        ))}
-      </div>
+      {title}
     </div>
   )
 }

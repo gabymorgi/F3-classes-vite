@@ -1,22 +1,13 @@
-import { useState } from "react"
-import TestComponent from "./TestComponent"
+import { useEffect } from "react"
 
 function Ejercicio1() {
-  const [inputValue, setInputValue] = useState('')
-  const [submitedValue, setSubmitedValue] = useState('')
+  useEffect(() => {
+    console.log('Wenas')
+  }, [])
+
   return (
     <div>
-      <input
-        type='text'
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button
-        onClick={() => setSubmitedValue(inputValue)}
-      >
-        Submit
-      </button>
-      <TestComponent value={submitedValue} />
+      Wenas
     </div>
   )
 }

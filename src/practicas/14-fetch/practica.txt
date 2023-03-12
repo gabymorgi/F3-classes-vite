@@ -1,4 +1,11 @@
 crea una app con lo siguiente
+  en el mount hara un fetch a https://jsonplaceholder.typicode.com/posts/1
+  y guardara el titulo en un estado
+  un texto que muestre el titulo guardado en el estado
+
+----------------------------------------------------------------------------------------------------------------------------
+
+crea una app con lo siguiente
   un boton con el texto "buscar datos"
     onClick llama a una async function
       utilizando la api https://cat-fact.herokuapp.com/facts
@@ -9,7 +16,7 @@ crea una app con lo siguiente
 
 mientras se esten cargando los datos, muestra un texto "cargando datos"
 
-
+----------------------------------------------------------------------------------------------------------------------------
 
 cree una app con lo siguiente
   un boton con el texto "siguiente hecho"
@@ -20,3 +27,33 @@ cree una app con lo siguiente
   un texto que muestre el hecho guardado en el estado
 
   ni bien inicia la app, se llama a la api y se guarda el hecho en el estado (usa useEffect)
+
+----------------------------------------------------------------------------------------------------------------------------
+
+cree una app con lo siguiente
+  un formulario que permita ingresar un titulo y un body
+    input text
+    textarea
+  un boton con el texto "guardar"
+    onClick llama a una async function
+      utilizando la api https://jsonplaceholder.typicode.com/posts
+      (la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)
+
+----------------------------------------------------------------------------------------------------------------------------
+
+cree una app con lo siguiente
+  un estado para guardar posts
+  un estado para guardar errores de la api
+  un estado para guardar el loading de la api
+  una funcion que hara un fetch a https://jsonplaceholder.typicode.com/posts
+  en el mount se llamara a la funcion que hace el fetch
+  y guardara los datos en un estado
+  un formulario que permita ingresar un titulo y un body
+    input text
+    textarea
+  un boton con el texto "guardar"
+    onClick llama a una async function
+      utilizando la api https://jsonplaceholder.typicode.com/posts
+      (la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)
+      se volvera a hacer un fetch a https://jsonplaceholder.typicode.com/posts
+  una lista que muestre los datos guardados en el estado

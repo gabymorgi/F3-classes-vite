@@ -1,3 +1,18 @@
+cree un formulario que solicite al usuario su numero favorito
+  cuando se apreta en el boton submit
+  mostrar en pantalla "tu numero favorito es: " + el numero ingresado
+    el mensaje debe aparecer en el DOM, no se permiten alerts
+    el mensaje no debe aparecer antes de que se aprete el boton submit
+    el mensaje no se debe modificar mientras el usuario escribe
+
+---------------------------------------
+
+agregar al formulario anterior una validacion que verifique que el numero ingresado sea mayor a 0
+  si no lo es, se debera mostrar en pantalla un mensaje de error
+    el mensaje de error debe aparecer en el DOM, no se permiten alerts
+
+---------------------------------------
+
 crea un formulario que solicite al usuario los datos para realizar una reserva:
   - nombre
   - DNI (debe ser un numero de 8 digitos)
@@ -10,5 +25,10 @@ cuando se hace click en submit, se debe validar
   
 mostrar los errores con console.error
 
-si esta todo ok, mostrar datos con console.log
+si esta todo ok, mostrar datos en pantalla
 resetear el formulario
+
+
+---------------------------------------
+Crea un componente que tenga una lista de tareas. El componente debe tener un campo de entrada de texto y un botón para agregar nuevas tareas a la lista. Cuando se agrega una nueva tarea, se debe agregar a un array y la lista de tareas debe actualizarse.
+

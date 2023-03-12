@@ -106,3 +106,8 @@ input, select {
   background-color: #666;
   color: #0F0;
 }
+
+.height-limited {
+  max-height: 300px;
+  overflow-y: auto;
+}

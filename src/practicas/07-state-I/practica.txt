@@ -1,7 +1,20 @@
-crea un componente que muestre un texto con un valor inicial en 0
+Crea un componente que tenga un botón que cambie el texto que se muestra en el componente de "Hola" a "Adiós" y viceversa cuando se hace clic en el botón.
+
+crea un componente Calculadora que muestre un texto con un valor inicial en 0
 crea botones con la siguiente funcionalidad:
 - al presionar el botón “+” el valor del texto aumenta en 1
 - al presionar el botón “-” el valor del texto disminuye en 1
-- al presionar el botón “*” el valor del texto se duplica
-- al presionar el botón “/” el valor del texto se divide en 2
 - al presionar el botón “reset” el valor del texto se pone en 0
+- al presionar el boton "=" se muestra un mensaje con el valor del texto
+
+modifique el componente Calculadora con lo siguiente
+  - recibira una prop amount que sera el valor por el que se incrementara o decrementara cada vez que se apreta en "+" o "-"
+  - recibira una prop onEqual que sera una funcion que se ejecutara cuando se aprete en "="
+
+cree una App con lo siguiente
+  - un estado sum de tipo number
+  - 3 componentes calculadora, la primera incrementara de a 1, la segunda de a 5, y la tercera de a 13
+  - cuando se aprete en "=" en cualquiera de las calculadoras,
+    se debe incrementar sum con el total de la calculadora
+  - mostrar el valor de sum en la App
+  
