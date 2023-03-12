@@ -1,3 +1,0 @@
-https://beta.reactjs.org/learn/updating-objects-in-state
-https://beta.reactjs.org/learn/updating-arrays-in-state
-https://beta.reactjs.org/reference/react/useState
