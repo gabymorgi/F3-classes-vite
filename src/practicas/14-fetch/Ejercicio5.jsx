@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import Form from './Ejercicio5Form'
 
 function Ejercicio5() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+
+  
 
   async function handleFetch() {
     setLoading(true)
@@ -12,7 +14,10 @@ function Ejercicio5() {
       const response = await (
         await fetch('https://jsonplaceholder.typicode.com/posts')
       ).json()
-      setPosts(response)
+      console.log(response)
+      setPosts(response.map((post) => {
+        return { id: post.id, body: post.body, title: post.title }
+      }))
       setError(null)
     } catch (error) {
       setError(error)
@@ -45,14 +50,14 @@ function Ejercicio5() {
       <Form onSubmit={handleSubmit} />
       {loading && <p>Cargando...</p>}
       {error && <p>{error.message}</p>}
-      <div className='height-limited'>
+      {posts ? <div className='height-limited'>
         {posts.map((post) => (
           <div key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
           </div>
         ))}
-      </div>
+      </div> : null}
     </div>
   )
 }

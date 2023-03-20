@@ -1,23 +1,21 @@
-import { Outlet, useRoutes } from 'react-router-dom'
-import PostDetail from './Routes/posts/PostDetail'
-import Index from './Routes/_index'
+import { Select } from "antd";
+import { useState } from "react";
+import Ejercicio1 from "./Ejercicio1/App";
+import Ejercicio2 from "./Ejercicio2/App";
 
-const App = () => {
-  // estas son rutas anidadas, por eso uso useRoutes + {router}
-  // y no createBrowserRouter + <RouterProvider>
-  // para ver ese ejemplo, mirar MainLayout (es mas complejo)
-  const router = useRoutes([
-    { path: '/', element: <Index /> },
-    { path: '/posts/:id', element: <PostDetail /> },
-    { path: '*', element: <div>Not Found</div> },
-  ])
-
+function App() {
+  const [excerciseNumber, setExcerciseNumber] = useState("1");
   return (
-    <>
-      <h1>comment src\main.tsx L6 to make this to work</h1>
-      {router}
-    </>
-  )
+    <div className="App">
+      <Select defaultValue="1" onChange={setExcerciseNumber}>
+        <Select.Option value="1">Ejercicio 1</Select.Option>
+        <Select.Option value="2">Ejercicio 2</Select.Option>
+      </Select>
+      <hr />
+      {excerciseNumber === "1" && <Ejercicio1 />}
+      {excerciseNumber === "2" && <Ejercicio2 />}
+    </div>
+  );
 }
 
-export default App
+export default App;

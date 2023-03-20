@@ -3,7 +3,7 @@ import { makeServer } from './fakeApi/server'
 import './index.css'
 import MainLayout from './mainLayout/MainLayout'
 
-// makeServer()
+makeServer()
 
 // punto de entrada de la aplicación
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
