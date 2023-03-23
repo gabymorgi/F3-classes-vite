@@ -1,34 +1,23 @@
-import { useCallback, useState } from 'react'
-import data from '../fakeApi/data.json'
-import TestComponent from './TestComponent'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import Header from './Components/Header'
+import UserInfo from './Routes/info'
+import ReposList from './Routes/repos'
+import RepoDetail from './Routes/detail'
+import WelcomePage from './Routes/_index'
 
-const App = () => {
-  const [state, setState] = useState(false)
-
-
-  function toggle() {
-    setState(!state)
-  }
-  console.log("app")
-
-  const fnMemoized = useCallback(
-    () => {
-      console.log("fnMemoized")
-    },
-    []
-  )
-
-  const fnNoMemoized = () => {
-    console.log("fnNoMemoized")
-  }
-
-
+export default function App() {
   return (
     <>
-      <TestComponent />
-      <button onClick={toggle}>Toggle {state ? "true" : "false"}</button>
+      <Header />
+      <Routes>
+        <Route path='/'>
+          <Route index element={<WelcomePage />} />
+          <Route path='info' element={<UserInfo />} />
+          <Route path='repos' element={<ReposList />} />
+          <Route path='repos/:repoName' element={<RepoDetail />} />
+          <Route path='*' element={<div>Not Found</div>} />
+        </Route>
+      </Routes>
     </>
   )
 }
-
-export default App

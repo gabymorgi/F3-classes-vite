@@ -20,6 +20,7 @@ export function makeServer() {
       this.namespace = 'api'
 
       this.get('/games', (schema) => {
+        console.log("asdf")
         const games = schema.all('game')
         // returns only name, imgUrl and id
         return games.models.map((game) => {
@@ -33,7 +34,10 @@ export function makeServer() {
       })
 
       this.get('/games/:id', (schema, request) => {
+        console.log("df")
         const id = request.params.id
+
+        console.log(id)
         
         return schema.find('game', id)
       })

@@ -1,22 +1,29 @@
 import { List, ListItem } from "../UI/List"
 import { useEffect, useState } from "react"
-import NewGameForm from "./NewGameForm"
+import FilterForm from "./FilterForm"
 import Card from "../UI/Card"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
+import gamesData from '../../../fakeApi/data.json'
 
 const GameList = (props) => {
   const [games, setGames] = useState([])
+  const [searchParams] = useSearchParams()
+
   async function fetchGames() {
-    const response = await (await fetch('/api/games')).json();
-    setGames(response);
+    const name = searchParams.get('name')
+    const filteredGames = name ? gamesData.filter((game) => {
+      return game.name.toLowerCase().includes(name.toLowerCase())
+    }) : gamesData
+
+    setGames(filteredGames);
   }
   useEffect(() => {
     fetchGames();
-  }, []);
+  }, [searchParams]);
 
   return (
     <>
-      <NewGameForm onFinish={fetchGames} />
+      <FilterForm />
       <List>
         {games.map((item) => {
           return (
