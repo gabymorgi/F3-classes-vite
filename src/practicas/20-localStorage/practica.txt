@@ -1,4 +1,32 @@
-1. Crea una app que muestre una lista de peliculas
-cuando se hace click, se agrega a favoritos si es que no esta, si no. Se elimina
+1. Crea una app que muestre una lista de peliculas, pueden usar el listado de aqui debajo
+[
+  { nombre: 'Avengers: Endgame', genero: 'Acción', edad_minima: 13 },
+  { nombre: 'The Shawshank Redemption', genero: 'Drama', edad_minima: 16 },
+  { nombre: 'The Dark Knight', genero: 'Acción', edad_minima: 14 },
+  { nombre: 'Inception', genero: 'Ciencia ficción', edad_minima: 12 },
+  { nombre: 'Pulp Fiction', genero: 'Crimen', edad_minima: 18 },
+  { nombre: 'Forrest Gump', genero: 'Comedia dramática', edad_minima: 10 },
+  { nombre: 'The Godfather', genero: 'Crimen', edad_minima: 18 },
+  { nombre: 'The Matrix', genero: 'Ciencia ficción', edad_minima: 13 },
+  { nombre: 'Joker', genero: 'Drama', edad_minima: 16 },
+  { nombre: "Schindler's List", genero: 'Drama histórico', edad_minima: 16 },
+  { nombre: 'The Silence of the Lambs', genero: 'Crimen', edad_minima: 18 },
+  { nombre: 'The Lord of the Rings: The Fellowship of the Ring', genero: 'Fantasía', edad_minima: 12 },
+  { nombre: 'Goodfellas', genero: 'Crimen', edad_minima: 18 },
+  { nombre: 'The Lion King', genero: 'Animación', edad_minima: 0 },
+  { nombre: 'Titanic', genero: 'Drama romántico', edad_minima: 12 },
+]
+La app debera tener un formulario que solicite el año de nacimiento del usuario.
+Esta fecha se guardara en localStorage.
+Luego se mostrara la lista de peliculas importada del json anterior.
+Se debera mostrar el titulo, el genero, y un boton para ver la pelicula
+al hacer click en el boton, se debera buscar en el localStorage la edad del usuario.
+  Si cumple los requisitos, se mostrara por consola un mensaje de success.
+  Si no, se mostrara un mensaje de error
 
-// pueden usar lada data de videojueguito de fakeapi si andan faltos de creatividad
+
+
+2 Crea una app con dos secciones
+Un listado de videojueguitos favoritos
+Un listado de todos los videojueguitos
+cuando se hace click, se agrega a favoritos si es que no esta, si no. Se elimina

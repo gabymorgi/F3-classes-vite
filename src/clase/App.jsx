@@ -1,23 +1,28 @@
-import { Routes, Route, Outlet } from 'react-router-dom'
-import Header from './Components/Header'
-import UserInfo from './Routes/info'
-import ReposList from './Routes/repos'
-import RepoDetail from './Routes/detail'
-import WelcomePage from './Routes/_index'
+import { useContext } from "react";
+import CardConContext from "./components/CardConContext";
+import CardSinContext from "./components/CardSinContext";
+import FormNumbers from "./components/FormNumbers";
+import ListOfNumbers from "./components/ListOfNumbers";
+import OtroComponente from "./components/OtroComponente";
+import { CountContext, CountProvider } from "./contexts/CountContext";
 
 export default function App() {
+  const contextValue = useContext(CountContext);
+
+  console.log("app", contextValue)
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path='/'>
-          <Route index element={<WelcomePage />} />
-          <Route path='info' element={<UserInfo />} />
-          <Route path='repos' element={<ReposList />} />
-          <Route path='repos/:repoName' element={<RepoDetail />} />
-          <Route path='*' element={<div>Not Found</div>} />
-        </Route>
-      </Routes>
+      Context
+      <CardSinContext />
+      <CountProvider>
+        <CardConContext />
+        <OtroComponente />
+        <hr />
+        <FormNumbers />
+        <hr />
+        <ListOfNumbers />
+
+      </CountProvider>
     </>
   )
 }

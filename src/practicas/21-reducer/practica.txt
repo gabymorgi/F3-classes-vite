@@ -1,4 +1,12 @@
-crea una app que le permita gestionar una lista de tareas
+1. Crea un contador que se pueda incrementar o decrementar
+en un paso determinado por el usuario.
+La app tendra un input para ingresar el paso, que se manejara con un estado
+ademas tendra dos botones, uno para incrementar y otro para decrementar el contador
+el contador se manejara con un reducer con dos acciones, incrementar y decrementar
+el payload de la accion sera el paso
+
+
+2. crea una app que le permita gestionar una lista de tareas
 cada tarea tiene
   un texto
   un bool que indica si esta completada o no

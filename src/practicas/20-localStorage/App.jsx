@@ -1,30 +1,14 @@
-import { useState } from 'react'
-import data from '../../fakeApi/data.json'
-import GameList from './Components/GameList'
+import Ejercicio1 from './Ejercicio1/App'
+import Ejercicio2 from './Ejercicio2/App'
 
 const App = () => {
-  const [favs, setFavs] = useState(
-    JSON.parse(localStorage.getItem('gameFavs') || '[]')
-  )
-
-  const addToFavs = (game) => {
-    let newFavs
-    if (favs.some((fav) => fav.id === game.id)) {
-      newFavs = favs.filter((fav) => fav.id !== game.id)
-    } else {
-      newFavs = [...favs, game]
-    }
-    setFavs(newFavs)
-    localStorage.setItem('gameFavs', JSON.stringify(newFavs))
-  }
-
   return (
     <>
-      <h1>Fav games</h1>
-      {favs.length > 0 ? <GameList games={favs} /> : undefined}
+      <h1>Ejercicio 1</h1>
+      <Ejercicio1 />
       <hr />
-      <h1>All games</h1>
-      <GameList games={data} onClick={addToFavs} />
+      <h1>Ejercicio 2</h1>
+      <Ejercicio2 />
     </>
   )
 }

@@ -1,14 +1,14 @@
-import TaskForm from "./Components/TaskForm";
-import TaskList from "./Components/TaskList";
-import { ListProvider } from "./Contexts/ListContext";
+import Ejercicio1 from "./Ejercicio1/App";
+import Ejercicio2 from "./Ejercicio2/App";
 
 const App = () => {
   return (
-    <ListProvider>
-      <TaskForm />
-      <hr />
-      <TaskList />
-    </ListProvider>
+    <>
+      <h1>Ejercicio 1</h1>
+      <Ejercicio1 />
+      <h1>Ejercicio 2</h1>
+      <Ejercicio2 />
+    </>
   );
 };
 
