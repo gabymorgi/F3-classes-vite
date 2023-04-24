@@ -17,9 +17,11 @@ export function makeServer() {
     },
 
     routes() {
-      this.namespace = 'api'
+      
+      // this.passthrough('https://jsonplaceholder.typicode.com/**');
+      // this.urlPrefix = 'api'
 
-      this.get('/games', (schema) => {
+      this.get('/api/games', (schema) => {
         console.log("asdf")
         const games = schema.all('game')
         // returns only name, imgUrl and id
@@ -33,7 +35,7 @@ export function makeServer() {
         })
       })
 
-      this.get('/games/:id', (schema, request) => {
+      this.get('/api/games/:id', (schema, request) => {
         console.log("df")
         const id = request.params.id
 
@@ -42,17 +44,19 @@ export function makeServer() {
         return schema.find('game', id)
       })
 
-      this.post('/games/add', (schema, request) => {
+      this.post('/api/games/add', (schema, request) => {
         const attrs = JSON.parse(request.requestBody)
         console.log(attrs)
         return schema.create('game', attrs)
       })
 
-      this.delete("/games/:id", (schema, request) => {
+      this.delete("/api/games/:id", (schema, request) => {
         const id = request.params.id
       
         return schema.db.games.find(id).destroy()
       })
+      // this.passthrough();
+      this.passthrough('**');
     },
   })
 }

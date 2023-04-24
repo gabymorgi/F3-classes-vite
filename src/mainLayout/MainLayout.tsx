@@ -1,93 +1,126 @@
+import { Suspense, lazy } from 'react'
 import {
   Link,
   Outlet,
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import { ConfigProvider, Layout, Menu, theme } from 'antd'
+import { ConfigProvider, Layout, Menu, Spin, theme } from 'antd'
+import styled from 'styled-components'
+import Readme from './Readme.js'
 
-// the following warnings are expected
-// because we are mixing JS and TS
-import JsJSX from '../js/02-jsxMotivation/App.jsx'
-import JsComponents from '../js/04-components/App.jsx'
-import JsEstilos from '../js/05-estilos/App.jsx'
-import JsKeys from '../js/06-keys/App.jsx'
-import JsStateI from '../js/07-state-I/App.jsx'
-import JsStateII from '../js/08-state-II/App.jsx'
-import JsForms from '../js/09-forms/App.jsx'
-import JsRepaso from '../js/10-repaso/App.jsx'
-import JsUseEffect from '../js/13-useEffect/App.jsx'
-import JsFetch from '../js/14-fetch/App.jsx'
-import JsMemo from '../js/15-memo/App.jsx'
-import JsRouterI from '../js/16-router-I/AppWithHooks.jsx'
-import JsRouterII from '../js/17-router-II/App.jsx'
-import JsTesting from '../js/18-testing/App.jsx'
-import JsContext from '../js/19-context/App.jsx'
-import JsLocalStorage from '../js/20-localStorage/App.jsx'
-import JsReducer from '../js/21-reducer/App.jsx'
-import JsCustomHooks from '../js/22-customHooks/App.jsx'
-import JsUseRef from '../js/25-useRef/App.jsx'
+const JsJSX = lazy(() => import('../js/02-jsxMotivation/App.jsx'))
+const JsComponents = lazy(() => import('../js/04-components/App.jsx'))
+const JsEstilos = lazy(() => import('../js/05-estilos/App.jsx'))
+const JsKeys = lazy(() => import('../js/06-keys/App.jsx'))
+const JsStateI = lazy(() => import('../js/07-state-I/App.jsx'))
+const JsStateII = lazy(() => import('../js/08-state-II/App.jsx'))
+const JsForms = lazy(() => import('../js/09-forms/App.jsx'))
+const JsRepaso = lazy(() => import('../js/10-repaso/App.jsx'))
+const JsUseEffect = lazy(() => import('../js/13-useEffect/App.jsx'))
+const JsFetch = lazy(() => import('../js/14-fetch/App.jsx'))
+const JsMemo = lazy(() => import('../js/15-memo/App.jsx'))
+const JsRouterI = lazy(
+  () => import('../js/16-router-I/AppWithHooks.jsx')
+)
+const JsRouterII = lazy(() => import('../js/17-router-II/App.jsx'))
+const JsTesting = lazy(() => import('../js/18-testing/App.jsx'))
+const JsContext = lazy(() => import('../js/19-context/App.jsx'))
+const JsLocalStorage = lazy(
+  () => import('../js/20-localStorage/App.jsx')
+)
+const JsReducer = lazy(() => import('../js/21-reducer/App.jsx'))
+const JsCustomHooks = lazy(
+  () => import('../js/22-customHooks/App.jsx')
+)
+const JsUseRef = lazy(() => import('../js/25-useRef/App.jsx'))
 
-import Parcial from '../practicas/Parcial/App.jsx'
-import PractJSX from '../practicas/02-jsxMotivation/App.jsx'
-import PractEntorno from '../practicas/03-entorno/App.jsx'
-import PractComponents from '../practicas/04-components/App.jsx'
-import PractEstilos from '../practicas/05-estilos/App.jsx'
-import PractKeys from '../practicas/06-keys/App.jsx'
-import PractStateI from '../practicas/07-state-I/App.jsx'
-import PractStateII from '../practicas/08-state-II/App.jsx'
-import PractForms from '../practicas/09-forms/App.jsx'
-import PractUseEffect from '../practicas/13-useEffect/App.jsx'
-import PractFetch from '../practicas/14-fetch/App.jsx'
-import PractMemo from '../practicas/15-memo/App.jsx'
-import PractRouterI from '../practicas/16-router-I/App.jsx'
-import PractRouterII from '../practicas/17-router-II/App.jsx'
-import PractTesting from '../practicas/18-testing/App.jsx'
-import PractContext from '../practicas/19-context/App.jsx'
-import PractLocalStorage from '../practicas/20-localStorage/App.jsx'
-import PractReducer from '../practicas/21-reducer/App.jsx'
-import PractCustomHooks from '../practicas/22-customHooks/App.jsx'
-import PractUseRef from '../practicas/25-useRef/App.jsx'
+const PractJSX = lazy(
+  () => import('../practicas/02-jsxMotivation/App.jsx')
+)
+const PractEntorno = lazy(
+  () => import('../practicas/03-entorno/App.jsx')
+)
+const PractComponents = lazy(
+  () => import('../practicas/04-components/App.jsx')
+)
+const PractEstilos = lazy(
+  () => import('../practicas/05-estilos/App.jsx')
+)
+const PractKeys = lazy(() => import('../practicas/06-keys/App.jsx'))
+const PractStateI = lazy(
+  () => import('../practicas/07-state-I/App.jsx')
+)
+const PractStateII = lazy(
+  () => import('../practicas/08-state-II/App.jsx')
+)
+const PractForms = lazy(() => import('../practicas/09-forms/App.jsx'))
+const PractUseEffect = lazy(
+  () => import('../practicas/13-useEffect/App.jsx')
+)
+const PractFetch = lazy(() => import('../practicas/14-fetch/App.jsx'))
+const PractMemo = lazy(() => import('../practicas/15-memo/App.jsx'))
+const PractRouterI = lazy(
+  () => import('../practicas/16-router-I/App.jsx')
+)
+const PractRouterII = lazy(
+  () => import('../practicas/17-router-II/App.jsx')
+)
+const PractTesting = lazy(
+  () => import('../practicas/18-testing/App.jsx')
+)
+const PractContext = lazy(
+  () => import('../practicas/19-context/App.jsx')
+)
+const PractLocalStorage = lazy(
+  () => import('../practicas/20-localStorage/App.jsx')
+)
+const PractReducer = lazy(
+  () => import('../practicas/21-reducer/App.jsx')
+)
+const PractCustomHooks = lazy(
+  () => import('../practicas/22-customHooks/App.jsx')
+)
+const PractUseRef = lazy(
+  () => import('../practicas/25-useRef/App.jsx')
+)
 
-import TsJSX from '../ts/02-jsxMotivation/App'
-import TsComponents from '../ts/04-components/App'
-import TsEstilos from '../ts/05-estilos/App'
-import TsKeys from '../ts/06-keys/App'
-import TsStateI from '../ts/07-state-I/App'
-import TsStateII from '../ts/08-state-II/App'
-import TsForms from '../ts/09-forms/App'
-import TsRepaso from '../ts/10-repaso/App'
-import TsUseEffect from '../ts/13-useEffect/App'
-import TsFetch from '../ts/14-fetch/App'
-import TsMemo from '../ts/15-memo/App'
-import TsRouterI from '../ts/16-router-I/App'
-import TsRouterII from '../ts/17-router-II/App'
-import TsTesting from '../ts/18-testing/App'
-import TsContext from '../ts/19-context/App'
-import TsLocalStorage from '../ts/20-localStorage/App'
-import TsReducer from '../ts/21-reducer/App'
-import TsCustomHooks from '../ts/22-customHooks/App'
-import TsUseRef from '../ts/25-useRef/App'
+const TsJSX = lazy(() => import('../ts/02-jsxMotivation/App'))
+const TsComponents = lazy(() => import('../ts/04-components/App'))
+const TsEstilos = lazy(() => import('../ts/05-estilos/App'))
+const TsKeys = lazy(() => import('../ts/06-keys/App'))
+const TsStateI = lazy(() => import('../ts/07-state-I/App'))
+const TsStateII = lazy(() => import('../ts/08-state-II/App'))
+const TsForms = lazy(() => import('../ts/09-forms/App'))
+const TsRepaso = lazy(() => import('../ts/10-repaso/App'))
+const TsUseEffect = lazy(() => import('../ts/13-useEffect/App'))
+const TsFetch = lazy(() => import('../ts/14-fetch/App'))
+const TsMemo = lazy(() => import('../ts/15-memo/App'))
+const TsRouterI = lazy(() => import('../ts/16-router-I/App'))
+const TsRouterII = lazy(() => import('../ts/17-router-II/App'))
+const TsTesting = lazy(() => import('../ts/18-testing/App'))
+const TsContext = lazy(() => import('../ts/19-context/App'))
+const TsLocalStorage = lazy(() => import('../ts/20-localStorage/App'))
+const TsReducer = lazy(() => import('../ts/21-reducer/App'))
+const TsCustomHooks = lazy(() => import('../ts/22-customHooks/App'))
+const TsUseRef = lazy(() => import('../ts/25-useRef/App'))
 
-import AppClase from '../clase/App.jsx'
+const AppClase = lazy(() => import('../clase/App.jsx'))
 
 const { darkAlgorithm } = theme
 
-const routesData = [
+type IRoute = {
+  path: string
+  name: string
+  sub?: IRoute[]
+  component?: JSX.Element
+}
+
+const routesData: IRoute[] = [
   {
     path: 'clase',
     name: 'Clase',
-    sub: [
-      {
-        path: 'clase',
-        name: 'Clase',
-        component: <AppClase />,
-      },{
-        path: 'parcial',
-        name: 'Parcial',
-        component: <Parcial />,
-      }
-    ]
+    component: <AppClase />,
   },
   {
     path: 'js',
@@ -394,7 +427,28 @@ const routesData = [
   },
 ]
 
+const FullScreenSpinner = styled(Spin)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 const MainLayout = () => {
+  console.log(
+    routesData.map((r) => ({
+      key: r.path,
+      label: r.sub ? r.name : <Link to={r.path}>{r.name}</Link>,
+      children:
+        !r.component &&
+        r.sub?.map((s) => ({
+          key: `${r.path}-${s.path}`,
+          label: <Link to={`${r.path}/${s.path}`}>{s.name}</Link>,
+        })),
+    }))
+  )
   return (
     <Layout className='min-h-full'>
       <Layout.Sider className='max-h-full overflow-y' trigger={null}>
@@ -413,16 +467,26 @@ const MainLayout = () => {
           items={routesData.map((r) => ({
             key: r.path,
             label: r.sub ? r.name : <Link to={r.path}>{r.name}</Link>,
-            children: r.sub?.map((s) => ({
-              key: `${r.path}-${s.path}`,
-              label: <Link to={`${r.path}/${s.path}`}>{s.name}</Link>,
-            })),
+            children:
+              !r.component &&
+              r.sub?.map((s) => ({
+                key: `${r.path}-${s.path}`,
+                label: (
+                  <Link to={`${r.path}/${s.path}`}>{s.name}</Link>
+                ),
+              })),
           }))}
         />
       </Layout.Sider>
       <Layout>
         <Layout.Content className='p-16'>
-          <Outlet />
+          <Suspense
+            fallback={
+              <FullScreenSpinner spinning tip='Cargando...' />
+            }
+          >
+            <Outlet />
+          </Suspense>
         </Layout.Content>
       </Layout>
     </Layout>
@@ -436,14 +500,17 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div>&lt;- Selecciona una clase</div>,
+        element: <Readme />,
       },
       ...routesData.map((r) => ({
         path: `${r.path}/*`,
-        children: r.sub?.map((s) => ({
-          path: `${s.path}/*`,
-          element: s.component,
-        })),
+        element: r.component,
+        children: !r.component
+          ? r.sub?.map((s) => ({
+              path: `${s.path}/*`,
+              element: s.component,
+            }))
+          : undefined,
       })),
       {
         path: '*',
@@ -461,6 +528,9 @@ const MainRoutes = () => {
         token: {
           colorPrimary: '#19FE1F',
           fontSize: 30,
+          colorLink: '#80D6FF',
+          colorLinkHover: '#4DC4FF',
+          colorLinkActive: '#1AB2FF',
         },
         components: {
           Menu: {

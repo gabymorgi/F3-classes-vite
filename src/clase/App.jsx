@@ -1,47 +1,28 @@
-import { useReducer } from "react"
-import { useState } from "react"
-import Favs from "./Favs"
-
-const users = [
-  { id: 1, name: "Juan" },
-  { id: 2, name: "Pedro" },
-  { id: 3, name: "Maria" },
-  { id: 4, name: "Jose" },
-  { id: 5, name: "Luis" },
-]
+import { useEffect, useState } from "react"
+import { useTest } from "./hooks/customHook"
+import Detail from "./Detail"
+import { useFetch, useLazyFetch } from "./hooks/useFetch"
 
 export default function App() {
-  function addToLocal(user) {
-    console.log("click", user)
-    const usersJSON = localStorage.getItem("users") || "[]"
-    const usersArray = JSON.parse(usersJSON)
-    const existUser = usersArray.some((u) => u.id === user.id)
-    // const matchingUsers = usersArray.filter((u) => u.id !== user.id)
-    console.log(usersJSON, existUser, usersArray)
-    if (existUser) {
-      console.log("no agregar")
-    } else {
-      usersArray.push(user)
-      const newUsersJSON = JSON.stringify(usersArray)
-      localStorage.setItem("users", newUsersJSON)
-      console.log("agregar")
-    }
-  }
+  // const { data, loading } = useFetch('https://jsonplaceholder.typicode.com/posts')
+  const { data, loading, error, fetch } = useLazyFetch('https://jsonplaceholder.typicode.com/posts')
+
+  console.log("app", data, loading)
 
   return (
-    <div className="flex-col">
-      {users.map((user) => {
-        return (
-        <div
-          className="card"
-          key={user.id}
-          onClick={() => addToLocal(user)}
-        >
-          <h2>{user.name}</h2>
-        </div>
-      )})}
-      <hr />
-      <Favs />
+    <div>
+      {loading && <p>Cargando...</p>}
+      {error && <p>{error.message}</p>}
+      {data ? <div className='height-limited'>
+        {data.map((post) => (
+          <div key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </div>
+        ))}
+      </div> : null}
+      <button onClick={fetch}>Search</button>
+      <Detail />
     </div>
   )
 }

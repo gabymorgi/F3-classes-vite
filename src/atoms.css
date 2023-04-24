@@ -1,0 +1,42 @@
+.max-h-full {
+  max-height: 100vh;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.min-h-full {
+  min-height: 100vh;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}

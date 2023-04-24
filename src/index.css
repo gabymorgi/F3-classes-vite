@@ -17,6 +17,41 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Estilo personalizado del scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track (barra de desplazamiento) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle (control deslizante) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* Handle en hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Ocultar scrollbar por defecto */
+.scroll-container {
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+  overflow: -moz-scrollbars-none; /* Para Firefox */
+}
+
+/* Mostrar scrollbar solo cuando se hace hover en el contenedor */
+.scroll-container:hover {
+  scrollbar-width: auto; /* Para Firefox */
+  -ms-overflow-style: scrollbar; /* Para Internet Explorer y Edge */
+  overflow: auto; /* Para Firefox */
+}
+
 button {
   background-color: #333;
   color: white;
@@ -35,14 +70,6 @@ button[disabled] {
   color: #666;
 }
 
-.max-h-full {
-  max-height: 100vh;
-}
-
-.overflow-y {
-  overflow-y: auto;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -57,44 +84,9 @@ header img {
   width: 75px;
 }
 
-.min-h-full {
-  min-height: 100vh;
-}
-
-.p-10 {
-  padding: 10px;
-}
-
 input, select {
   background-color: #333;
   color: #fff;
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.card {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #333;
 }
 
 .light {
