@@ -4,26 +4,36 @@ import List from './Components/List'
 const Components = () => {
   return (
     <>
+      <ul>
+        <li>Elantris</li>
+        <li>El camino de los reyes</li>
+        <li>El imperio final</li>
+        <li>El pozo de la ascensión</li>
+        <li>El héroe de las eras</li>
+        <li>El aliento de los dioses</li>
+        <li>Palabras radiantes</li>
+        <li>Juramentada</li>
+      </ul>
       <List>
-        <Item>item 1</Item>
-        <Item>item 2</Item>
-        <Item>item 3</Item>
-        <Item>item 4</Item>
-        <Item>item 5</Item>
-        <Item>item 6</Item>
-        <Item>item 7</Item>
-        <Item>item 8</Item>
+        <Item>Elantris</Item>
+        <Item>El camino de los reyes</Item>
+        <Item>El imperio final</Item>
+        <Item>El pozo de la ascensión</Item>
+        <Item>El héroe de las eras</Item>
+        <Item>El aliento de los dioses</Item>
+        <Item>Palabras radiantes</Item>
+        <Item>Juramentada</Item>
       </List>
       <div className='compact-theme'>
         <List>
-          <Item>item 1</Item>
-          <Item>item 2</Item>
-          <Item>item 3</Item>
-          <Item>item 4</Item>
-          <Item>item 5</Item>
-          <Item>item 6</Item>
-          <Item>item 7</Item>
-          <Item>item 8</Item>
+          <Item>Elantris</Item>
+          <Item>El camino de los reyes</Item>
+          <Item>El imperio final</Item>
+          <Item>El pozo de la ascensión</Item>
+          <Item>El héroe de las eras</Item>
+          <Item>El aliento de los dioses</Item>
+          <Item>Palabras radiantes</Item>
+          <Item>Juramentada</Item>
         </List>
       </div>
     </>

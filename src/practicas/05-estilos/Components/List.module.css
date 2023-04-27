@@ -1,12 +1,11 @@
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   list-style: none;
   box-sizing: border-box;
-
 }
 
 :global(.compact-theme) .list {
-  grid-gap: 4px;
+  gap: 8px;
 }

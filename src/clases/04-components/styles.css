@@ -1,0 +1,9 @@
+.class-4-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #111;
+}

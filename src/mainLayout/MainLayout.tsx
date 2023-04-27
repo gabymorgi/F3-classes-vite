@@ -9,31 +9,31 @@ import { ConfigProvider, Layout, Menu, Spin, theme } from 'antd'
 import styled from 'styled-components'
 import Readme from './Readme.js'
 
-const JsJSX = lazy(() => import('../js/02-jsxMotivation/App.jsx'))
-const JsComponents = lazy(() => import('../js/04-components/App.jsx'))
-const JsEstilos = lazy(() => import('../js/05-estilos/App.jsx'))
-const JsKeys = lazy(() => import('../js/06-keys/App.jsx'))
-const JsStateI = lazy(() => import('../js/07-state-I/App.jsx'))
-const JsStateII = lazy(() => import('../js/08-state-II/App.jsx'))
-const JsForms = lazy(() => import('../js/09-forms/App.jsx'))
-const JsRepaso = lazy(() => import('../js/10-repaso/App.jsx'))
-const JsUseEffect = lazy(() => import('../js/13-useEffect/App.jsx'))
-const JsFetch = lazy(() => import('../js/14-fetch/App.jsx'))
-const JsMemo = lazy(() => import('../js/15-memo/App.jsx'))
+const JsJSX = lazy(() => import('../clases/02-jsxMotivation/App.jsx'))
+const JsComponents = lazy(() => import('../clases/04-components/App.jsx'))
+const JsEstilos = lazy(() => import('../clases/05-estilos/App.jsx'))
+const JsKeys = lazy(() => import('../clases/06-keys/App.jsx'))
+const JsStateI = lazy(() => import('../clases/07-state-I/App.jsx'))
+const JsStateII = lazy(() => import('../clases/08-state-II/App.jsx'))
+const JsForms = lazy(() => import('../clases/09-forms/App.jsx'))
+const JsRepaso = lazy(() => import('../clases/10-repaso/App.jsx'))
+const JsUseEffect = lazy(() => import('../clases/13-useEffect/App.jsx'))
+const JsFetch = lazy(() => import('../clases/14-fetch/App.jsx'))
+const JsMemo = lazy(() => import('../clases/15-memo/App.jsx'))
 const JsRouterI = lazy(
-  () => import('../js/16-router-I/AppWithHooks.jsx')
+  () => import('../clases/16-router-I/AppWithHooks.jsx')
 )
-const JsRouterII = lazy(() => import('../js/17-router-II/App.jsx'))
-const JsTesting = lazy(() => import('../js/18-testing/App.jsx'))
-const JsContext = lazy(() => import('../js/19-context/App.jsx'))
+const JsRouterII = lazy(() => import('../clases/17-router-II/App.jsx'))
+const JsTesting = lazy(() => import('../clases/18-testing/App.jsx'))
+const JsContext = lazy(() => import('../clases/19-context/App.jsx'))
 const JsLocalStorage = lazy(
-  () => import('../js/20-localStorage/App.jsx')
+  () => import('../clases/20-localStorage/App.jsx')
 )
-const JsReducer = lazy(() => import('../js/21-reducer/App.jsx'))
+const JsReducer = lazy(() => import('../clases/21-reducer/App.jsx'))
 const JsCustomHooks = lazy(
-  () => import('../js/22-customHooks/App.jsx')
+  () => import('../clases/22-customHooks/App.jsx')
 )
-const JsUseRef = lazy(() => import('../js/25-useRef/App.jsx'))
+const JsUseRef = lazy(() => import('../clases/25-useRef/App.jsx'))
 
 const PractJSX = lazy(
   () => import('../practicas/02-jsxMotivation/App.jsx')
@@ -85,27 +85,7 @@ const PractUseRef = lazy(
   () => import('../practicas/25-useRef/App.jsx')
 )
 
-const TsJSX = lazy(() => import('../ts/02-jsxMotivation/App'))
-const TsComponents = lazy(() => import('../ts/04-components/App'))
-const TsEstilos = lazy(() => import('../ts/05-estilos/App'))
-const TsKeys = lazy(() => import('../ts/06-keys/App'))
-const TsStateI = lazy(() => import('../ts/07-state-I/App'))
-const TsStateII = lazy(() => import('../ts/08-state-II/App'))
-const TsForms = lazy(() => import('../ts/09-forms/App'))
-const TsRepaso = lazy(() => import('../ts/10-repaso/App'))
-const TsUseEffect = lazy(() => import('../ts/13-useEffect/App'))
-const TsFetch = lazy(() => import('../ts/14-fetch/App'))
-const TsMemo = lazy(() => import('../ts/15-memo/App'))
-const TsRouterI = lazy(() => import('../ts/16-router-I/App'))
-const TsRouterII = lazy(() => import('../ts/17-router-II/App'))
-const TsTesting = lazy(() => import('../ts/18-testing/App'))
-const TsContext = lazy(() => import('../ts/19-context/App'))
-const TsLocalStorage = lazy(() => import('../ts/20-localStorage/App'))
-const TsReducer = lazy(() => import('../ts/21-reducer/App'))
-const TsCustomHooks = lazy(() => import('../ts/22-customHooks/App'))
-const TsUseRef = lazy(() => import('../ts/25-useRef/App'))
-
-const AppClase = lazy(() => import('../clase/App.jsx'))
+const AppClase = lazy(() => import('../sandbox/App.jsx'))
 
 const { darkAlgorithm } = theme
 
@@ -118,13 +98,13 @@ type IRoute = {
 
 const routesData: IRoute[] = [
   {
-    path: 'clase',
-    name: 'Clase',
+    path: 'sandbox',
+    name: 'SandBox',
     component: <AppClase />,
   },
   {
-    path: 'js',
-    name: 'JS',
+    path: 'clases',
+    name: 'Clases',
     sub: [
       {
         path: '02',
@@ -324,107 +304,6 @@ const routesData: IRoute[] = [
       },
     ],
   },
-  {
-    path: 'ts',
-    name: 'TS',
-    sub: [
-      {
-        path: '02',
-        name: 'JSX',
-        component: <TsJSX />,
-      },
-      {
-        path: '04',
-        name: 'Components',
-        component: <TsComponents />,
-      },
-      {
-        path: '05',
-        name: 'Estilos',
-        component: <TsEstilos />,
-      },
-      {
-        path: '06',
-        name: 'Keys',
-        component: <TsKeys />,
-      },
-      {
-        path: '07',
-        name: 'State I',
-        component: <TsStateI />,
-      },
-      {
-        path: '08',
-        name: 'State II',
-        component: <TsStateII />,
-      },
-      {
-        path: '09',
-        name: 'Forms',
-        component: <TsForms />,
-      },
-      {
-        path: '10',
-        name: 'Repaso',
-        component: <TsRepaso />,
-      },
-      {
-        path: '13',
-        name: 'useEffect',
-        component: <TsUseEffect />,
-      },
-      {
-        path: '14',
-        name: 'fetch',
-        component: <TsFetch />,
-      },
-      {
-        path: '15',
-        name: 'memo',
-        component: <TsMemo />,
-      },
-      {
-        path: '16',
-        name: 'router I',
-        component: <TsRouterI />,
-      },
-      {
-        path: '17',
-        name: 'router II',
-        component: <TsRouterII />,
-      },
-      {
-        path: '18',
-        name: 'testing',
-        component: <TsTesting game='Cave Story' />,
-      },
-      {
-        path: '19',
-        name: 'context',
-        component: <TsContext />,
-      },
-      {
-        path: '20',
-        name: 'localStorage',
-        component: <TsLocalStorage />,
-      },
-      {
-        path: '21',
-        name: 'reducer',
-        component: <TsReducer />,
-      },
-      {
-        path: '22',
-        name: 'customHooks',
-        component: <TsCustomHooks />,
-      },
-      {
-        path: '25',
-        name: 'useRef',
-        component: <TsUseRef />,
-      },
-    ],
-  },
 ]
 
 const FullScreenSpinner = styled(Spin)`
@@ -452,7 +331,7 @@ const MainLayout = () => {
   return (
     <Layout className='min-h-full'>
       <Layout.Sider className='max-h-full overflow-y' trigger={null}>
-        <div className='flex p-10 items-center'>
+        <Link to="/" className='flex p-16 items-center'>
           <img
             src='/sburb.svg'
             width='50px'
@@ -460,7 +339,7 @@ const MainLayout = () => {
             alt='Sburb'
           />
           FE3
-        </div>
+        </Link>
         <Menu
           theme='dark'
           mode='inline'

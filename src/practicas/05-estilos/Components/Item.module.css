@@ -2,10 +2,11 @@
   list-style: none;
   padding: 16px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   box-sizing: border-box;
 }
 
 :global(.compact-theme) .item {
-  padding: 4px;
+  padding: 8px;
 }
 

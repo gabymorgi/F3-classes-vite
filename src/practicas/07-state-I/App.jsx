@@ -1,38 +1,21 @@
 import { useState } from 'react'
+import Calculadora from './Calculadora';
 
 const App = () => {
-  const [cant, setCant] = useState(0)
+  const [sum, setSum] = useState(0);
 
-  function handleSum() {
-    setCant(cant + 1)
-  }
-
-  function handleSub() {
-    setCant(cant - 1)
-  }
-
-  function handleMul() {
-    setCant(cant * 2)
-  }
-
-  function handleDiv() {
-    setCant(cant / 2)
-  }
-
-  function handleReset() {
-    setCant(0)
-  }
+  const sumarCalculadora = (valor) => {
+    setSum(sum + valor);
+  };
 
   return (
-    <>
-      <h1>Value {cant}</h1>
-      <button onClick={handleSum}>+</button>
-      <button onClick={handleSub}>-</button>
-      <button onClick={handleMul}>*</button>
-      <button onClick={handleDiv}>/</button>
-      <button onClick={handleReset}>reset</button>
-    </>
-  )
-}
+    <div>
+      <Calculadora amount={1} onEqual={sumarCalculadora} />
+      <Calculadora amount={5} onEqual={sumarCalculadora} />
+      <Calculadora amount={13} onEqual={sumarCalculadora} />
+      <h2>Suma total: {sum}</h2>
+    </div>
+  );
+};
 
 export default App

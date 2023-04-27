@@ -1,3 +1,13 @@
+# Practica clase 6!
+
+### Practica de key y map
+
+muestra las siguiente lista de elementos utilizando el metodo map
+intenta utilizar en cada caso, la key que consideras mas apropiada en cada caso
+
+1. Muestra la lista de productos con su nombre, precio y descripcion
+
+```js
 const productos = [
   {
     id: 1,
@@ -66,25 +76,33 @@ const productos = [
     descripcion: "Chaqueta de cuero elegante y duradera para cualquier look."
   },
 ];
+```
 
+2. Muestra la lista de links que muestren el nombre del usuario y redirijan a `https://twitter.com/${account}`
+
+```js
 const cuentas = [
-  { account: "@elonmusk", userName: "Elon Musk" },
-  { account: "@BarackObama", userName: "Barack Obama" },
-  { account: "@BillGates", userName: "Bill Gates" },
-  { account: "@Oprah", userName: "Oprah Winfrey" },
-  { account: "@TheEllenShow", userName: "Ellen DeGeneres" },
-  { account: "@KimKardashian", userName: "Kim Kardashian" },
-  { account: "@donaldTrump", userName: "Donald Trump" },
-  { account: "@realDonaldTrump", userName: "Donald Trump" },
-  { account: "@NYTimes", userName: "The New York Times" },
-  { account: "@CNN", userName: "CNN" },
-  { account: "@BBCWorld", userName: "BBC News (World)" },
-  { account: "@NASA", userName: "NASA" },
-  { account: "@NatGeo", userName: "National Geographic" },
-  { account: "@UberFacts", userName: "UberFacts" },
-  { account: "@realDonaldTrumpNoFake", userName: "Donald Trump" },
+  { account: "elonmusk", userName: "Elon Musk" },
+  { account: "BarackObama", userName: "Barack Obama" },
+  { account: "BillGates", userName: "Bill Gates" },
+  { account: "Oprah", userName: "Oprah Winfrey" },
+  { account: "TheEllenShow", userName: "Ellen DeGeneres" },
+  { account: "KimKardashian", userName: "Kim Kardashian" },
+  { account: "donaldTrump", userName: "Donald Trump" },
+  { account: "realDonaldTrump", userName: "Donald Trump" },
+  { account: "NYTimes", userName: "The New York Times" },
+  { account: "CNN", userName: "CNN" },
+  { account: "BBCWorld", userName: "BBC News (World)" },
+  { account: "NASA", userName: "NASA" },
+  { account: "NatGeo", userName: "National Geographic" },
+  { account: "UberFacts", userName: "UberFacts" },
+  { account: "realDonaldTrumpNoFake", userName: "Donald Trump" },
 ];
+```
 
+3. Muestra la lista de usuarios con su apodo, y la lista de sus mascotas con el formato `${nombre} (${edad}): ${color}`
+
+```js
 const usuarios = [
   {
     apodo: "Nepeta",
@@ -155,51 +173,4 @@ const usuarios = [
     ]
   },
 ]
-
-const App = () => {
-  return (
-    <div>
-      <div className="flex height-limited">
-        {productos.map(producto => (
-          <div className="card" key={producto.id}>
-            <h2>{producto.nombre}</h2>
-            <p>ID: {producto.id}</p>
-            <p>Precio: {producto.precio}</p>
-            <p>Descripción: {producto.descripcion}</p>
-          </div>
-        ))}
-      </div>
-      <hr />
-      <div className="flex height-limited">
-        {cuentas.map(cuenta => (
-          <div className="card" key={cuenta.account}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={`https://twitter.com/${cuenta.account}`}
-            >
-              {cuenta.account}
-            </a>
-          </div>
-        ))}
-      </div>
-      <hr />
-      <div className="flex height-limited">
-        {usuarios.map(usuario => (
-          <div className="card" key={usuario.email}>
-            <h2>{usuario.apodo}</h2>
-            <ul>
-              {usuario.mascotas.map(mascota => (
-                <li key={mascota.nombre}>
-                  {mascota.nombre} ({mascota.edad}): {mascota.color}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-export default App
+```
