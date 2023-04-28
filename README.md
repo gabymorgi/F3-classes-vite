@@ -15,13 +15,9 @@ Dentro de la carpeta **src** te vas a encontrar con las siguientes carpetas
 
 - **mainLayout**: Aquí esta la logica necesaria para mostrar el menu con todas las clases del proyecto. Te recomiendo que la ignores al menos hasta tener conocimientos de Router.
 - **fakeApi**: Aquí encontraras los datos en archivos json con los que trabajaremos durante la clase. Asi como otros archivos que facilitan el armado de las clases, pero que no son necesarios para las practicas.
-- **js**: Aquí encontraras todas las guías de clase separadas cada una en diferentes carpetas. Te aconsejo que las tengas a mano durante las teorías, y que las revises si te trabas durante las practicas.
+- **clase**: Aquí encontraras todas las guías de clase separadas cada una en diferentes carpetas. Te aconsejo que las tengas a mano durante las teorías, y que las revises si te trabas durante las practicas.
 - **practicas**: Aquí encontraras en cada carpeta un txt con el enunciado de la clase, y tambien la resolución de la misma. Te recomiendo que intentes resolver los ejercicios por tu cuenta antes de echarle un vistazo a la solución; y recuerda que no existe una solución única a los problemas.
-- **clase**: No encontraras nada interesante aquí. Esta carpeta es para uso del profesor durante el dictado de las clases.
-- **ts**: Al igual que en la carpeta **js**, encontraras todas las practicas, utilizando typescript. No es requisito para las clases, pero siéntete libre de explorar esta herramienta en cuanto tengas el tiempo, ya que te ahorrara dolores de cabeza a futuro.
-
-### Importante:
-Adicionalmente encontraras dentro del archivo **src/main.tsx** *Linea 6*, una linea de código que montara un servidor de testing. La misma **bloqueara cualquier request no gestionada dentro del servidor**. Esto es para proporcionar un entorno seguro de fetching durante el dictado de las clases. Sin embargo, **para ejecutar las practicas tendrás que comentarla**.
+- **sandbox**: No encontraras nada interesante aquí. Esta carpeta es para uso del profesor durante el dictado de las clases.
 
 # Documentacion relacionada
 ## Clase 1: manejo de datos
