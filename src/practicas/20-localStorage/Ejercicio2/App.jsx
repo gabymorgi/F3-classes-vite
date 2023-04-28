@@ -1,30 +1,30 @@
 import { useState } from 'react'
-import data from '../../../fakeApi/data.json'
-import GameList from './Components/GameList'
+import data from '../../../fakeApi/books.json'
+import BookList from './Components/BookList'
 
 const App = () => {
   const [favs, setFavs] = useState(
-    JSON.parse(localStorage.getItem('gameFavs') || '[]')
+    JSON.parse(localStorage.getItem('bookFavs') || '[]')
   )
 
-  const addToFavs = (game) => {
+  const addToFavs = (book) => {
     let newFavs
-    if (favs.some((fav) => fav.id === game.id)) {
-      newFavs = favs.filter((fav) => fav.id !== game.id)
+    if (favs.some((fav) => fav.id === book.id)) {
+      newFavs = favs.filter((fav) => fav.id !== book.id)
     } else {
-      newFavs = [...favs, game]
+      newFavs = [...favs, book]
     }
     setFavs(newFavs)
-    localStorage.setItem('gameFavs', JSON.stringify(newFavs))
+    localStorage.setItem('bookFavs', JSON.stringify(newFavs))
   }
 
   return (
     <>
-      <h1>Fav games</h1>
-      {favs.length > 0 ? <GameList games={favs} /> : undefined}
+      <h1>Fav books</h1>
+      {favs.length > 0 ? <BookList books={favs} /> : undefined}
       <hr />
-      <h1>All games</h1>
-      <GameList games={data} onClick={addToFavs} />
+      <h1>All books</h1>
+      <BookList books={data} onClick={addToFavs} />
     </>
   )
 }

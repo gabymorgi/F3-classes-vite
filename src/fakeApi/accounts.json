@@ -1,0 +1,17 @@
+[
+  { "account": "elonmusk", "userName": "Elon Musk" },
+  { "account": "BarackObama", "userName": "Barack Obama" },
+  { "account": "BillGates", "userName": "Bill Gates" },
+  { "account": "Oprah", "userName": "Oprah Winfrey" },
+  { "account": "TheEllenShow", "userName": "Ellen DeGeneres" },
+  { "account": "KimKardashian", "userName": "Kim Kardashian" },
+  { "account": "donaldTrump", "userName": "Donald Trump" },
+  { "account": "realDonaldTrump", "userName": "Donald Trump" },
+  { "account": "NYTimes", "userName": "The New York Times" },
+  { "account": "CNN", "userName": "CNN" },
+  { "account": "BBCWorld", "userName": "BBC News (World)" },
+  { "account": "NASA", "userName": "NASA" },
+  { "account": "NatGeo", "userName": "National Geographic" },
+  { "account": "UberFacts", "userName": "UberFacts" },
+  { "account": "realDonaldTrumpNoFake", "userName": "Donald Trump" }
+]

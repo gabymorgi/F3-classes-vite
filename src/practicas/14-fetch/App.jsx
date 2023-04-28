@@ -7,7 +7,6 @@ import Ejercicio5 from './Ejercicio5'
 const App = () => {
   return (
     <>
-      <h1>comment src\main.tsx L6 to make this to work</h1>
       <h2>Ejercicio 1</h2>
       <Ejercicio1 />
       <hr />

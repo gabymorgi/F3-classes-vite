@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
-import data from '../../fakeApi/data.json'
+import products from '../../fakeApi/products.json'
+import books from '../../fakeApi/books.json'
 
 const App = () => {
   const [number1, setNumber1] = useState(0)
@@ -12,14 +13,14 @@ const App = () => {
     return number1 + number2
   }, [number1, number2])
 
-  const goodGames = useMemo(() => {
-    console.log("recalculating good games...")
-    return data.filter((game) => game.score >= 9)
+  const expensiveProducts = useMemo(() => {
+    console.log("recalculating expensiveProducts...")
+    return products.filter((prod) => prod.precio > 50)
   }, [])
 
-  const filteredGames = useMemo(() => {
-    console.log("recalculating filtered games...")
-    return data.filter((game) => game.tags.includes(selectedTag))
+  const filteredBooks = useMemo(() => {
+    console.log("recalculating filteredBooks...", selectedTag)
+    return books.filter((book) => book.planeta === selectedTag)
   }, [selectedTag])
 
   return (
@@ -29,25 +30,26 @@ const App = () => {
       <input type="number" value={number3} onChange={(e) => setNumber3(Number(e.target.value))} />
       <p>La suma es {sum}</p>
       <hr />
-      <h1>Good Games</h1>
+      <h1>Expensive Products</h1>
       <div className='flex height-limited'>
-        {goodGames.map((game) => (
-          <div className='card' key={game.id}>
-            {game.name}
+        {expensiveProducts.map((prod) => (
+          <div className='card' key={prod.id}>
+            {prod.nombre}
           </div>
         ))}
       </div>
       <select onChange={(e) => setSelectedTag(e.target.value)}>
-        <option value="Roguelike">Roguelike</option>
-        <option value="Platformer">Platformer</option>
-        <option value="Metroidvania">Metroidvania</option>
+        <option value={"Roshar"}>Roshar</option>
+        <option value={"Skadrial"}>Skadrial</option>
+        <option value={"Nalthis"}>Nalthis</option>
+        <option value={"Threnody"}>Threnody</option>
       </select>
       
-      <h1>Filtered Games</h1>
+      <h1>Filtered Books</h1>
       <div className='flex height-limited'>
-        {filteredGames.map((game) => (
-          <div className='card' key={game.id}>
-            {game.name}
+        {filteredBooks.map((book) => (
+          <div className='card' key={book.id}>
+            {book.nombre}
           </div>
         ))}
       </div>

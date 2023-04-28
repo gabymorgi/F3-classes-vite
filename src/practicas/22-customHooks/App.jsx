@@ -1,32 +1,63 @@
-import FormComponent from "./Components/FormComponent"
-import { useSquare } from "./hooks/useSquare"
+import useLocalStorage from './hooks/useLocalStorage'
+import useLocation from './hooks/useLocation'
 
 const App = () => {
-  const [square, setSquare, { perimeter, area, isSquare }] = useSquare({
-    posX: 0,
-    posY: 0,
-    width: 100,
-    height: 100
-  })
+  const [submitData, setSubmitData] = useLocalStorage('submitedCountry')
+  const {
+    country,
+    province,
+    countriesList,
+    provincesList,
+    handleCountryChange,
+    handleProvinceChange,
+   } = useLocation()
+
+   console.log(provincesList)
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    setSubmitData({ country, province })
+  }
+
   return (
     <div>
-      <FormComponent setSquare={setSquare} />
-      <div style={{ position: 'relative' }}>
-        <div style={{
-          position: 'absolute',
-          zIndex: 1,
-          top: `${square.posY}px`,
-          left: `${square.posX}px`,
-          width: `${square.width}px`,
-          height: `${square.height}px`,
-          border: '10px solid green',
-          backgroundColor: 'red'
-        }}>
-          <div>Perimeter: {perimeter}</div>
-          <div>Area: {area}</div>
-          <div>Is Square: {isSquare ? 'Yes' : 'No'}</div>
+      {submitData && (
+        <div>
+          <h2>Último país enviado</h2>
+          <p>País: {submitData.country}</p>
+          <p>Provincia: {submitData.province}</p>
         </div>
-      </div>
+      )}
+      <form onSubmit={handleSubmit}>
+        <select
+          id='country-select'
+          value={country}
+          onChange={handleCountryChange}
+        >
+          <option value=''>Seleccionar país</option>
+          {countriesList.map((c) => (
+            <option key={c.id} value={c.id}>
+              {c.name}
+            </option>
+          ))}
+        </select>
+        <select
+          id='province-select'
+          value={province}
+          onChange={handleProvinceChange}
+          disabled={!country}
+        >
+          <option value=''>Seleccionar provincia</option>
+          {provincesList.map((p) => (
+            <option key={p.id} value={p.id}>
+              {p.name}
+            </option>
+          ))}
+        </select>
+        <button type='submit' disabled={!province}>
+          Enviar
+        </button>
+      </form>
     </div>
   )
 }

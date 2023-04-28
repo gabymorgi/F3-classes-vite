@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Elantris",
+    "saga": "Elantris",
+    "planeta": "Sel",
+    "año": 2005,
+    "paginas": 652
+  },
+  {
+    "id": 2,
+    "nombre": "El imperio final",
+    "saga": "Mistborn",
+    "planeta": "Skadrial",
+    "año": 2006,
+    "paginas": 672
+  },
+  {
+    "id": 3,
+    "nombre": "El pozo de la ascensión",
+    "saga": "Mistborn",
+    "planeta": "Skadrial",
+    "año": 2007,
+    "paginas": 781
+  },
+  {
+    "id": 4,
+    "nombre": "El héroe de las eras",
+    "saga": "Mistborn",
+    "planeta": "Skadrial",
+    "año": 2008,
+    "paginas": 768
+  },
+  {
+    "id": 5,
+    "nombre": "El camino de los reyes",
+    "saga": "El Archivo de las Tormentas",
+    "planeta": "Roshar",
+    "año": 2010,
+    "paginas": 1007
+  },
+  {
+    "id": 6,
+    "nombre": "Palabras radiantes",
+    "saga": "El Archivo de las Tormentas",
+    "planeta": "Roshar",
+    "año": 2014,
+    "paginas": 1086
+  },
+  {
+    "id": 7,
+    "nombre": "Juramentada",
+    "saga": "El Archivo de las Tormentas",
+    "planeta": "Roshar",
+    "año": 2017,
+    "paginas": 1243
+  },
+  {
+    "id": 8,
+    "nombre": "El aliento de los dioses",
+    "saga": "Warbreaker",
+    "planeta": "Nalthis",
+    "año": 2009,
+    "paginas": 677
+  },
+  {
+    "id": 9,
+    "nombre": "Sombras por silencio en los bosques del infierno",
+    "saga": "Arcanum Unbounded",
+    "planeta": "Threnody",
+    "año": 2016,
+    "paginas": 128
+  },
+  {
+    "id": 10,
+    "nombre": "El ultimo Metal",
+    "saga": "Mistborn: Era 2",
+    "planeta": "Skadrial",
+    "año": 2019,
+    "paginas": 336
+  },
+  {
+    "id": 11,
+    "nombre": "Aleación de ley",
+    "saga": "Mistborn: Era 2",
+    "planeta": "Skadrial",
+    "año": 2011,
+    "paginas": 459
+  },
+  {
+    "id": 12,
+    "nombre": "Sombras de identidad",
+    "saga": "Mistborn: Era 2",
+    "planeta": "Skadrial",
+    "año": 2015,
+    "paginas": 448
+  },
+  {
+    "id": 13,
+    "nombre": "Brazales de duelo",
+    "saga": "Mistborn: Era 2",
+    "planeta": "Skadrial",
+    "año": 2016,
+    "paginas": 336
+  },
+  {
+    "id": 14,
+    "nombre": "El ritmo de la guerra",
+    "saga": "El Archivo de las Tormentas",
+    "planeta": "Roshar",
+    "año": 2020,
+    "paginas": 1232
+  },
+  {
+    "id": 15,
+    "nombre": "Sexto del ocaso",
+    "saga": "Arcanum Unbounded",
+    "planeta": "Primero del sol",
+    "año": 2016,
+    "paginas": 128
+  }
+]

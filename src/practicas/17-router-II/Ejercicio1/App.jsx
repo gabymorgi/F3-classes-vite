@@ -14,7 +14,6 @@ const App = () => {
 
   return (
     <>
-      <h1>comment src\main.tsx L6 to make this to work</h1>
       {router}
     </>
   )

@@ -1,72 +1,63 @@
 import { useState } from 'react'
 
-const App = () => {
-  const [name, setName] = useState('')
-  const [dni, setDni] = useState(0)
-  const [edad, setEdad] = useState(0)
 
-  async function handleSubmit(e) {
-    e.preventDefault()
-    //validate form
-    if (!name || !dni || !edad) {
-      console.error('Please fill out all fields')
-      return
+let autoId = 0
+
+const App = () => {
+  const [nombre, setNombre] = useState('')
+  const [numero, setNumero] = useState('')
+  const [mensajeError, setMensajeError] = useState('')
+  const [valores, setValores] = useState([])
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    if (nombre.trim() === '') {
+      setMensajeError('Debe ingresar un nombre')
+    } else if (numero <= 0 || isNaN(numero)) {
+      setMensajeError('Debe ingresar un número mayor a 0')
+    } else {
+      setValores([...valores, { nombre, numero, id: autoId++ }])
+      setNombre('')
+      setNumero('')
+      setMensajeError('')
     }
-    // if dni doesnt has 8 digits
-    if (!(dni.toString().length === 8)) {
-      console.error('DNI must have 8 digits')
-      return
-    }
-    if (edad < 18) {
-      console.error('You must be 18 years old')
-      return
-    }
-    const user = {
-      name,
-      dni,
-      edad
-    }
-    console.log(user)
-    //reset form
-    setName('')
-    setDni(0)
-    setEdad(0)
   }
 
   return (
-    <>
-      <h1>Add a new game</h1>
+    <div>
+      <h2>Formulario</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor='name'>Name</label>
+        <label>
+          Nombre:
           <input
             type='text'
-            id='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={nombre}
+            onChange={(event) => setNombre(event.target.value)}
           />
-        </div>
-        <div>
-          <label htmlFor='dni'>DNI</label>
-          <input
-            type='text'
-            id='dni'
-            value={dni}
-            onChange={(e) => setDni(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor='edad'>Edad</label>
+        </label>
+        <br />
+        <label>
+          Número favorito:
           <input
             type='number'
-            id='edad'
-            value={edad}
-            onChange={(e) => setEdad(Number(e.target.value))}
+            value={numero}
+            onChange={(event) => setNumero(event.target.value)}
           />
-        </div>
-        <button type='submit'>Reservar</button>
+        </label>
+        <br />
+        <button type='submit'>Submit</button>
       </form>
-    </>
+      {mensajeError && <p>{mensajeError}</p>}
+      <h3>Valores ingresados:</h3>
+      <ul className='flex gap-16'>
+        {valores.map((valor) => (
+          <li className='card' key={valor.id}>
+            <p>Nombre: {valor.nombre}</p>
+            <p>Número favorito: {valor.numero}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
