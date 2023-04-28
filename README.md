@@ -19,9 +19,6 @@ Dentro de la carpeta **src** te vas a encontrar con las siguientes carpetas
 - **practicas**: Aquí encontraras en cada carpeta un txt con el enunciado de la clase, y tambien la resolución de la misma. Te recomiendo que intentes resolver los ejercicios por tu cuenta antes de echarle un vistazo a la solución; y recuerda que no existe una solución única a los problemas.
 - **sandbox**: No encontraras nada interesante aquí. Esta carpeta es para uso del profesor durante el dictado de las clases.
 
-### Importante:
-Adicionalmente encontraras dentro del archivo **src/main.tsx** *Linea 6*, una linea de código que montara un servidor de testing. La misma **bloqueara cualquier request no gestionada dentro del servidor**. Esto es para proporcionar un entorno seguro de fetching durante el dictado de las clases. Sin embargo, **para ejecutar las practicas tendrás que comentarla**.
-
 # Documentacion relacionada
 ## Clase 1: manejo de datos
 
