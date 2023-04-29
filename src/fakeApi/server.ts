@@ -1,62 +1,65 @@
-import { createServer, Model, Registry } from 'miragejs'
 import { GameI } from './types'
-import data from './detailedData.json'
-import { ModelDefinition } from 'miragejs/-types';
-import Schema from 'miragejs/orm/schema';
+import gamesData from './data.json'
+import detailedGames from './detailedData.json'
 
-export function makeServer() {
-  createServer({
-    models: {
-      game: Model.extend<Partial<GameI>>({} as GameI),
-    },
+interface FetchOptions {
+  method?: 'GET' | 'POST' | 'DELETE'
+  body?: string
+}
 
-    seeds(server) {
-      server.db.loadData({
-        games: data,
-      })
-    },
+export async function fakeFetch(
+  url: string,
+  options: FetchOptions = { method: 'GET' }
+): Promise<any> {
+  const delay = (ms: number) =>
+    new Promise((resolve) => setTimeout(resolve, ms))
 
-    routes() {
-      
-      // this.passthrough('https://jsonplaceholder.typicode.com/**');
-      // this.urlPrefix = 'api'
+  await delay(500) // Agrega un retraso de 1 segundo
 
-      this.get('/api/games', (schema) => {
-        console.log("asdf")
-        const games = schema.all('game')
-        // returns only name, imgUrl and id
-        return games.models.map((game) => {
-          const attrs = game.attrs as GameI
-          return {
-            id: game.id,
-            name: attrs.name,
-            imgUrl: attrs.imgUrl,
+  const [_, api, route, params] = url.split('/')
+
+  const responseBody = (() => {
+    switch (route) {
+      case 'games':
+        if (options.method === 'GET') {
+          if (!params) {
+            // /api/games
+            // Retorna solo "name", "imgUrl" e "id"
+            return gamesData.map((game) => ({
+              id: game.id,
+              name: game.name,
+              imgUrl: game.imgUrl,
+            }))
+          } else {
+            // /api/games/:id
+            const gameId = params
+            return detailedGames.find((game) => game.id === gameId)
           }
-        })
-      })
+        } else if (options.method === 'POST' && params === 'add') {
+          // /api/games/add
+          const newGame: GameI = JSON.parse(options.body as string)
+          gamesData.push(newGame)
+          return newGame
+        } else if (options.method === 'DELETE') {
+          // /api/games/:id
+          const gameId = params
+          const index = gamesData.findIndex(
+            (game) => game.id === gameId
+          )
+          if (index > -1) {
+            gamesData.splice(index, 1)
+            return { message: 'Game deleted successfully' }
+          } else {
+            throw new Error('Game not found')
+          }
+        }
+        break
+      default:
+        throw new Error('Invalid API route')
+    }
+  })()
 
-      this.get('/api/games/:id', (schema, request) => {
-        console.log("df")
-        const id = request.params.id
-
-        console.log(id)
-        
-        return schema.find('game', id)
-      })
-
-      this.post('/api/games/add', (schema, request) => {
-        const attrs = JSON.parse(request.requestBody)
-        console.log(attrs)
-        return schema.create('game', attrs)
-      })
-
-      this.delete("/api/games/:id", (schema, request) => {
-        const id = request.params.id
-      
-        return schema.db.games.find(id).destroy()
-      })
-      // this.passthrough();
-      this.passthrough('**');
-    },
-  })
+  return {
+    json: async () => responseBody,
+  }
 }

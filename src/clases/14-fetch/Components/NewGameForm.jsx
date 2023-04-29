@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { fakeFetch } from '../../../fakeApi/server'
 
 const NewGameForm = (props) => {
   const [name, setName] = useState('')
@@ -11,7 +12,7 @@ const NewGameForm = (props) => {
       name,
       imgUrl,
     }
-    await fetch('/api/games/add', {
+    await fakeFetch('/api/games/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

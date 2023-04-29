@@ -31,7 +31,7 @@ const App = () => {
     { path: '/', element: <GameList onBuy={handleBuy} /> },
     { path: '/chart', element: <Chart chart={chart} onDelete={handleDelete} /> },
     { path: '/games', element: <Outlet />, children: [
-      { path: 'detail', element: <GameDetail /> },
+      { path: ':id', element: <GameDetail /> },
       { path: 'create', element: <NewGameForm /> },
     ] },
     { path: '*', element: <div>Not Found</div> },

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { fakeFetch } from '../../../fakeApi/server'
 
 const NewGameForm = () => {
   const [name, setName] = useState('')
@@ -18,7 +19,7 @@ const NewGameForm = () => {
       imgUrl,
       score
     }
-    await fetch('/api/games/add', {
+    await fakeFetch('/api/games/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

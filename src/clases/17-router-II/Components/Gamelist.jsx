@@ -33,7 +33,7 @@ const GameList = (props) => {
                 <button onClick={() => props.onBuy(item)}>
                   Comprar
                 </button>
-                <Link to={`./game/${item.id}`}>See details</Link>
+                <Link to={`./games/${item.id}`}>See details</Link>
               </Card>
             </ListItem>
           )

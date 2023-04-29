@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { fakeFetch } from '../../../fakeApi/server'
 
 export const useFetch = (url) => {
   const [data, setData] = useState()
@@ -9,7 +10,7 @@ export const useFetch = (url) => {
     const getData = async () => {
       setLoading(true)
       try {
-        const response = await fetch(url)
+        const response = await fakeFetch(url)
         const data = await response.json()
         setData(data)
       } catch (error) {
@@ -31,7 +32,7 @@ export const  useLazyFetch = (url) => {
   const getData = async () => {
     setLoading(true)
     try {
-      const response = await fetch(url)
+      const response = await fakeFetch(url)
       const data = await response.json()
       setData(data)
     } catch (error) {

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { fakeFetch } from '../../../fakeApi/server'
 
 const GameDetail = (props) => {
   const [game, setGame] = useState() 
@@ -6,8 +7,8 @@ const GameDetail = (props) => {
   useEffect(() => {
     if (!props.gameId) return
     const getGame = async () => {
-      const game = await (await fetch(`/api/games/${props.gameId}`)).json()
-      setGame(game.game)
+      const game = await (await fakeFetch(`/api/games/${props.gameId}`)).json()
+      setGame(game)
     }
     getGame()
   }, [props.gameId])

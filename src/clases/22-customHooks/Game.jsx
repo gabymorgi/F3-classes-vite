@@ -20,7 +20,7 @@ const Game = (props) => {
           show details
         </button>
       ) : (
-        data.game.playedTime
+        data.playedTime
       )}
     </div>
   )
