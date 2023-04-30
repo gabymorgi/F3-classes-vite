@@ -16,7 +16,7 @@ Dentro de la carpeta **src** te vas a encontrar con las siguientes carpetas
 - **mainLayout**: Aquí esta la logica necesaria para mostrar el menu con todas las clases del proyecto. Te recomiendo que la ignores al menos hasta tener conocimientos de Router.
 - **fakeApi**: Aquí encontraras los datos en archivos json con los que trabajaremos durante la clase. Asi como otros archivos que facilitan el armado de las clases, pero que no son necesarios para las practicas.
 - **clase**: Aquí encontraras todas las guías de clase separadas cada una en diferentes carpetas. Te aconsejo que las tengas a mano durante las teorías, y que las revises si te trabas durante las practicas.
-- **practicas**: Aquí encontraras en cada carpeta un txt con el enunciado de la clase, y tambien la resolución de la misma. Te recomiendo que intentes resolver los ejercicios por tu cuenta antes de echarle un vistazo a la solución; y recuerda que no existe una solución única a los problemas.
+- **practicas**: Aquí encontraras en cada carpeta un md con el enunciado de la clase, y tambien la resolución de la misma. Te recomiendo que intentes resolver los ejercicios por tu cuenta antes de echarle un vistazo a la solución; y recuerda que no existe una solución única a los problemas.
 - **sandbox**: No encontraras nada interesante aquí. Esta carpeta es para uso del profesor durante el dictado de las clases.
 
 # Documentacion relacionada
@@ -120,6 +120,7 @@ Dentro de la carpeta **src** te vas a encontrar con las siguientes carpetas
 ## Clase 20: localStorage
 
 - [localStorage API](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+- [Que informacion guardar en localStorage](https://www.rdegges.com/2018/please-stop-using-local-storage)
 
 ## Clase 21: Reducer
 

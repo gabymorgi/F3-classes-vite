@@ -1,55 +1,63 @@
-import data from '../../fakeApi/data.json'
+import users from '../../fakeApi/users.json'
 
 const practica01 = () => {
-  // el id del primer Juego
-  console.log(data[0].id)
-  // el nombre del tercer juego
-  console.log(data[2].name)
-  // el nombre del quinto achievement del segundo juego
-  console.log(data[1].achievements[4].name)
+  //Muestra por consola:
+  //el 'id' del primer Usuario
+  console.log(users[0].id)
 
-  // usando desestructuracion:
+  //el 'nombre' del tercer Usuario
+  console.log(users[2].name)
+
+  // el color de la segunda 'mascota' del tercer Usuario
+  console.log(users[2].mascotas[1].color)
+
+  // Usando desestructuracion:
   // extrae en variables el primer y cuarto elemento
-  const [first, , , fourth] = data
-  console.log(first, fourth)
-  // usando lo obtenido arriba extrae en variables el tiempo jugado y los tags del perimer elemento
-  const { playedTime, tags } = first
-  console.log(playedTime, tags)
+  const [first, , , fourth] = users
+
+  // usando lo obtenido arriba extrae en variables 'email' y 'mascotas' del primer elemento
+  const { email, mascotas } = first
+
   // spread operator:
-  // haz una copia de los tags obtenidos arriba y agregale el tag "2D"
-  const tagsCopy = [...tags, '2D']
-  // (usar console log para mostrar que no se modifico el original)
-  console.log({ tagsCopy, tags })
+  // haz una copia de las 'mascotas' obtenidas arriba y agregale la mascota '{ "nombre": "Nami", "edad": 2, "color": "negro" }'
 
-  // crea una funcion que reciba por props un objeto con las siguientes keys
-  // name, playedTime
-  // y que retorne un string con el siguiente formato
-  // "El juego {name} se jugo por {playedTime} horas"
-  function gamePlayed({ name, playedTime }) {
-    return `El juego ${name} se jugo por ${playedTime} horas`
+  const copia = {
+    ...mascotas,
+    mascotas: [
+      ...mascotas.mascotas,
+      { nombre: 'Nami', edad: 2, color: 'negro' },
+    ],
   }
-  console.log(gamePlayed(first))
 
-  // usando la operacion filter, crea un array con los juegos que tengan score mayor o igual a 9
-  const filteredGames = data.filter((game) => game.score >= 9)
-  console.log(filteredGames)
-  // usando la operacion map y la funcion anterior, crea un array de strings con el nombre y tiempo jugado de cada juego filtrado anteriormente
+  console.log(copia)
+
+  // crea una funcion que reciba por props un objeto con las siguientes keys: **name**, **cantMascotas** y que retorne un string con el siguiente formato
+  // '"El Usuario {name} tiene {cantMascotas} mascotas"'
+
+  function getUserNameAndPets({name, cantMascotas}){
+    return `El Usuario ${name} tiene ${cantMascotas} mascotas`
+  }
+
+  // usando la operacion 'filter', crea un array con los Usuarios que tengan **mas** de 1 mascota
+
+  const usersWithMoreThanOnePet = users.filter(user => user.cantMascotas > 1)
+
+  // usando la operacion 'map' y la funcion anterior, crea un array de strings con el nombre y la cantidad de mascotas de cada Usuario filtrado anteriormente
   // Ej:
   // [
-  //   "El juego Super Meat Boy se jugo por 10 horas",
-  //   "El juego Celeste se jugo por 35 horas"
+  //   "El Usuario Gaby tiene 3 mascotas",
+  //   "El Usuario Morgi tiene 5 mascotas"
   // ]
-  const filteredGamesPlayed = filteredGames.map((game) =>
-    gamePlayed(game)
-  )
-  console.log(filteredGamesPlayed)
 
-  // Usando la operacion reduce y los datos filtrados previamente, devuelve la cantidad total de minutos jugados
-  const totalMinutesPlayed = filteredGames.reduce(
-    (acc, game) => acc + game.playedTime,
-    0
-  )
-  console.log(totalMinutesPlayed)
+  const usersWithMoreThanOnePetString = usersWithMoreThanOnePet.map((user) => getUserNameAndPets(user))
+  console.log(usersWithMoreThanOnePetString)
+
+  // Usando la operacion reduce devuelve la cantidad total de mascotas
+
+  const totalPets = users.reduce((acc, user) => {
+    return acc + user.cantMascotas
+  }, 0)
+  console.log(totalPets)
 }
 
 export default practica01
