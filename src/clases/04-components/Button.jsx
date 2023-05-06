@@ -1,5 +1,6 @@
 const Button = (props) => {
-  //uso destructuring para sacar loading de props
+  //uso destructuring aislar loading del resto de props
+  //restProps es un objeto con todas las props menos loading
   const { loading, ...restProps } = props
   return (
     <button {...restProps} disabled={loading || props.disabled}>

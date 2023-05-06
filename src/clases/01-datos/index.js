@@ -83,7 +83,12 @@ const JsData = () => {
   charPokimon.stats.hp // 78
   charPokimon.moves[0] // "fire blast"
 
-  // funciones
+  // string builder
+  const pet = "cats"
+  const message = `I have ${pet} and I love them`
+
+  //---FUNCIONES---
+
   function sumaFn(a, b) {
     return a + b
   }
@@ -94,10 +99,6 @@ const JsData = () => {
   
   suma(1, 2) // 3
   sumaFn(1, 2) // 3
-
-  // string builder
-  const pet = "cats"
-  const message = `I have ${pet} and I love them`
 
   // cuando necesitamos enviar muchos params a una funcion
   // podemos usar un objeto
@@ -131,6 +132,8 @@ const JsData = () => {
   }
 
   fnConCallback(multiplicacion) // 2
+
+  //---DESTRUCTURING---
 
   // si me da pereza escribir
   pokimon.id

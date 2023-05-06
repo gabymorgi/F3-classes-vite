@@ -9,6 +9,11 @@ const App = () => {
   const [chart, setChart] = useState([])
 
   function handleBuy(game) {
+    //podemos tener en el carrito juegos repetidos
+    // por lo que su id no es unico
+    // para solucionar esto, le agregamos un id unico a cada juego
+    // un id autoincremental es una opcion simple
+    // pero no es la mejor opcion (el fast refresh no funciona bien con ids autoincrementales)
     const chartItem = {
       chartId: getId(),
       game,
@@ -18,6 +23,7 @@ const App = () => {
   }
 
   function handleDelete(chartId) {
+    //podemos usar filter para eliminar un elemento del array
     const newChart = chart.filter((item) => item.chartId !== chartId)
     setChart(newChart)
   }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 const App = () => {
   const [submitted, setSubmitted] = useState()
   const [error, setError] = useState('')
+  
   const [name, setName] = useState('')
   const [imgUrl, setImgUrl] = useState('')
   const [score, setScore] = useState(0)
@@ -10,13 +11,12 @@ const App = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(e)
-    console.log(name.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/))
     if (!name || !imgUrl || !color) {
       console.error('Please fill out all fields')
       setError('Please fill out all fields')
       return
     }
+    // regex no es un requerimiento para la cursada
     if (!color.match(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/)) {
       console.error('Please set a valid color')
       setError('Please set a valid color')
@@ -48,7 +48,13 @@ const App = () => {
           <input
             type='text'
             name='name'
+            // cuando un input no tiene value, es un input no controlado
+            // cuando un input tiene value, es un input controlado
             value={name}
+            // para que el input sea controlado, tenemos que definir un handler
+            // para el evento onChange
+            // en este caso solo reflejamos el valor del input en el estado
+            // pero podriamos hacer cualquier cosa con el valor del input
             onChange={(e) => setName(e.target.value)}
           />
         </div>

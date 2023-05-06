@@ -5,6 +5,7 @@ const Card = (props) => {
   return (
     <div className={styles.card}>
       <h1>{title}</h1>
+      {/* recuerden que ademas del operador . podemos usar [] para acceder a propiedades */}
       <div className={styles['card-body']}>{children}</div>
     </div>
   );
