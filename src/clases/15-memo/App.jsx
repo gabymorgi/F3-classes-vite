@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import GameDetail from './Components/GameDetail'
-import data from '../../fakeApi/data.json'
+import data from '../../fakeApi/games.json'
 
 const App = () => {
   const [isTrue, setIsTrue] = useState(false)

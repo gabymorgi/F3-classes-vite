@@ -1,65 +1,162 @@
-import { GameI } from './types'
-import gamesData from './data.json'
+import accounts from './accounts.json'
+import books from './books.json'
 import detailedGames from './detailedData.json'
+import gamesData from './games.json'
+import movies from './movies.json'
+import paises from './paises.json'
+import products from './products.json'
+import provincias from './provincias.json'
+import users from './users.json'
 
-interface FetchOptions {
-  method?: 'GET' | 'POST' | 'DELETE'
-  body?: string
+interface Data {
+  id: string | number
+  [key: string]: any
+}
+
+interface EndPoints {
+  [key: string] : Data[]
+}
+
+const data: EndPoints = {
+  books: books,
+  games: gamesData,
+  detailedGames: detailedGames,
+  movies: movies,
+  products: products,
+  paises: paises,
+  provincias: provincias,
+  accounts: accounts.map((account: any) => {
+    return {
+      ...account,
+      id: account.account
+    }
+  }),
+  users: users.map((user: any) => {
+    return {
+      ...user,
+      id: user.email
+    }
+  })
 }
 
 export async function fakeFetch(
-  url: string,
-  options: FetchOptions = { method: 'GET' }
+  url: RequestInfo,
+  options: RequestInit = { method: 'GET' }
 ): Promise<any> {
-  const delay = (ms: number) =>
-    new Promise((resolve) => setTimeout(resolve, ms))
+  if (typeof url === 'string' && url.startsWith('/api')) {
+    const method = options?.method ?? 'GET';
+    const [,, key, id] = url.split('/');
 
-  await delay(500) // Agrega un retraso de 1 segundo
+    console.log('key', key)
 
-  const [_, api, route, params] = url.split('/')
-
-  const responseBody = (() => {
-    switch (route) {
-      case 'games':
-        if (options.method === 'GET') {
-          if (!params) {
-            // /api/games
-            // Retorna solo "name", "imgUrl" e "id"
-            return gamesData.map((game) => ({
-              id: game.id,
-              name: game.name,
-              imgUrl: game.imgUrl,
-            }))
-          } else {
-            // /api/games/:id
-            const gameId = params
-            return detailedGames.find((game) => game.id === gameId)
-          }
-        } else if (options.method === 'POST' && params === 'add') {
-          // /api/games/add
-          const newGame: GameI = JSON.parse(options.body as string)
-          gamesData.push(newGame)
-          return newGame
-        } else if (options.method === 'DELETE') {
-          // /api/games/:id
-          const gameId = params
-          const index = gamesData.findIndex(
-            (game) => game.id === gameId
-          )
-          if (index > -1) {
-            gamesData.splice(index, 1)
-            return { message: 'Game deleted successfully' }
-          } else {
-            throw new Error('Game not found')
-          }
-        }
-        break
-      default:
-        throw new Error('Invalid API route')
+    if (!Object.prototype.hasOwnProperty.call(data, key)) {
+      return new Response(null, {
+        status: 404,
+        statusText: 'Endpoint Not Found',
+      });
     }
-  })()
 
-  return {
-    json: async () => responseBody,
+    switch (method) {
+      case 'GET': {
+        if (id) {
+          const item = data[key].find((item: Data) => item.id === id);
+
+          if (item) {
+            return new Response(JSON.stringify(item), {
+              status: 200,
+              headers: { 'Content-Type': 'application/json' },
+            });
+          } else {
+            return new Response(null, {
+              status: 404,
+              statusText: 'Item Not Found',
+            });
+          }
+        } else {
+          return new Response(JSON.stringify(data[key]), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+          });
+        }
+      }
+
+      case 'POST': {
+        if (!options || !options.body) {
+          return new Response(null, {
+            status: 400,
+            statusText: 'Bad Request',
+          });
+        }
+
+        const newItem: Data = {
+          id: Date.now(),
+          ...JSON.parse(options.body.toString())
+        };
+        data[key].unshift(newItem);
+
+        return new Response(JSON.stringify(newItem), {
+          status: 201,
+          headers: { 'Content-Type': 'application/json' },
+        });
+      }
+
+      case 'PUT': {
+        if (!id || !options || !options.body) {
+          return new Response(null, {
+            status: 400,
+            statusText: 'Bad Request',
+          });
+        }
+
+        const updatedItem: Data = JSON.parse(options.body.toString());
+        const index = data[key].findIndex((item: Data) => item.id === id);
+
+        if (index !== -1) {
+          data[key][index] = updatedItem;
+        } else {
+          data[key].unshift(updatedItem);
+        }
+
+        return new Response(JSON.stringify(updatedItem), {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' },
+        });
+      }
+
+      case 'DELETE': {
+        if (!id) {
+          return new Response(null, {
+            status: 400,
+            statusText: 'Bad Request',
+          });
+        }
+
+        const index = data[key].findIndex((item: Data) => item.id === id);
+
+        if (index !== -1) {
+          const deletedItem = data[key].splice(index, 1)[0];
+
+          return new Response(JSON.stringify(deletedItem), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+          });
+        } else {
+          return new Response(null, {
+            status: 404,
+            statusText: 'Item Not Found',
+          });
+        }
+      }
+
+      default: {
+        return new Response(null, {
+          status: 405,
+          statusText: 'Method Not Allowed',
+        });
+      }
+    }
   }
+
+  // Si la URL no empieza con "/api", realiza un fetch normal.
+  return fetch(url, options);
 }

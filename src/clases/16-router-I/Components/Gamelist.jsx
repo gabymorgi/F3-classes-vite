@@ -6,8 +6,11 @@ import { fakeFetch } from '../../../fakeApi/server'
 const GameList = (props) => {
   const [games, setGames] = useState([])
   async function fetchGames() {
-    const response = await (await fakeFetch('/api/games')).json()
-    setGames(response)
+    const response = await fakeFetch('/api/games')
+    console.log(response)
+    const data = await response.json()
+    console.log(data)
+    setGames(data)
   }
   useEffect(() => {
     fetchGames()

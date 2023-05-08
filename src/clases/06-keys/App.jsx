@@ -1,5 +1,5 @@
 import { List, ListItem } from "./UI/List";
-import data from '../../fakeApi/data.json'
+import data from '../../fakeApi/games.json'
 import Card from "./UI/Card";
 
 const App = () => {

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import FilterForm from "./FilterForm"
 import Card from "../UI/Card"
 import { Link, useSearchParams } from "react-router-dom"
-import gamesData from '../../../fakeApi/data.json'
+import gamesData from '../../../fakeApi/games.json'
 
 const GameList = (props) => {
   const [games, setGames] = useState([])

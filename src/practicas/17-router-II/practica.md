@@ -18,7 +18,7 @@ Crea una web con lo siguientes
 
 ### Ejercicio 2: useSearchParams
 
-Crea una web que muestre una lista importada de [aqui](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/data.json)
+Crea una web que muestre una lista importada de [aqui](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/games.json)
 
 1. En el index se mostrara un formulario con los siguientes campos
   
