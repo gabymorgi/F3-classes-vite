@@ -1,8 +1,8 @@
 export function format(date) {
-  let day = date.getDate()
-  let month = date.getMonth() + 1
-  let year = date.getFullYear()
-  return `${day}/${month}/${year}`
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  return `${day}/${month}/${year}`;
 }
 
 export function objectToArray(obj) {
@@ -10,3 +10,4 @@ export function objectToArray(obj) {
     { name, value }
   ))
 }
+

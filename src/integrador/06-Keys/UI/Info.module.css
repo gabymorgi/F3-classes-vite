@@ -1,0 +1,17 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info .label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #eee;
+}
+
+.info .value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}

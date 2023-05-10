@@ -21,26 +21,20 @@ const practica01 = () => {
   // spread operator:
   // haz una copia de las 'mascotas' obtenidas arriba y agregale la mascota '{ "nombre": "Nami", "edad": 2, "color": "negro" }'
 
-  const copia = {
-    ...mascotas,
-    mascotas: [
-      ...mascotas.mascotas,
-      { nombre: 'Nami', edad: 2, color: 'negro' },
-    ],
-  }
+  const copia = [...mascotas, { nombre: 'Nami', edad: 2, color: 'negro' }]
 
   console.log(copia)
 
   // crea una funcion que reciba por props un objeto con las siguientes keys: **name**, **cantMascotas** y que retorne un string con el siguiente formato
   // '"El Usuario {name} tiene {cantMascotas} mascotas"'
 
-  function getUserNameAndPets({name, cantMascotas}){
+  function getUserNameAndPets({ name, cantMascotas }) {
     return `El Usuario ${name} tiene ${cantMascotas} mascotas`
   }
 
   // usando la operacion 'filter', crea un array con los Usuarios que tengan **mas** de 1 mascota
 
-  const usersWithMoreThanOnePet = users.filter(user => user.cantMascotas > 1)
+  const usersWithMoreThanOnePet = users.filter((user) => user.cantMascotas > 1)
 
   // usando la operacion 'map' y la funcion anterior, crea un array de strings con el nombre y la cantidad de mascotas de cada Usuario filtrado anteriormente
   // Ej:
@@ -49,7 +43,9 @@ const practica01 = () => {
   //   "El Usuario Morgi tiene 5 mascotas"
   // ]
 
-  const usersWithMoreThanOnePetString = usersWithMoreThanOnePet.map((user) => getUserNameAndPets(user))
+  const usersWithMoreThanOnePetString = usersWithMoreThanOnePet.map((user) =>
+    getUserNameAndPets(user)
+  )
   console.log(usersWithMoreThanOnePetString)
 
   // Usando la operacion reduce devuelve la cantidad total de mascotas

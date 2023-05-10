@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkblue;
+}
+
+.header .headerSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header .userInfo {
+  gap: 64px;
+}

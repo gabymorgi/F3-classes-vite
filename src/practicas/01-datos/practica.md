@@ -2,6 +2,8 @@
 
 Usando la lista de [usuarios](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/users.json)
 
+*copia y pega el contenido en una variable. Import y export no funcionan fuera de Node, asi que no te preocupes por eso*
+
 ### Ejercicio 1
 
 Muestra por consola:

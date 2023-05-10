@@ -1,0 +1,11 @@
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 50px;
+  background-color: #444;
+  border: 1px solid #fff;
+}

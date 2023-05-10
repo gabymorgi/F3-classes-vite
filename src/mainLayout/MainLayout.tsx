@@ -50,10 +50,10 @@ const PractCustomHooks = lazy(() => import('../practicas/22-customHooks/App.jsx'
 const PractUseRef = lazy(() => import('../practicas/25-useRef/App.jsx'))
 
 const IntJSX = lazy(() => import('../integrador/02-JSX/App.jsx'))
-// const IntEntorno = lazy(() => import('../integrador/03-entorno/App.jsx'))
-// const IntComponents = lazy(() => import('../integrador/04-components/App.jsx'))
-// const IntEstilos = lazy(() => import('../integrador/05-estilos/App.jsx'))
-// const IntKeys = lazy(() => import('../integrador/06-keys/App.jsx'))
+const IntEntorno = lazy(() => import('../integrador/03-Entorno/App.jsx'))
+const IntComponents = lazy(() => import('../integrador/04-Componentes/App.jsx'))
+const IntEstilos = lazy(() => import('../integrador/05-Estilos/App.jsx'))
+const IntKeys = lazy(() => import('../integrador/06-Keys/App.jsx'))
 // const IntStateI = lazy(() => import('../integrador/07-state-I/App.jsx'))
 // const IntStateII = lazy(() => import('../integrador/08-state-II/App.jsx'))
 // const IntForms = lazy(() => import('../integrador/09-forms/App.jsx'))
@@ -297,6 +297,26 @@ const routesData: IRoute[] = [
         name: 'JSX',
         component: <IntJSX />,
       },
+      {
+        path: '03',
+        name: 'Entorno',
+        component: <IntEntorno />,
+      },
+      {
+        path: '04',
+        name: 'Components',
+        component: <IntComponents />,
+      },
+      {
+        path: '05',
+        name: 'Estilos',
+        component: <IntEstilos />,
+      },
+      {
+        path: '06',
+        name: 'Keys',
+        component: <IntKeys />,
+      },
     ],
   },
 ]
@@ -311,18 +331,6 @@ const FullScreenSpinner = styled(Spin)`
 `
 
 const MainLayout = () => {
-  console.log(
-    routesData.map((r) => ({
-      key: r.path,
-      label: r.sub ? r.name : <Link to={r.path}>{r.name}</Link>,
-      children:
-        !r.component &&
-        r.sub?.map((s) => ({
-          key: `${r.path}-${s.path}`,
-          label: <Link to={`${r.path}/${s.path}`}>{s.name}</Link>,
-        })),
-    }))
-  )
   return (
     <Layout className='min-h-full'>
       <Layout.Sider className='max-h-full overflow-y' trigger={null}>

@@ -4,6 +4,8 @@
 
 1. Crear funcion que convierta Date en string format "dd/mm/yyyy"
 
+2. Crear funcion que convierta un objeto `{[key]: value}` en un array `[{ name: [key], value: value}]`
+
 ## Practica Clase 2
 
 1. Crear una carpeta con todos los datos mockeados necesaros:
@@ -19,49 +21,28 @@ por un lado el [logo](https://github.com/gabymorgi/F3-classes-vite/blob/main/pub
 
 por otro lado 3 span con los siguientes textos: `User Info`, `Repos`, `Log Out`; y un bloque con el nombre y avatar del [usuario](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghUser.json)
 
+No es necesario aplicar estilos aun
+
 ## Practica Clase 3
 
 1. Crear componente Login que muestre el logo y el nombre de la aplicacion (el formulario no)
 
+2. Crear un componente para la Home Page, que muestre Welcome userName (usar la data mockeada)
 
-Clase 4
-Componentizacion en React
-Pensando en React
-HB-3
+3. Crear componente UserInfo que muestre la imagen y nombre del usuario, un link externo al github del usuario, cant Seguidores, cant siguiendo, cant repos, bio
 
+No es necesario aplicar estilos aun
 
-HB-4
-Crear un componente para la Home Page, que muestre Welcome user (por el momento mocked)
+## Practica Clase 4
 
-Crear componente UserInfo que muestre una Card, y muestre en el titulo la imagen y nombre del usuario, en el footer un link externo al github del usuario. y en el body muestre varios componentes Info con la siguiente informacion: cant Seguidores, cant siguiendo, cant repos, bio
+1. Crear componente Card, que reciba props title, children, footer. title y footer son opcionales!!
 
-HB-5
-Crear un componente header que muestre, a la izq, el logo y nombre de la compania. A la izq, dos links (no funcionales), que lleven a /info /repos, un boton que al apretarlo imprima "log out" por consola, el nombre de usuario(mocked)
+2. Crear un componente info que reciba props label y value.
 
+3. Crear componente Tag que muestre el children
 
-
-HB-10
-Crear componente Tag que agregue border, background, border-radius, y padding y muestre el children
-
-Clase 5
-Componentizacion en React
-Trabajando con componentes
-HB-6
-Crear componente Card que reciba las siguientes props:
-title, children, footer. title y footer son opcionales!!
-La card tiene un border, border radius y un color de fondo (elegir alguna tonalidad de gris a eleccion)
-El title tiene border bottom y padding
-el body tiene padding, y dentro va el children
-El footer tiene padding y border top
-
-HB-7
-Crear componente Info que reciba props label y value. Y muestre ambos valores verticalmente separados por algunos pixeles, y el label bold
-
-HB-11
-crear funcion que convierta un objeto {[key]: value} en un array [{ name: [key], value: value}]
-
-HB-12
-Crear componente RepoDetail que cree una card solo con body. En la misma se van a mostrar varios componentes Info con la siguiente informacion
+4. Crear componente RepoDetail para mostrar la info de ghRepoDetail.
+Usa una card solo con body. En la misma se van a mostrar varios componentes Info con la siguiente informacion
 name
 created, update y pushed at (usar utility function creada previamente)
 description
@@ -69,14 +50,30 @@ watchers
 forks
 stars
 link
-languages (usar conversor + logica adicional y componente Tag para cada lenguage y el porcentaje utilizado)
+languages: usar utility function creada previamente para convertir repoLanguages en array, calcular el porcentaje en base a las lineas totales y **mostrar solo el primer elemento**
 
-HB-14
-Crear componente repolist que muestre una grilla de card con la info de cada repo, el title de cada card tendra el nombre del repo, ademas, si el proyecto es un fork, se mostrara un Tag a la derecha (justify-between, NO float, NO position absolute), el footer tendra un link externo a github y un link(no funcional) al detalle, en el body habra un conjunto de componentes info con la siguiente informacion. Descripcion, lenguaje principal, estrellas, y seguidores
+5. Modificar UserInfo para que use el componente Card, prop title con la imagen y el userName, y el footer con el link al github del usuario. En el children usaremos varios componentes info para mostrar la informacion restante
 
-Clase 6
-Componentizacion en React
-Revision y practica
+## Practica Clase 5
+
+1. Agregarle estilos a Tag: border, background, border-radius, y padding
+
+2. Agregarle estilos a Info: Y muestre ambos valores verticalmente separados por algunos pixeles, y el label bold
+
+3. Agregarle estilos a la card: border, border radius y un color de fondo
+El title tiene border bottom y padding
+el body tiene padding, y dentro va el children
+El footer tiene padding y border top
+
+4. Agregarle estilos al Header: display flex, justify-content space-between, padding, border-bottom
+
+## Practica Clase 6
+
+1. Crear componente repolist que muestre una grilla de card con la info de cada repo
+- el title de cada card tendra el nombre del repo
+- si el proyecto es un fork, se mostrara un Tag a la derecha
+- el footer tendra un link externo a github
+- en el body habra un conjunto de componentes info con la siguiente informacion. Descripcion, lenguaje principal, estrellas, y seguidores
 
 
 Clase 7

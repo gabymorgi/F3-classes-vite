@@ -4,3 +4,10 @@ export function format(date) {
   let year = date.getFullYear();
   return `${day}/${month}/${year}`;
 }
+
+export function objectToArray(obj) {
+  return Object.entries(obj).map(([name, value]) => (
+    { name, value }
+  ))
+}
+
