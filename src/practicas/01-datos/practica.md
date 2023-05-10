@@ -7,7 +7,7 @@ Usando la lista de [usuarios](https://github.com/gabymorgi/F3-classes-vite/blob/
 ### Ejercicio 1
 
 Muestra por consola:
-- el `id` del primer Usuario
+- el `email` del primer Usuario
 - el `nombre` del tercer Usuario
 - el color de la segunda `mascota` del tercer Usuario
 

@@ -2,11 +2,11 @@ import users from '../../fakeApi/users.json'
 
 const practica01 = () => {
   //Muestra por consola:
-  //el 'id' del primer Usuario
-  console.log(users[0].id)
+  //el 'email' del primer Usuario
+  console.log(users[0].email)
 
   //el 'nombre' del tercer Usuario
-  console.log(users[2].name)
+  console.log(users[2].mascotas)
 
   // el color de la segunda 'mascota' del tercer Usuario
   console.log(users[2].mascotas[1].color)
@@ -28,13 +28,13 @@ const practica01 = () => {
   // crea una funcion que reciba por props un objeto con las siguientes keys: **name**, **cantMascotas** y que retorne un string con el siguiente formato
   // '"El Usuario {name} tiene {cantMascotas} mascotas"'
 
-  function getUserNameAndPets({ name, cantMascotas }) {
-    return `El Usuario ${name} tiene ${cantMascotas} mascotas`
+  function getUserNameAndPets({ apodo, mascotas }) {
+    return `El Usuario ${apodo} tiene ${mascotas.length} mascotas`
   }
 
   // usando la operacion 'filter', crea un array con los Usuarios que tengan **mas** de 1 mascota
 
-  const usersWithMoreThanOnePet = users.filter((user) => user.cantMascotas > 1)
+  const usersWithMoreThanOnePet = users.filter((user) => user.mascotas.length > 1)
 
   // usando la operacion 'map' y la funcion anterior, crea un array de strings con el nombre y la cantidad de mascotas de cada Usuario filtrado anteriormente
   // Ej:
@@ -51,7 +51,7 @@ const practica01 = () => {
   // Usando la operacion reduce devuelve la cantidad total de mascotas
 
   const totalPets = users.reduce((acc, user) => {
-    return acc + user.cantMascotas
+    return acc + user.mascotas.length
   }, 0)
   console.log(totalPets)
 }
