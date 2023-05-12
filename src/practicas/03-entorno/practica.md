@@ -21,12 +21,19 @@ Asegurate de que el `.gitingore` contenga `node_modules`
 
 1. Instala [ESLint](https://eslint.org/docs/latest/use/getting-started)
 `npm init @eslint/config`
+
 **How would you like to use ESLint?** To check syntax and find problems
+
 **What type of modules does your project use?** JavaScript modules (import/export)
+
 **Which framework does your project use?** React
+
 **Does your project use TypeScript?** No
+
 **Where does your code run?** Browser
+
 **What format do you want your config file to be in?** JSON
+
 
 2. Mira el archivo App. Tendra errores ahora
 Deshabilita la regla react/react-in-jsx-scope

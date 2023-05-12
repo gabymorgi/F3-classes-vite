@@ -8,7 +8,7 @@ Usando la lista de [usuarios](https://github.com/gabymorgi/F3-classes-vite/blob/
 
 Muestra por consola:
 - el `email` del primer Usuario
-- el `nombre` del tercer Usuario
+- el `apodo` del tercer Usuario
 - el color de la segunda `mascota` del tercer Usuario
 
 ---
