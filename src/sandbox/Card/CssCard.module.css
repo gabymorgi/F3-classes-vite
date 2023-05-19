@@ -1,0 +1,20 @@
+.h1 {
+  font-size: 24px;
+  color: yellow;
+}
+
+.title {
+  padding: 10px;
+  background-color: pink;
+}
+
+.card {
+  padding: 10px;
+  background-color: fuchsia;
+  color: black;
+}
+
+:global(.green-theme) .card {
+  background-color: green;
+  color: white;
+}
