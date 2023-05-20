@@ -1,27 +1,31 @@
 import products from '../../fakeApi/products.json'
 import accounts from '../../fakeApi/accounts.json'
 import users from '../../fakeApi/users.json'
+import ProductCard from './ProductCard'
 
 const App = () => {
+  function handleAddToCart(id) {
+    console.log(`Agregado al carrito el producto con id ${id}`)
+  }
+
   return (
     <div>
-      <div className="flex height-limited">
-        {products.map(producto => (
-          <div className="card" key={producto.id}>
-            <h2>{producto.nombre}</h2>
-            <p>ID: {producto.id}</p>
-            <p>Precio: {producto.precio}</p>
-            <p>Descripción: {producto.descripcion}</p>
-          </div>
+      <div className='flex height-limited'>
+        {products.map((producto) => (
+          <ProductCard
+            key={producto.id}
+            product={producto}
+            onAddToCart={handleAddToCart}
+          />
         ))}
       </div>
       <hr />
-      <div className="flex height-limited">
-        {accounts.map(cuenta => (
-          <div className="card" key={cuenta.account}>
+      <div className='flex height-limited'>
+        {accounts.map((cuenta) => (
+          <div className='card' key={cuenta.account}>
             <a
-              target="_blank"
-              rel="noreferrer"
+              target='_blank'
+              rel='noreferrer'
               href={`https://twitter.com/${cuenta.account}`}
             >
               {cuenta.account}
@@ -30,12 +34,12 @@ const App = () => {
         ))}
       </div>
       <hr />
-      <div className="flex height-limited">
-        {users.map(usuario => (
-          <div className="card" key={usuario.email}>
+      <div className='flex height-limited'>
+        {users.map((usuario) => (
+          <div className='card' key={usuario.email}>
             <h2>{usuario.apodo}</h2>
             <ul>
-              {usuario.mascotas.map(mascota => (
+              {usuario.mascotas.map((mascota) => (
                 <li key={mascota.nombre}>
                   {mascota.nombre} ({mascota.edad}): {mascota.color}
                 </li>

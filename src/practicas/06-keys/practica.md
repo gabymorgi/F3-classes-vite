@@ -16,3 +16,6 @@ usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/s
 3. Muestra la lista de usuarios con su apodo, y la lista de sus mascotas con el formato `${nombre} (${edad}): ${color}`
 
 usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/users.json)
+
+4. Crea un componente ProductCard, que se encargue de mostrar un producto de la misma forma que en el paso 1, pero con un boton adicional para agregar el producto al chango. Y utilizala dentro del map.
+Agregale una prop `onAddToCart` que reciba una funcion que se encargue de agregar el producto al chango.
