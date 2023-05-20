@@ -1,8 +1,12 @@
-import { List, ListItem } from "./UI/List";
+import { List, ListItem } from './UI/List'
 import data from '../../fakeApi/games.json'
-import Card from "./UI/Card";
+import Card from './UI/Card'
 
 const App = () => {
+  function handleComprar(id) {
+    console.log(`Comprado el juego con id ${id}`)
+  }
+
   return (
     <List>
       {data.map((item) => {
@@ -11,14 +15,18 @@ const App = () => {
             {/* key must be unique between its siblings */}
             {/* but also should be identitary of elements */}
 
-            <Card title={item.name}>
-              <img width="100%" src={item.imgUrl} alt={item.name} />
+            <Card
+              id={item.id}
+              title={item.name}
+              onBuy={handleComprar}
+            >
+              <img width='100%' src={item.imgUrl} alt={item.name} />
             </Card>
           </ListItem>
         )
       })}
     </List>
-  );
-};
+  )
+}
 
-export default App;
+export default App

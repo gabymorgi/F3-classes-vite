@@ -1,25 +1,23 @@
-import ghUser from '../fakeApi/ghUser.json'
-import Card from './Card/CssCard'
-import Header from './Header/Header'
-import styles from './Card/CssCard.module.css'
+import { Fragment } from 'react';
+import games from '../fakeApi/games.json'
+import Card from "./UI/Card";
+import React from 'react';
 
-function App() {
+const App = () => {
+
   return (
-    <div className='flex p-16'>
-      <Header />
-      <Card title="Card title">
-        card body
-      </Card>
-      <div className="green-theme">
-        <Card title="Card title">
-          card body
+    <>
+      <div className="flex">
+        <Card
+          title="Nuevo titulo"
+          id="random-element"
+          key="random-element"
+        >
+          asdfads
         </Card>
       </div>
-      <div className={styles.h1}>
-        card body
-      </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default App
+export default App;
