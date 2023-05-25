@@ -19,6 +19,28 @@ const App = () => {
   function handleDelete() {
     setCant(cant - 1)
   }
+
+  function MultipleBuyWrong() {
+    // esto no funciona porque los estados son asincronicos
+    // no podemos esperar a que el estado cambie
+    // React lo hace cuando le pinte
+    setCant(cant + 1)
+    setCant(cant + 2)
+    setCant(cant + 3)
+  }
+
+  function MultipleBuyGood() {
+    // setState puede recibir, en lugar de un valor, una funcion
+    // esa funcion recibe como parametro el valor anterior del estado
+    // y retorna el nuevo valor del estado
+    // de esta forma, podemos asegurarnos de que el estado se va a actualizar correctamente
+    // de todas formas, React hara un unico render
+    // pero el estado quedara con el valor correcto
+    setCant((prevCant) => prevCant + 1)
+    setCant((prevCant) => prevCant + 2)
+    setCant((prevCant) => prevCant + 3)
+  }
+
   return (
     <>
       {/* el valor del estado se puede usar en cualquier parte del componente */}
