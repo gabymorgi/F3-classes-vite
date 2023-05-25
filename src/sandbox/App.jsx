@@ -1,67 +1,50 @@
-import { useState } from 'react';
-import data from '../fakeApi/games.json'
-import Game from './Components/Game';
-import { List, ListItem } from './UI/List'
+import { useState } from 'react'
+import Menu from './components/Menu'
+import Pedido from './components/Pedido'
 
+// necesito generar un id unico y que no cambie
 let uniqueId = 0
 
 const App = () => {
-  const [juegosComprados, setJuegosComprados] = useState([])
+  const [pedidos, setPedidos] = useState([])
 
-  function handleComprar(game) {
-    console.log("comprar", game)
-    const productoComprado = {
+  function handleSubmit(value) {
+    console.log('submit', value)
+    const newPedido = {
       id: uniqueId++,
-      game: game,
+      nombre: value,
     }
-    setJuegosComprados([...juegosComprados, productoComprado])
+    setPedidos([newPedido, ...pedidos])
   }
 
   function handleDelete(id) {
-    console.log(id)
-    const newJuegosComprados = juegosComprados.filter(
-      (item) => item.id !== id
-    )
-    setJuegosComprados(newJuegosComprados)
+    console.log('click')
+    const newPedidos = pedidos.filter((pedido) => pedido.id !== id)
+    setPedidos(newPedidos)
   }
 
-  console.log("render app", juegosComprados)
-
   return (
-    <div className="flex-col">
-      <h1>
-        Juegos Comprados: {juegosComprados.length}
-      </h1>
-      <List>
-        {juegosComprados.map((item) => {
-          return (
-            <ListItem key={item.id}>
-              <div id={item.id}>
-                <Game
-                  game={item.game}
-                  onBuy={handleComprar}
-                  onDelete={() => handleDelete(item.id)}
-                />
-              </div>
-            </ListItem>
-          )
-        })}
-      </List>
+    <div className='flex-col'>
+      <Menu
+        onSubmit={handleSubmit}
+      >
+        <p>adsfasd</p>
+      </Menu>
       <hr />
-      <h1>Lista de lo juegito</h1>
-      <List>
-        {data.map((item) => {
+      <ul>
+        {pedidos.map((pedido) => {
           return (
-            <ListItem key={item.id}>
-              <div id={item.id}>
-                <Game game={item} onBuy={handleComprar} onDelete={() => handleDelete(item.id)} />
-              </div>
-            </ListItem>
+            <li key={pedido.id}>
+              <Pedido
+                nombre={pedido.nombre}
+                onClick={() => handleDelete(pedido.id)}
+              />
+            </li>
           )
         })}
-      </List>
+      </ul>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

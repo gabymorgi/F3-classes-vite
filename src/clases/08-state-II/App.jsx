@@ -9,7 +9,7 @@ const App = () => {
   const [chart, setChart] = useState([])
 
   function handleBuy(game) {
-    //podemos tener en el carrito juegos repetidos
+    // podemos tener en el carrito juegos repetidos
     // por lo que su id no es unico
     // para solucionar esto, le agregamos un id unico a cada juego
     // un id autoincremental es una opcion simple
