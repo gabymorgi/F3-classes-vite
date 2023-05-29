@@ -2,6 +2,49 @@
 
 ### Testing
 
+### Ejercicio 1: configuracion de entorno
+
+1. Instale las dependencias de **desarrollo** `vitest`, `@testing-library/react` y `jsdom`
+2. Configure el archivo `vite.config.js` para que use `jsdom` como entorno de testeo
+Agregar la siguiente linea al archivo:
+
+```js
+// vite.config.js
+export default defineConfig({
+  // ...
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  }
+})
+```
+3. Modifique el `package.json` para que ejecute los tests con `vitest`
+
+```json
+// package.json
+{
+  // ...
+  "scripts": {
+    // ...
+    "test": "vitest"
+  }
+}
+```
+4. Cree un test de prueba para verificar que todo este funcionando correctamente
+
+```js
+// src/App.test.js
+import { render, screen } from '@testing-library/react'
+import App from './App'
+
+test('renders learn react link', () => {
+  render(<App />)
+  expect(true).toBeTruthy()
+})
+```
+
+### Ejercicio 2: Proper practice
+
 cree los siguientes test, y adapte la aplicacion de acuerdo a los mismos:
 
 1. La app debe tener un titulo que diga `Cookie Clicker`
