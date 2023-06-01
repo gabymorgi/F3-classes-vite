@@ -4,6 +4,7 @@ import { sumClockTime } from "./sum"
 describe("test clock time sum", () => {
   test("1 + 2 = 3", () => {
     const value = sumClockTime(1, 2)
+    
     expect(value).toBe(3)
   })
   
