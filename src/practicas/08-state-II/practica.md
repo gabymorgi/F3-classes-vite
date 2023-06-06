@@ -31,12 +31,16 @@ Crea una app que muestra
 
 2. un componente con todas las cuentas disponibles:
 
-3. cuando haces click en una cuenta, se agrega a la lista de cuentas que estas siguiendo
-  si la cuenta no esta en la lista, se agrega 
-  si la cuenta ya esta en la lista, no se agrega
+3. cuando haces click en una cuenta:
 
-> TIP: puedes user el metodo [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) para saber si la cuenta ya esta en la lista
+    - si la cuenta no esta en la lista, se agrega 
 
-4. cuando se hace click en una cuenta que estas siguiendo, se elimina de la lista de cuentas que estas siguiendo
+    - si la cuenta ya esta en la lista, no se agrega
 
-> TIP: puedes usar el metodo [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) para eliminar un elemento de la lista
+    > TIP: puedes user el metodo [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) para saber si la cuenta ya esta en la lista
+
+4. cuando se hace click en una cuenta que estas siguiendo: 
+
+    - se elimina de la lista de cuentas que estas siguiendo
+
+    > TIP: puedes usar el metodo [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) para eliminar un elemento de la lista

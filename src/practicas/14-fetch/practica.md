@@ -16,14 +16,15 @@ Crea una app con lo siguiente
   
 1. Un boton con el texto `buscar datos`
 
-2. `onClick` llama a una async function
+    - `onClick` llama a una async function
 
-utilizando la api `https://cat-fact.herokuapp.com/facts` obtiene una lista de hechos
-guarda en un estado el `_id` y `text` de cada hecho
+      - utilizando la api `https://cat-fact.herokuapp.com/facts` obtiene una lista de hechos
+
+      - guarda en un estado el `_id` y `text` de cada hecho
   
-3. Una lista que muestre los datos guardados en el estado
+2. Una lista que muestre los datos guardados en el estado
 
-4. Mientras se esten cargando los datos, muestra un texto `cargando datos`
+3. Mientras se esten cargando los datos, muestra un texto `cargando datos`
 
 ---
 
@@ -31,15 +32,19 @@ guarda en un estado el `_id` y `text` de cada hecho
 
 Crea una app con lo siguiente
 
-1. Un boton con el texto `siguiente hecho`
+1. Un boton con el texto `siguiente facto`
     
-2. `onClick` llama a una async function
+    - `onClick` llama a una async function
 
-utilizando la api `https://cat-fact.herokuapp.com/facts/random` guarda en un estado el `text` del hecho
+      - utilizando la api `https://cat-fact.herokuapp.com/facts/random` guarda en un estado el `text` del facto
   
-3. Un texto que muestre el hecho guardado en el estado
+2. Un texto que muestre el facto guardado en el estado
 
-4. Ni bien inicia la app, se llama a la api y se guarda el hecho en el estado
+3. Ni bien inicia la app
+  
+    - Se llama a la api
+    
+    - Se guarda un facto en el estado
 
 ---
 
@@ -51,9 +56,10 @@ Crea una app con lo siguiente
 
 2. Un boton con el texto `guardar`
   
-`onClick` llama a una async function
+      - `onClick` llama a una async function
   utilizando la api `https://jsonplaceholder.typicode.com/posts`
-  (la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)
+  
+      - *(la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)*
 
 ---
 
@@ -67,18 +73,19 @@ Crea una app con lo siguiente
 
 3. Un estado para guardar el loading de la api
 
-4. Una funcion que hara un fetch a https://jsonplaceholder.typicode.com/posts
+4. Una funcion que hara un fetch a `https://jsonplaceholder.typicode.com/posts`
   
-En el mount se llamara a la funcion que hace el fetch y guardara los datos en un estado
+    - En el mount se llamara a la funcion que hace el fetch y guardara los datos en un estado.
 
-5. Un formulario que permita ingresar un titulo `input text` y un body `textarea`
+5. Un formulario que permita ingresar un titulo `input type text` y un body `textarea`
 
 6. Un boton con el texto `guardar`
   
-`onClick` llama a una async function
+    - `onClick` llama a una async function
   utilizando la api `https://jsonplaceholder.typicode.com/posts`
-  (la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)
+  
+    - *(la api no guarda los datos en el servidor, pero devolvera como si lo hiciera)*
 
-Se volvera a hacer un fetch a `https://jsonplaceholder.typicode.com/posts`
+    - Se volvera a hacer un fetch a `https://jsonplaceholder.typicode.com/posts` para simular que obtenemos los datos guardados en el servidor actualizados
 
 7. Una lista que muestre los datos guardados en el estado

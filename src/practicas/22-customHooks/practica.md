@@ -2,11 +2,15 @@
 
 ### Custom Hook Ejercicio 1
 
-crea un hook useLocalStorage que permita guardar y obtener datos del localStorage
+crea un hook `useLocalStorage` que permita guardar y obtener datos del localStorage
 
 1. el hook debe recibir una key
 
 2. el hook debe devolver un array con el valor y una funcion para actualizarlo
+
+    **Que pasa si dos componentes usan el mismo hook con la misma key?**
+
+    > TIP: setItem no es reactivo, por lo que si dos componentes usan el mismo hook con la misma key, no se actualizara el valor en el otro componente
 
 ---
 

@@ -8,20 +8,22 @@ Crea una App con lo siguiente
 
 2. utiliza `useMemo` que muestre la suma de los primeros 2 inputs
 
-**el memo no se debe recalcular si el tercer input se modifica**
+    **el memo no se debe recalcular si el tercer input se modifica**
 
-3. Crea una Componente con lo siguiente
+3. Crea una Componente `Products` con lo siguiente
 
-usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/products.json)
+    -  Con `useMemo` muestra en pantalla todos los productos que tengan un precio mayor a 50
 
-4. Con `useMemo` muestra en pantalla todos los productos que tengan un precio mayor a 50
+    - usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/products.json)
 
-**el memo no debe recalcularse**
+      **el memo no debe recalcularse**
 
-5. Agrega un select con los siguientes valores: `["Roshar", "Skadrial", "Nalthis", "Threnody"]`
+5. Crea un componente `Books` con lo siguiente
 
-6. Con `useMemo` muestra todos los libros que transcurran en el planeta seleccionado
+     - un select con los siguientes valores: `["Roshar", "Skadrial", "Nalthis", "Threnody"]`
 
-usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/books.json)
+     - Con `useMemo` muestra todos los libros que transcurran en el planeta seleccionado
 
-**el memos solo deben recalcularse si el select cambia**
+        usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/books.json)
+
+        **el memo solo deben recalcularse si el select cambia**

@@ -14,8 +14,9 @@ Crea una app que muestre una lista de [peliculas](https://github.com/gabymorgi/F
 
 5. Al hacer click en el boton, se debera buscar en el `localStorage` la edad del usuario.
 
-Si cumple los requisitos, se mostrara por consola un mensaje de success.
-Si no, se mostrara un mensaje de error
+    - Si cumple los requisitos, se mostrara por consola un mensaje de success.
+
+    - Si no, se mostrara un mensaje de error
 
 ---
 
@@ -28,4 +29,7 @@ Crea una app con dos secciones
 1. Un listado de libros favoritos
 
 2. Un listado de todos los libros
-cuando se hace click, se agrega a favoritos si es que no esta, si no. Se elimina
+
+    - cuando se hace click, se agrega a favoritos si es que no esta.
+     
+    - si no, se elimina.

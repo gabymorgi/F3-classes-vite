@@ -22,32 +22,40 @@ Asegurate de que el `.gitingore` contenga `node_modules`
 1. Instala [ESLint](https://eslint.org/docs/latest/use/getting-started)
 `npm init @eslint/config`
 
-**How would you like to use ESLint?** To check syntax and find problems
+    **How would you like to use ESLint?** To check syntax and find problems
 
-**What type of modules does your project use?** JavaScript modules (import/export)
+    **What type of modules does your project use?** JavaScript modules (import/export)
 
-**Which framework does your project use?** React
+    **Which framework does your project use?** React
 
-**Does your project use TypeScript?** No
+    **Does your project use TypeScript?** No
 
-**Where does your code run?** Browser
+    **Where does your code run?** Browser
 
-**What format do you want your config file to be in?** JSON
+    **What format do you want your config file to be in?** JSON
 
 
-2. Mira el archivo App. Tendra errores ahora
-Deshabilita la regla react/react-in-jsx-scope
-Ve al archivo `.eslintrc.json` y agrega la siguiente linea en `rules`
-`"react/react-in-jsx-scope": "off"`
+2. Mira el archivo App. Tendra errores :(
 
-3. Vuelve a mirar el archivo App. los anchors tendran errores ahora
-si no ves esto agrega el siguiente codigo
-```html
-  <a href="https://vitejs.dev" target="_blank">
-    <img src={viteLogo} className="logo" alt="Vite logo" />
-  </a>
-```
-Si hovereas sobre el error veras que te dice que no se puede usar `target="_blank"` sin `rel="noopener noreferrer"`, puedes hacer click en el error si quieres mas informacion
+    - Deshabilita la regla `react/react-in-jsx-scope`
+
+    - Para eso, ve al archivo `.eslintrc.json` y agrega la siguiente linea en `rules`
+
+        ```
+        "react/react-in-jsx-scope": "off"
+        ```
+
+3. Vuelve a mirar el archivo App. los anchors tendran errores ahora.
+
+    - si no ves esto agrega el siguiente codigo
+
+      ```html
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+      ```
+
+     - Si hovereas sobre el error veras que te dice que no se puede usar `target="_blank"` sin `rel="noopener noreferrer"`, puedes hacer click en el error si quieres mas informacion.
 
 4. Resuelve el error agregando `rel="noopener noreferrer"` al anchor
 
@@ -55,26 +63,32 @@ Si hovereas sobre el error veras que te dice que no se puede usar `target="_blan
 
 6. Escribe el siguiente codigo y mira el error que te da eslint
 
-```js
-<CustomComponent />
-```
+    ```js
+    <CustomComponent />
+    ```
 
 7. Escribe el siguiente codigo y mira el error que te da eslint
 
-```js
-const ovgekt = {
-  neim: 'nonvre'
-  heda  25,
-}
-```
+    ```js
+    const ovgekt = {
+      neim: 'nonvre'
+      heda  25,
+    }
+    ```
 
 ---
 
 ### Practica de dependencias
 
 1. Instala la siguiente dependencia [is-odd](https://www.npmjs.com/package/is-odd)
-`npm i is-odd`
-2. Utiliza la biblioteca en el proyecto
-`import isOdd from 'is-odd';`
-`console.log(isOdd(1)); //=true`
 
+    ```
+    npm i is-odd
+    ```
+
+2. Utiliza la biblioteca en el proyecto
+
+    ```
+    import isOdd from 'is-odd';
+    console.log(isOdd(1)); //=true
+    ```
