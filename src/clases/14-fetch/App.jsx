@@ -2,7 +2,7 @@ import GameList from './Components/Gamelist'
 import GameDetail from './Components/GameDetail'
 import { useEffect, useState } from 'react';
 import NewGameForm from './Components/NewGameForm';
-import { fakeFetch } from '../../fakeApi/server';
+import { fakeFetch } from '@/fakeApi/server';
 
 const App = () => {
   const [games, setGames] = useState([])
