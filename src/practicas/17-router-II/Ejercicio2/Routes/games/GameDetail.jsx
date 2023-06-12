@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import gamesDetailData from "@/fakeApi/detailedData.json"
+import gamesDetailData from "@/fakeApi/detailedGames.json"
 
 function PostDetail() {
   const [game, setGame] = useState()

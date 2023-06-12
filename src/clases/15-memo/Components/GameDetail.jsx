@@ -7,7 +7,7 @@ const GameDetail = (props) => {
   useEffect(() => {
     if (!props.gameId) return
     const getGame = async () => {
-      const game = await (await fakeFetch(`/api/games/${props.gameId}`)).json()
+      const game = await (await fakeFetch(`/api/detailedGames/${props.gameId}`)).json()
       setGame(game)
     }
     getGame()

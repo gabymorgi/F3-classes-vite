@@ -1,6 +1,6 @@
 import accounts from './accounts.json'
 import books from './books.json'
-import detailedGames from './detailedData.json'
+import detailedGames from './detailedGames.json'
 import gamesData from './games.json'
 import movies from './movies.json'
 import paises from './paises.json'

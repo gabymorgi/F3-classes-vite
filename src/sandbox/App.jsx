@@ -1,23 +1,26 @@
-import { useState } from 'react'
-import Timer from './Components/Timer'
+import { useEffect, useState } from 'react'
+import GameDetail from './Components/GameDetail'
+import data from '@/fakeApi/games.json'
+import { fakeFetch } from '@/fakeApi/server'
+
+//`/api/games`
 
 const App = () => {
-  const [showTimer, setShowTimer] = useState(false)
-  const [seconds, setSeconds] = useState(1)
+  const [isTrue, setIsTrue] = useState(false)
 
-  function toggleTimer() {
-    setShowTimer(!showTimer)
-  }
-  
   return (
     <>
-      <button onClick={toggleTimer}>{showTimer ? 'stop': 'start'}</button>
-      <select value={seconds} onChange={e => setSeconds(e.target.value)}>
-        <option value="1">1 segundo</option>
-        <option value="2">2 segundos</option>
-        <option value="3">3 segundos</option>
-      </select>
-      {showTimer && <Timer seconds={seconds} />}
+      <button onClick={() => setIsTrue(!isTrue)}>
+        Tema: {isTrue ? 'claro' : 'oscuro'}
+      </button>
+      {/* <GameDetail gameId={selectedId} /> */}
+      <div className='flex-column'>
+        {/* {games.map((game) => (
+          <div className='card' key={game.id} onClick={() => setSelectedId(game.id)}>
+            {game.name}
+          </div>
+        ))} */}
+      </div>
     </>
   )
 }
