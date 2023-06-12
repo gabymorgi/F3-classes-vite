@@ -1,4 +1,4 @@
-import user from '../../../fakeApi/ghUser.json'
+import user from '@/fakeApi/ghUser.json'
 import Card from '../UI/Card'
 import Info from '../UI/Info'
 

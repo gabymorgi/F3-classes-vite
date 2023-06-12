@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import data from '../../../fakeApi/books.json'
+import data from '@/fakeApi/books.json'
 import BookList from './Components/BookList'
 
 const App = () => {

@@ -1,6 +1,6 @@
 import Card from '../UI/Card'
-import repo from '../../../fakeApi/ghRepoDetail.json'
-import repoLanguages from '../../../fakeApi/ghLanguages.json'
+import repo from '@/fakeApi/ghRepoDetail.json'
+import repoLanguages from '@/fakeApi/ghLanguages.json'
 import Info from '../UI/Info'
 import { format, objectToArray } from '../Utils/format'
 import Tag from '../UI/Tag'

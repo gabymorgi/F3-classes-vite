@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import gamesData from '../../../../fakeApi/games.json'
+import gamesData from '@/fakeApi/games.json'
 import Form from '../components/Form'
 
 function Index() {

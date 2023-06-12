@@ -1,4 +1,4 @@
-import users from '../../fakeApi/users.json'
+import users from '@/fakeApi/users.json'
 
 const practica01 = () => {
   //Muestra por consola:

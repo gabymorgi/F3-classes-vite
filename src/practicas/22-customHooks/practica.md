@@ -16,7 +16,7 @@ crea un hook `useLocalStorage` que permita guardar y obtener datos del localStor
 
 ### Custom Hook Ejercicio 2
 
-crea un hook useLocation que permita manejar los datos de [paises](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/paises.json) y [provincias](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/provincias.json)
+crea un hook useLocation que permita manejar los datos de [paises](/src/fakeApi/paises.json) y [provincias](/src/fakeApi/provincias.json)
 
 El hook devolvera
 

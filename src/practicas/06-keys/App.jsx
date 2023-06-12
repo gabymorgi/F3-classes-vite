@@ -1,6 +1,6 @@
-import products from '../../fakeApi/products.json'
-import accounts from '../../fakeApi/accounts.json'
-import users from '../../fakeApi/users.json'
+import products from '@/fakeApi/products.json'
+import accounts from '@/fakeApi/accounts.json'
+import users from '@/fakeApi/users.json'
 import ProductCard from './ProductCard'
 
 const App = () => {

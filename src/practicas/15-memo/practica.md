@@ -14,7 +14,7 @@ Crea una App con lo siguiente
 
     -  Con `useMemo` muestra en pantalla todos los productos que tengan un precio mayor a 50
 
-    - usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/products.json)
+    - usa la siguiente [data](/src/fakeApi/products.json)
 
       **el memo no debe recalcularse**
 
@@ -24,6 +24,6 @@ Crea una App con lo siguiente
 
      - Con `useMemo` muestra todos los libros que transcurran en el planeta seleccionado
 
-        usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/books.json)
+        usa la siguiente [data](/src/fakeApi/books.json)
 
         **el memo solo deben recalcularse si el select cambia**

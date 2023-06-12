@@ -1,5 +1,5 @@
 import { List, ListItem } from './UI/List'
-import data from '../../fakeApi/games.json'
+import data from '@/fakeApi/games.json'
 import Game from './Components/Game'
 import { useState } from 'react'
 

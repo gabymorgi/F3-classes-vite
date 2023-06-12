@@ -44,8 +44,8 @@ export async function fakeFetch(
   options: RequestInit = { method: 'GET' }
 ): Promise<any> {
   if (typeof url === 'string' && url.startsWith('/api')) {
-    // wait 1 second before responding
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // wait half a second before responding
+    await new Promise((resolve) => setTimeout(resolve, 500));
     
     const method = options?.method ?? 'GET';
     const [,, key, id] = url.split('/');

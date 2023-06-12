@@ -1,4 +1,4 @@
-import repos from '../../../fakeApi/ghRepos.json'
+import repos from '@/fakeApi/ghRepos.json'
 import Card from '../UI/Card'
 import FlexSection from '../UI/FlexSection'
 import Info from '../UI/Info'

@@ -1,7 +1,7 @@
 import { List, ListItem } from '../UI/List'
 import { useEffect, useState } from 'react'
 import Card from '../UI/Card'
-import { fakeFetch } from '../../../fakeApi/server'
+import { fakeFetch } from '@/fakeApi/server'
 
 const GameList = (props) => {
   const [games, setGames] = useState([])

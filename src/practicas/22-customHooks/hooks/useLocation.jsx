@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import countriesData from '../../../fakeApi/paises.json'
-import provincesData from '../../../fakeApi/provincias.json'
+import countriesData from '@/fakeApi/paises.json'
+import provincesData from '@/fakeApi/provincias.json'
 
 function useLocation() {
   const [country, setCountry] = useState()

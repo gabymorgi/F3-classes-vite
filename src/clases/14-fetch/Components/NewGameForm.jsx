@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { fakeFetch } from '../../../fakeApi/server'
+import { fakeFetch } from '@/fakeApi/server'
 
 const NewGameForm = (props) => {
   const [name, setName] = useState('')

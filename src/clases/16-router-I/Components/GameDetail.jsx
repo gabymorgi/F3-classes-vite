@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fakeFetch } from '../../../fakeApi/server'
+import { fakeFetch } from '@/fakeApi/server'
 
 const GameDetail = () => {
   const [game, setGame] = useState() 

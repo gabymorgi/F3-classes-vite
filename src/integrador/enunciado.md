@@ -10,16 +10,16 @@
 
 1. Crear una carpeta con todos los datos mockeados necesaros:
 
-[user](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghUser.json)
-[repos](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghRepos.json)
-[repoList](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghRepoDetail.json)
-[repoLanguages](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghLanguages.json)
+[user](/src/fakeApi/g)
+[repos](/src/fakeApi/ghRepos.json)
+[repoList](/src/fakeApi/ghRepoDetail.json)
+[repoLanguages](/src/fakeApi/ghLanguages.json)
 
 2. Crear un componente Navbar que renderice un header que internamente tendra 2 bloques
 
-por un lado el [logo](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/hitbug-logo.png) y nombre de la aplicacion
+por un lado el [logo](/public/hitbug-logo.png) y nombre de la aplicacion
 
-por otro lado 3 span con los siguientes textos: `User Info`, `Repos`, `Log Out`; y un bloque con el nombre y avatar del [usuario](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/ghUser.json)
+por otro lado 3 span con los siguientes textos: `User Info`, `Repos`, `Log Out`; y un bloque con el nombre y avatar del [usuario](/src/fakeApi/ghUser.json)
 
 No es necesario aplicar estilos aun
 

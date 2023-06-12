@@ -6,15 +6,15 @@ Muestra las siguiente lista de elementos utilizando el metodo map. Intenta utili
 
 1. Muestra la lista de productos con su nombre, precio y descripcion
 
-    - usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/products.json)
+    - usa la siguiente [data](/src/fakeApi/products.json)
 
 2. Muestra la lista de links que muestren el nombre del usuario y redirijan a `https://twitter.com/${account}`
 
-    - usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/accounts.json)
+    - usa la siguiente [data](/src/fakeApi/accounts.json)
 
 3. Muestra la lista de usuarios con su apodo, y la lista de sus mascotas con el formato `${nombre} (${edad}): ${color}`
 
-    - usa la siguiente [data](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/users.json)
+    - usa la siguiente [data](/src/fakeApi/users.json)
 
 4. Crea un componente ProductCard, que se encargue de mostrar un producto de la misma forma que en el paso 1, pero con un boton adicional para agregar el producto al chango.
 

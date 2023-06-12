@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { fakeFetch } from '../../../fakeApi/server'
+import { fakeFetch } from '@/fakeApi/server'
 
 const NewGameForm = () => {
   const [name, setName] = useState('')

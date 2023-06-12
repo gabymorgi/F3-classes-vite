@@ -17,7 +17,7 @@ function sumar(a, b) {
 
 Cuando el programa llega a la palabra clave `debugger`, se detiene y nos permite ver los valores de las variables en ese momento. Tambien nos permite ejecutar codigo en la consola.
 
-![Imagen Debugger](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/debugger.png)
+![Imagen Debugger](/public/debugger.png)
 
 En mi experiencia personal, esta herramienta es muy util para funciones normales, no Componentes de React, porque a veces entramos en codigo de React que no podemos controlar, y el debugger se detiene en ese codigo, y no en el nuestro.
 
@@ -67,19 +67,19 @@ Recuerden que los console log son gratis, y no afectan el rendimiento de la apli
 
 Los errores en consola nos muestran el nombre del error, y la linea donde esta el error. Por ejemplo:
 
-![Imagen Error](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/error.png)
+![Imagen Error](/public/error.png)
 
 con estos mensajes podemos tratar de acotar el problema, y buscar la solucion.
 Ojo, si el componente se usa en muchos lados, se nos va a llenar la consola de errores, y no vamos a poder ver los errores que nos interesan.
 Para estos casos, es util comentar todo lo que no nos interesa, y si es necesario mockear datos para forzar el error en entornos mas controlados.
 
-![Imagen Debugger](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/button-component.png)
+![Imagen Debugger](/public/button-component.png)
 
-![Imagen Debugger](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/button-console-mess.png)
+![Imagen Debugger](/public/button-console-mess.png)
 
-![Imagen Debugger](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/button-container-comments.png)
+![Imagen Debugger](/public/button-container-comments.png)
 
-![Imagen Debugger](https://github.com/gabymorgi/F3-classes-vite/blob/main/public/button-console-clean.png)
+![Imagen Debugger](/public/button-console-clean.png)
 
 Los pasos que yo sigo tipicamente son:
 

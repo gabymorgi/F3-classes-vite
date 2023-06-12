@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fakeFetch } from '../../../fakeApi/server'
+import { fakeFetch } from '@/fakeApi/server'
 
 export const useFetch = (url) => {
   const [data, setData] = useState()

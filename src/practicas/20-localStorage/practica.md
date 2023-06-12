@@ -2,7 +2,7 @@
 
 ### Context Ejercicio 1
 
-Crea una app que muestre una lista de [peliculas](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/movies.json)
+Crea una app que muestre una lista de [peliculas](/src/fakeApi/movies.json)
 
 1. La app debera tener un formulario que solicite el año de nacimiento del usuario.
 
@@ -22,7 +22,7 @@ Crea una app que muestre una lista de [peliculas](https://github.com/gabymorgi/F
 
 ### Context Ejercicio 2
 
-Crea una app que muestre una lista de [libros](https://github.com/gabymorgi/F3-classes-vite/blob/main/src/fakeApi/books.json)
+Crea una app que muestre una lista de [libros](/src/fakeApi/books.json)
 
 Crea una app con dos secciones
 

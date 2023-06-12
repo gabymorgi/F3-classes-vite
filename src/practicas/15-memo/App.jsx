@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
-import products from '../../fakeApi/products.json'
-import books from '../../fakeApi/books.json'
+import products from '@/fakeApi/products.json'
+import books from '@/fakeApi/books.json'
 
 const App = () => {
   const [number1, setNumber1] = useState(0)

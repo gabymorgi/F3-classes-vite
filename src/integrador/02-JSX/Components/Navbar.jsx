@@ -1,4 +1,4 @@
-import user from '../../../fakeApi/ghUser.json'
+import user from '@/fakeApi/ghUser.json'
 
 function Navbar() {
   return (
