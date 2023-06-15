@@ -7,9 +7,7 @@ const GameList = (props) => {
   const [games, setGames] = useState([])
   async function fetchGames() {
     const response = await fakeFetch('/api/games')
-    console.log(response)
     const data = await response.json()
-    console.log(data)
     setGames(data)
   }
   useEffect(() => {

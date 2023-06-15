@@ -1,5 +1,11 @@
 # Practica clase 16!
 
+### Instalacion
+
+- Ejecuta `npm install react-router-dom`
+
+- Agrega el `BrowserRouter` en el `main` de tu app
+
 ### React Router con rutas estaticas
 
 1. Crea una app con las siguientes seccines

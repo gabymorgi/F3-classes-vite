@@ -7,19 +7,38 @@ import { fakeFetch } from '@/fakeApi/server'
 
 const App = () => {
   const [isTrue, setIsTrue] = useState(false)
+  const [games, setGames] = useState([])
+  // const [visible, setVisible] = useState(false)
+  const [selectedId, setSelectedId] = useState()
+
+  async function getGames() {
+    const response = await fakeFetch('/api/games')
+    const data = await response.json()
+
+    setGames(data)
+  }
+
+  useEffect(() => {
+    getGames()
+  }, [])
 
   return (
     <>
       <button onClick={() => setIsTrue(!isTrue)}>
         Tema: {isTrue ? 'claro' : 'oscuro'}
       </button>
-      {/* <GameDetail gameId={selectedId} /> */}
+      {selectedId ? <GameDetail gameId={selectedId} /> : undefined}
       <div className='flex-column'>
-        {/* {games.map((game) => (
-          <div className='card' key={game.id} onClick={() => setSelectedId(game.id)}>
+        {games.map((game) => (
+          <div
+            title="asdfasdfa"
+            className='card'
+            key={game.id}
+            onClick={() => setSelectedId(game.id)}
+          >
             {game.name}
           </div>
-        ))} */}
+        ))}
       </div>
     </>
   )

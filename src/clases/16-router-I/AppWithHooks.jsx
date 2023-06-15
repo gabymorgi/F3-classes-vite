@@ -6,6 +6,7 @@ import NewGameForm from './Components/NewGameForm'
 import GameDetail from './Components/GameDetail'
 import { Outlet, useRoutes } from 'react-router-dom'
 import Header from './Components/Header'
+import ProtectedElement from './Components/ProtectedElement'
 
 const App = () => {
   const [chart, setChart] = useState([])
@@ -29,12 +30,26 @@ const App = () => {
   // para ver ese ejemplo, mirar MainLayout (es mas complejo)
   const router = useRoutes([
     { path: '/', element: <GameList onBuy={handleBuy} /> },
-    { path: '/chart', element: <Chart chart={chart} onDelete={handleDelete} /> },
-    { path: '/games', element: <Outlet />, children: [
-      { index: true, element: <div>index page</div>},
-      { path: 'detail', element: <GameDetail /> },
-      { path: 'create', element: <NewGameForm /> },
-    ] },
+    {
+      path: '/chart',
+      element: <Chart chart={chart} onDelete={handleDelete} />,
+    },
+    {
+      path: '/games',
+      element: <Outlet />,
+      children: [
+        { index: true, element: <div>index page</div> },
+        { path: 'detail', element: <GameDetail /> },
+        { path: 'create', element: <NewGameForm /> },
+      ],
+    },
+    {
+      path: '/protected',
+      element: (
+        <ProtectedElement>This element is protected :p</ProtectedElement>
+      ),
+    },
+
     { path: '*', element: <div>Not Found</div> },
   ])
 
