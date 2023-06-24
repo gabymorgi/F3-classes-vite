@@ -1,45 +1,24 @@
-import { useEffect, useState } from 'react'
-import GameDetail from './Components/GameDetail'
-import data from '@/fakeApi/games.json'
-import { fakeFetch } from '@/fakeApi/server'
+import { useEffect, useState } from "react"
 
-//`/api/games`
+const VALUE_KEY = "valber"
 
 const App = () => {
-  const [isTrue, setIsTrue] = useState(false)
-  const [games, setGames] = useState([])
-  // const [visible, setVisible] = useState(false)
-  const [selectedId, setSelectedId] = useState()
+  const [value, setValue] = useState(
+    localStorage.getItem(VALUE_KEY) ? JSON.parse(localStorage.getItem(VALUE_KEY)) : []
+  )
 
-  async function getGames() {
-    const response = await fakeFetch('/api/games')
-    const data = await response.json()
+  console.log(value)
 
-    setGames(data)
+  function increment() {
+    const newValue = [...value, value.length + 1]
+    setValue(newValue)
+    localStorage.setItem(VALUE_KEY, JSON.stringify(newValue))
   }
-
-  useEffect(() => {
-    getGames()
-  }, [])
 
   return (
     <>
-      <button onClick={() => setIsTrue(!isTrue)}>
-        Tema: {isTrue ? 'claro' : 'oscuro'}
-      </button>
-      {selectedId ? <GameDetail gameId={selectedId} /> : undefined}
-      <div className='flex-column'>
-        {games.map((game) => (
-          <div
-            title="asdfasdfa"
-            className='card'
-            key={game.id}
-            onClick={() => setSelectedId(game.id)}
-          >
-            {game.name}
-          </div>
-        ))}
-      </div>
+      <button onClick={increment}>Incrementar</button>
+      El numero: {value.length}
     </>
   )
 }
