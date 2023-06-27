@@ -108,4 +108,3 @@ Los pasos que yo sigo tipicamente son:
 11. Llamar a un amigo que sepa mas y que tenga mas paciencia y que tenga mas tiempo y que tenga mas ganas
 
 12. Llamar a un amigo que sepa mas y que tenga mas paciencia y que tenga mas tiempo y que tenga mas ganas y que tenga mas suerte
-

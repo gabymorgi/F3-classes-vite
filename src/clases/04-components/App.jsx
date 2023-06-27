@@ -1,7 +1,7 @@
-import Header from "./Header"
-import Tag from "./Tag"
+import Header from "./components/Header"
+import Tag from "./components/Tag"
 import "./styles.css"
-import Button from "./Button"
+import Button from "./components/Button"
 
 const Components = () => {
   function handleClick() {

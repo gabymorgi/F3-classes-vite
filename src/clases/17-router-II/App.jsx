@@ -31,6 +31,7 @@ const App = () => {
     { path: '/', element: <GameList onBuy={handleBuy} /> },
     { path: '/chart', element: <Chart chart={chart} onDelete={handleDelete} /> },
     { path: '/games', element: <Outlet />, children: [
+      // lo que pongamos luego de ":" es el nombre que tendra esa seccion de la url
       { path: ':id', element: <GameDetail /> },
       { path: 'create', element: <NewGameForm /> },
     ] },

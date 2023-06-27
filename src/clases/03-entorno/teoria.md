@@ -35,3 +35,5 @@ ESLint es una herramienta de linting para JavaScript. Ayuda a mantener la calida
 
 ### TypeScript
 TypeScript es un lenguaje de programación que es una superconjunto de JavaScript. Añade tipos estáticos a JavaScript, lo que puede ayudar a prevenir muchos errores comunes en el desarrollo de JavaScript. **Lamentablemente** se escapa del alcance de este curso, pero es una herramienta muy útil para proyectos grandes.
+
+> recuerda consultar la [documentacion](/doc/externalLinks.md#clase-3-entorno) si quieres saber mas sobre alguna instruccion

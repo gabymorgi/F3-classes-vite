@@ -1,19 +1,3 @@
-function Title() {
-  // Un componente simple que retorna un elemento h1
-  return <h1>My App</h1>
-}
-
-function Paragraph(props) {
-  // Un componente que acepta props y utiliza className y text en un párrafo
-  return <p className={props.className}>{props.text}</p>
-}
-
-function Button(props) {
-  // Un componente que acepta un onClick handler y children como props
-  // children es un atributo especial que contiene los elementos hijos (lo que está entre las etiquetas)
-  return <button onClick={props.onClick}>{props.children}</button>
-}
-
 function JSX() {
   // dentro de un componente podemos escribir JS como siempre
   const isMateOk = 1 + 1 === 2
@@ -63,6 +47,22 @@ function JSX() {
       {optionalJSX}
     </div>
   )
+}
+
+function Title() {
+  // Un componente simple que retorna un elemento h1
+  return <h1>My App</h1>
+}
+
+function Paragraph(props) {
+  // Un componente que acepta props y utiliza className y text en un párrafo
+  return <p className={props.className}>{props.text}</p>
+}
+
+function Button(props) {
+  // Un componente que acepta un onClick handler y children como props
+  // children es un atributo especial que contiene los elementos hijos (lo que está entre las etiquetas)
+  return <button onClick={props.onClick}>{props.children}</button>
 }
 
 export default JSX

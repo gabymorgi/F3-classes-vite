@@ -1,35 +1,30 @@
 import { useEffect, useState } from "react";
 
-const Timer = () => {
-  const [time, setTime] = useState(0);
+const Timer = (props) => {
+  const [tick, setTick] = useState(0);
 
   useEffect(() => {
     console.log("effect")
     const interval = setInterval(() => {
-      setTime((time) => time + 1);
+      // necesitamos usar una funcion para actualizar el estado
+      // porque el valor de tick depende del valor anterior
+      // y setInterval se crea una sola vez
+      // con el valor del estado en ese momento (snapshot)
+      setTick((tick) => tick + 1);
       console.log("interval")
-    }, 5000);
+    }, props.delay);
 
     return () => {
-      //this function will be executed when the component is unmounted
+      // esto se ejecuta cuando cambia el delay o cuando se desmonta el componente
+      // antes de ejecutar el siguiente efecto
       console.log("cleaning up");
+      // que pasa si no limpiamos el interval?
       clearInterval(interval)
     }
-    //this effect will be executed only once after it's first render
-  }, [])
+    // agregamos en el arreglo de dependencias el delay
+  }, [props.delay]);
 
-  useEffect(() => {
-    console.log("time effect")
-    //this effect only will be executed every time "time" changes
-  }, [time])
-
-  useEffect(() => {
-    console.log("always effect")
-    //this effect will be executed every time the component is rendered
-    //(when the state, props or parent component changes)
-  })
-
-  return <div>{time} segundos</div>;
+  return <div>{tick} Ticks</div>;
 }
 
 export default Timer;

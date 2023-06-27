@@ -7,9 +7,13 @@ import gamesData from '@/fakeApi/games.json'
 
 const GameList = (props) => {
   const [games, setGames] = useState([])
+  // useSearchParams nos permite acceder a los parametros de la url
+  // a los que estan despues del "?"
+  // no nos devuelve un objeto generico, sino un objeto de tipo URLSearchParams
   const [searchParams] = useSearchParams()
 
   async function fetchGames() {
+    // searchParams es un poco raro de usar, pero tiene un metodo get
     const name = searchParams.get('name')
     const filteredGames = name ? gamesData.filter((game) => {
       return game.name.toLowerCase().includes(name.toLowerCase())
@@ -33,6 +37,7 @@ const GameList = (props) => {
                 <button onClick={() => props.onBuy(item)}>
                   Comprar
                 </button>
+                {/* Fijate como construimos el link al detalle */}
                 <Link to={`./games/${item.id}`}>See details</Link>
               </Card>
             </ListItem>

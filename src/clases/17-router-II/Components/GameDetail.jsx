@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 import { fakeFetch } from '@/fakeApi/server'
 
 const GameDetail = () => {
+  // useParams nos permite acceder a los parametros de la url
+  // sera un objeto con tantas propiedades como parametros haya en la url
+  // en este caso, solo tenemos uno: id
   const params = useParams()
   const [game, setGame] = useState() 
 
