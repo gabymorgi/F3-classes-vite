@@ -1,36 +1,38 @@
-import React from 'react'
+import { useState } from 'react'
 
 const Calculator = (props) => {
-  const [value, setValue] = React.useState('')
+  const [value, setValue] = useState('')
 
-  const handleChange = (e) => {
-    setValue(e.target.value)
-  }
+  // todas las funciones siguientes son """iguales""" en el sentido de que
+  // todas llaman a la misma funcion reducer con el mismo tipo de props
 
-  const sumar = () => {
+  function sumar() {
     props.dispatchResult({ type: 'sumar', payload: Number(value) })
   }
 
-  const restar = () => {
+  function restar() {
     props.dispatchResult({ type: 'restar', payload: Number(value) })
   }
 
-  const multiplicar = () => {
+  function multiplicar() {
     props.dispatchResult({ type: 'multiplicar', payload: Number(value) })
   }
 
-  const dividir = () => {
+  function dividir() {
     props.dispatchResult({ type: 'dividir', payload: Number(value) })
   }
 
-  const reset = () => {
+  function reset() {
     props.dispatchResult({ type: 'reset' })
   }
 
-
   return (
     <div className='card flex-column'>
-      <input type='string' value={value} onChange={handleChange} />
+      <input
+        type='string'
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
       <div className='flex'>
         <button onClick={sumar}>+</button>
         <button onClick={restar}>-</button>

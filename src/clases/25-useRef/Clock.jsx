@@ -1,8 +1,11 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const Clock = () => {
   const [playing, setPlaying] = useState(false)
   const [seconds, setSeconds] = useState(0)
+
+  // useRef nos permite guardar un valor sin que se dispare una re-renderización
+  // seria como un "let" que no se resetea cuando el componente se re-renderiza
   const intervalRef = useRef(null)
 
   function handleClick() {
@@ -18,6 +21,13 @@ const Clock = () => {
       }, 1000)
     }
   }
+
+  useEffect(() => {
+    return () => {
+      // si el componente se desmonta, limpiamos el intervalo
+      clearInterval(intervalRef.current || undefined)
+    }
+  }, [])
 
   return (
     <>

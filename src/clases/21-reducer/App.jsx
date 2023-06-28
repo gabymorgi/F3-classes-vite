@@ -1,4 +1,4 @@
-import React from 'react'
+import { useReducer } from 'react'
 import Calculator from './components/Calculator'
 import Result from './components/Result'
 
@@ -16,7 +16,8 @@ function init(initialValue) {
  */
 function calcReducer(state, action) {
   let newState = state
-  //evaluamos el tipo de accion que se esta ejecutando
+  // evaluamos el tipo de accion que se esta ejecutando
+  // en base a eso calculamos el nuevo estado
   switch (action.type) {
     case 'sumar': {
       newState = state + (action.payload || 0)
@@ -44,11 +45,12 @@ function calcReducer(state, action) {
   }
   //logica comun para todos los casos
   localStorage.setItem('value', newState.toString())
+  // lo que retorne esta funcion sera el nuevo estado
   return newState
 }
 
 const App = () => {
-  const [result, dispatchResult] = React.useReducer(
+  const [result, dispatchResult] = useReducer(
     calcReducer, //funcion que se ejecuta cuando se hace un dispatch, retorna el nuevo estado
     0, //valor inicial
     init //funcion que calcula el valor inicial
@@ -56,6 +58,8 @@ const App = () => {
 
   return (
     <div className='card flex-column'>
+      {/* en lugar de pasar cinco funciones,
+        pasamos una sola que recibe un objeto con la key type y payload */}
       <Calculator dispatchResult={dispatchResult} />
       <hr />
       <Result result={result} />

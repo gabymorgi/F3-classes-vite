@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from "react"
 
 const colors = [
   'red',
@@ -11,15 +11,18 @@ const colors = [
 ]
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = React.useState(
+  // uso un estado para guardar el tema actual de forma reactiva
+  const [currentTheme, setCurrentTheme] = useState(
     localStorage.getItem('theme') || 'dark'
   )
-  const [sequence, setSequence] = React.useState(
+  // local storage solo guarda strings, por eso uso JSON.parse para convertirlo a un array
+  const [sequence, setSequence] = useState(
     JSON.parse(localStorage.getItem('sequence') || '[]')
   )
 
   const toggleTheme = () => {
     if (currentTheme === 'light') {
+      // mantengo sincronizado el estado con el localStorage
       setCurrentTheme('dark')
       localStorage.setItem('theme', 'dark')
     } else {
@@ -31,6 +34,7 @@ const App = () => {
   const addToSequence = (color) => {
     const newSequence = [...sequence, color]
     setSequence(newSequence)
+    // convierto el array a string para guardarlo en el localStorage
     localStorage.setItem('sequence', JSON.stringify(newSequence))
   }
 

@@ -1,0 +1,17 @@
+:global(.light) .card :global(.otraClase) {
+  background-color: #fff;
+  color: #000;
+}
+
+:global(.green) .card :global(.otraClase) {
+  background-color: #0F0;
+  color: #fff;
+}
+
+
+/* cuando se compile */
+
+/* .green .asdfadsf_card_123452 {
+  background-color: #0F0;
+  color: #fff;
+} */

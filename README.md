@@ -8,7 +8,11 @@ por lo que te recomiendo acceder a la documentacion oficial si quieres profundiz
 
 - [Pensando en React](https://react.dev/learn/thinking-in-react)
 
-[Aquí](/doc/externalLinks.md) puedes encontrar documentación especifica sobre cada una de las clases
+--- 
+
+## [Aquí](/doc/externalLinks.md) puedes encontrar documentación especifica sobre cada una de las clases
+
+---
 
 # Instalación
 
@@ -19,6 +23,8 @@ Una vez instalado, puedes clonar el repositorio y ejecutar el comando `npm insta
 Luego puedes ejecutar el comando `npm run dev` para levantar el servidor local y poder ver los ejercicios en el navegador.
 
 > recuerda que puedes hacer `git pull origin main` para actualizar tu repositorio local con los cambios que se vayan subiendo al repositorio remoto.
+
+---
 
 # Estructura de carpetas
 

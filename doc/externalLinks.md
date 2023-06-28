@@ -78,7 +78,7 @@
 
 - [uso general y ejemplos](https://react.dev/reference/react/useEffect)
 
-**Lecturas Avanzadas:**
+  **Lecturas Avanzadas:**
 
 - [Puede que no necesites un effect](https://react.dev/learn/you-might-not-need-an-effect)
 
@@ -94,7 +94,7 @@
 
 - [uso general y ejemplos](https://react.dev/reference/react/useMemo)
 
-**Lecturas Avanzadas:**
+  **Lecturas Avanzadas:**
 
 - [memoizando funciones](https://react.dev/reference/react/useCallback)
 
@@ -145,3 +145,9 @@
 - [manipulando el DOM con useRef](https://react.dev/learn/manipulating-the-dom-with-refs)
 
 - [uso general y ejemplos](https://react.dev/reference/react/useRef)
+
+---
+
+## Handy Libs
+
+[Aqui](/doc/handyLibs.md) puedes encontrar una lista de librerias que pueden serte utiles para tus proyectos
