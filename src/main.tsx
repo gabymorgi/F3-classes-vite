@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import './atoms.css'
+import './styles/index.css'
+import './styles/atoms.css'
+import './styles/scrollbar.css'
 import MainLayout from './mainLayout/MainLayout'
 
 // punto de entrada de la aplicación

@@ -1,15 +1,47 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
+import remarkGfm from 'remark-gfm'
+import { Spin, message } from 'antd';
+import { Link, useSearchParams } from 'react-router-dom';
+import { NormalComponents } from 'react-markdown/lib/complex-types';
+import { SpecialComponents } from 'react-markdown/lib/ast-to-react';
+
+const ReadmeUrl = '/README.md'
+
+const components: Partial<Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents> = {
+  a: ({node, ...props}) => {
+    if (props.href && props.href.startsWith('http')) {
+      return <a {...props} target="_blank" rel="noreferrer" />
+    } else {
+      // Link to other markdown file
+      if (props.href && props.href.endsWith('.md')) {
+        return <Link to={`?path=${props.href}`} {...props} />
+      } else {
+        return <Link to={props.href || ''} {...props} />
+      }
+    }
+  }
+};
 
 const StyledMarkdown = styled(ReactMarkdown)`
   font-size: 16px;
   padding: 2em;
   h1 {
     font-size: 2em;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #eee;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    &:not(:first-child) {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
   }
   p {
     font-size: 18px;
+    margin-bottom: 0.5em;
   }
   ul {
     //dotted list
@@ -19,18 +51,52 @@ const StyledMarkdown = styled(ReactMarkdown)`
     //dotted list
     list-style: disc;
   }
+  code {
+    background-color: #333;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  blockquote {
+    background-color: #020;
+    border-left: 4px solid #19FE1F;
+    padding: 8px 16px;
+    margin: 0;
+    margin-left: 8px;
+  }
 `;
 
 function Readme() {
+  const [searchParams] = useSearchParams();
+  const [loading, setLoading] = useState(false);
   const [markdown, setMarkdown] = useState('');
 
-  useEffect(() => {
-    fetch('../README.md')
-      .then((response) => response.text())
-      .then((text) => setMarkdown(text));
-  }, []);
+  async function getMarkdown(url: string) {
+    setLoading(true);
+    try {
+      const response = await fetch(url);
+      const text = await response.text();
+      setMarkdown(text);
+    } catch (error: any) {
+      message.error(error.message);
+    }
+    setLoading(false);
+  }
 
-  return <StyledMarkdown>{markdown}</StyledMarkdown>;
+  useEffect(() => {
+    const path = searchParams.get('path');
+    getMarkdown(path || ReadmeUrl);
+  }, [searchParams.get('path')]);
+
+  return (
+    <Spin spinning={loading}>
+      <StyledMarkdown
+        components={components}
+        remarkPlugins={[remarkGfm]}
+      >
+        {markdown}
+      </StyledMarkdown>
+    </Spin>
+  );
 }
 
 export default Readme;

@@ -373,6 +373,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Readme />,
       },
+      {
+        path: 'doc/externalLinks.md',
+        element: <div>asdfadsf</div>,
+      },
       ...routesData.map((r) => ({
         path: `${r.path}/*`,
         element: r.component,
@@ -399,9 +403,9 @@ const MainRoutes = () => {
         token: {
           colorPrimary: '#19FE1F',
           fontSize: 30,
-          colorLink: '#80D6FF',
-          colorLinkHover: '#4DC4FF',
-          colorLinkActive: '#1AB2FF',
+          colorLink: '#6CFF80',
+          colorLinkHover: '#4DFF61',
+          colorLinkActive: '#2AFF3D',
         },
         components: {
           Menu: {

@@ -1,4 +1,4 @@
-import sburbImage from '../../assets/sburb.svg'
+import sburbImage from '@/assets/sburb.svg'
 
 const Header = () => {
   return (
