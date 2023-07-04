@@ -1,7 +1,7 @@
 function EmptyApp() {
   return (
     <div>
-      👀
+      👀 FreeDay
     </div>
   );
 }

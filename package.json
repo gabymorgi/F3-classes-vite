@@ -18,6 +18,7 @@
     "react-error-boundary": "^3.1.4",
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.4.3",
+    "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
     "styled-components": "^5.3.6"
   },

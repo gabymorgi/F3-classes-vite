@@ -7,17 +7,17 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [CSS-modules](https://github.com/css-modules/css-modules)
+- [CSS-modules](https://github.com/css-modules/css-modules)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Observa como cambiamos la extencion de los archivos `css` a `module.css` para poder usarlos como modulos de estilos.
+- Observa como cambiamos la extencion de los archivos `css` a `module.css` para poder usarlos como modulos de estilos.
 
-- [ ] Mira como importamos los estilos en los componentes, dandoles un nombre y como los usamos en el JSX como si fuera un objeto.
+- Mira como importamos los estilos en los componentes, dandoles un nombre y como los usamos en el JSX como si fuera un objeto.
 
-- [ ] Recuerda la restriccion de que no podemos tener estilos modulares que no sean clases. si tenemos estilos de etiquetas, debemos refactorizarlos a clases.
+- Recuerda la restriccion de que no podemos tener estilos modulares que no sean clases. si tenemos estilos de etiquetas, debemos refactorizarlos a clases.
 
-- [ ] Contempla como usamos el operador `:global` para evitar que el nombre de la clase se modifique al ser importada.
+- Contempla como usamos el operador `:global` para evitar que el nombre de la clase se modifique al ser importada.
 
 ---
 

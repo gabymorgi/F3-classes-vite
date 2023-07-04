@@ -7,7 +7,7 @@
 
 Comienza a leer el archivo `sum.test.js`.
 
-- [ ] Observa la sintaxis de los tests.
+- Observa la sintaxis de los tests.
 
   - Observa como se utiliza `describe` para agrupar tests.
 
@@ -17,7 +17,7 @@ Comienza a leer el archivo `sum.test.js`.
 
   - Observa como utilizamos matchers para definir la asercion.
 
-- [ ] Ahora observa el archivo `App.test.js`.
+- Ahora observa el archivo `App.test.js`.
 
   - Observa como se utiliza `render` para renderizar un componente.
 
@@ -25,13 +25,13 @@ Comienza a leer el archivo `sum.test.js`.
 
   - Observa como se utiliza `fireEvent` para simular eventos.
 
-- [ ] Recuerda que queremos que los test sean independientes. Por lo tanto, no queremos que puedan hacer fetch a la API. Para eso vamos a utilizar `jest.mock` para mockear el modulo `window.fetch`. Lo mismo con las props y funciones que recibe el componente.
+- Recuerda que queremos que los test sean independientes. Por lo tanto, no queremos que puedan hacer fetch a la API. Para eso vamos a utilizar `jest.mock` para mockear el modulo `window.fetch`. Lo mismo con las props y funciones que recibe el componente.
 
 Opcionalmente, puedes leer la siguiente documentacion:
 
-- [ ] [Vitest](https://vitest.dev/api/expect.html)
+- [Vitest](https://vitest.dev/api/expect.html)
 
-- [ ] [Prioridad de queries en Testing Library](https://testing-library.com/docs/queries/about/#priority)
+- [Prioridad de queries en Testing Library](https://testing-library.com/docs/queries/about/#priority)
 
 ---
 

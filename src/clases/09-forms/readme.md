@@ -7,23 +7,23 @@
 
 Lee la siguiente documentacion
 
-- [ ] [Componentes controlados](https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable)
+- [Componentes controlados](https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Observa como usamos un estado para guardar el valor de los inputs.
+- Observa como usamos un estado para guardar el valor de los inputs.
 
-- [ ] Examina como pasamos las props `value` y `onChange` a los inputs para que sean controlados.
+- Examina como pasamos las props `value` y `onChange` a los inputs para que sean controlados.
 
-- [ ] Observa como usamos el evento `onSubmit` para prevenir que se recargue la pagina al enviar el formulario.
+- Observa como usamos el evento `onSubmit` para prevenir que se recargue la pagina al enviar el formulario.
 
-- [ ] Analiza como realizamos la validacion de los campos del formulario.
+- Analiza como realizamos la validacion de los campos del formulario.
 
-- [ ] Observa como usamos un estado adicional para guardar los errores de validacion, y como evitamos que se envie el formulario si hay errores.
+- Observa como usamos un estado adicional para guardar los errores de validacion, y como evitamos que se envie el formulario si hay errores.
 
-- [ ] Observa como usamos un estado adicional para guardar el estado de envio del formulario, si no hay errores.
+- Observa como usamos un estado adicional para guardar el estado de envio del formulario, si no hay errores.
 
-- [ ] Recuerda que cada vez que se cambia el estado, se vuelve a renderizar el componente.
+- Recuerda que cada vez que se cambia el estado, se vuelve a renderizar el componente.
 
   - Es decir, cada vez que el usuario escribe en un input, se vuelve a renderizar el componente.
 

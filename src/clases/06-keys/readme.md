@@ -7,17 +7,17 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Renderizando Listas](https://react.dev/learn/rendering-lists#)
+- [Renderizando Listas](https://react.dev/learn/rendering-lists#)
 
-- [ ] Lee [esta diapositiva](https://docs.google.com/presentation/d/1CjDsfNcOu15MUIh1BiIe5bZt6mZGo7ynH8QvhcYTGBM/edit?usp=sharing) para tener una mejor idea.
+- Lee [esta diapositiva](https://docs.google.com/presentation/d/1CjDsfNcOu15MUIh1BiIe5bZt6mZGo7ynH8QvhcYTGBM/edit?usp=sharing) para tener una mejor idea.
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Observa como usamos `.map` para renderizar una lista de elementos.
+- Observa como usamos `.map` para renderizar una lista de elementos.
 
-- [ ] Analiza que pasa cuando no le pasamos una `key` a un elemento de una lista.
+- Analiza que pasa cuando no le pasamos una `key` a un elemento de una lista.
 
-- [ ] Recuerda las dos reglas de las `keys`:
+- Recuerda las dos reglas de las `keys`:
 
   - Deben ser unicas entre los elementos de la lista.
 

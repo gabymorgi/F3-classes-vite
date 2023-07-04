@@ -2,7 +2,7 @@ import Card from '../UI/Card'
 import repo from '@/fakeApi/ghRepoDetail.json'
 import repoLanguages from '@/fakeApi/ghLanguages.json'
 import Info from '../UI/Info'
-import { format, objectToArray } from '../Utils/format'
+import { formatDay, objectToArray } from '../Utils/format'
 import Tag from '../UI/Tag'
 import FlexSection from '../UI/FlexSection'
 
@@ -23,9 +23,9 @@ function RepoDetail() {
     >
       <FlexSection>
         <Info label='Name' value={repo.name} />
-        <Info label='Created At' value={format(new Date(repo.created_at))} />
-        <Info label='Updated At' value={format(new Date(repo.updated_at))} />
-        <Info label='Pushed At' value={format(new Date(repo.pushed_at))} />
+        <Info label='Created At' value={formatDay(new Date(repo.created_at))} />
+        <Info label='Updated At' value={formatDay(new Date(repo.updated_at))} />
+        <Info label='Pushed At' value={formatDay(new Date(repo.pushed_at))} />
         <Info label='Watchers' value={repo.watchers} />
         <Info label='Forks' value={repo.forks} />
         <Info label='Stars' value={repo.stargazers_count} />

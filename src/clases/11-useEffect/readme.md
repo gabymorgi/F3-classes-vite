@@ -7,23 +7,23 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Introduccion a useEffect](https://react.dev/learn/synchronizing-with-effects)
+- [Introduccion a useEffect](https://react.dev/learn/synchronizing-with-effects)
 
-- [ ] [Ciclo de vida del useEffect](https://react.dev/learn/lifecycle-of-reactive-effects)
+- [Ciclo de vida del useEffect](https://react.dev/learn/lifecycle-of-reactive-effects)
 
-- [ ] [Eventos o Efectos](https://react.dev/learn/separating-events-from-effects)
+- [Eventos o Efectos](https://react.dev/learn/separating-events-from-effects)
 
-- [ ] [uso general y ejemplos](https://react.dev/reference/react/useEffect)
+- [uso general y ejemplos](https://react.dev/reference/react/useEffect)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis de `useEffect`
+- Aprende la sintaxis de `useEffect`
 
   - Recuerda que el primer parametro es una funcion, que se ejecutara cuando el componente se monte, y cada vez que cambie el valor de alguna de las dependencias.
 
   - El segundo parametro es un array de dependencias, que le indica a React que debe ejecutar la funcion del primer parametro, solo cuando cambie el valor de alguna de las dependencias.
 
-- [ ] Observa como controlamos el ciclo de vida de un componente con `useEffect` a travez del componente padre.
+- Observa como controlamos el ciclo de vida de un componente con `useEffect` a travez del componente padre.
 
 ---
 

@@ -11,19 +11,19 @@ recuerda que a partir de ahora, la extension de los archivos que vamos a usar es
 
 Lee la siguiente documentacion:
 
-- [ ] [Maquetando con JSX](https://react.dev/learn/writing-markup-with-jsx)
+- [Maquetando con JSX](https://react.dev/learn/writing-markup-with-jsx)
 
-- [ ] [Javascript en JSX con llaves](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
+- [Javascript en JSX con llaves](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
 
 Mira en el archivo App.jsx como se usa JSX
 
-- [ ] Identifica que la diferencia entre una funcion y un componente es que el componente debe comenzar con mayuscula, y retornar un elemento JSX. Por lo demas, es igual a una funcion.
+- Identifica que la diferencia entre una funcion y un componente es que el componente debe comenzar con mayuscula, y retornar un elemento JSX. Por lo demas, es igual a una funcion.
 
-- [ ] Observa como podemos escribir cualquier codigo javascript dentro de los componentes, incluso podemos asignar HTML a una variable y luego usarla dentro del componente.
+- Observa como podemos escribir cualquier codigo javascript dentro de los componentes, incluso podemos asignar HTML a una variable y luego usarla dentro del componente.
 
-- [ ] Recuerda que, tecnicamente, NO estamos escribiendo HTML, sino JSX. Pero la idea es que sea muy similar a HTML, por lo que no deberias tener problemas en entenderlo.
+- Recuerda que, tecnicamente, NO estamos escribiendo HTML, sino JSX. Pero la idea es que sea muy similar a HTML, por lo que no deberias tener problemas en entenderlo.
 
-- [ ] Las etiquetas pueden recibir todos los atributos que ya conoces de HTML. Pero hay algunas diferencia:
+- Las etiquetas pueden recibir todos los atributos que ya conoces de HTML. Pero hay algunas diferencia:
 
   - El atributo `class` queda deprecado, utilizaremos siempre `className`
   
@@ -33,9 +33,9 @@ Mira en el archivo App.jsx como se usa JSX
 
     - Fijate que las funciones no tienen parentesis, ya que no queremos ejecutarlas, sino pasar las referencias.
 
-- [ ] Descubre como podemos escribir entre llaves `{}` cualquier expresion de javascript dentro de JSX, por ejemplo, podemos escribir `2+2` o `Math.random()` o `miFuncion()`
+- Descubre como podemos escribir entre llaves `{}` cualquier expresion de javascript dentro de JSX, por ejemplo, podemos escribir `2+2` o `Math.random()` o `miFuncion()`
 
-- [ ] Visualiza como podemos usar los componentes dentro de otros componentes, como si fueran etiquetas HTML, usando la sintaxis `<MiComponente />`
+- Visualiza como podemos usar los componentes dentro de otros componentes, como si fueran etiquetas HTML, usando la sintaxis `<MiComponente />`
 
 ---
 

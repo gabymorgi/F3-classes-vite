@@ -4,6 +4,7 @@ import {
   Outlet,
   createBrowserRouter,
   RouterProvider,
+  useLocation,
 } from 'react-router-dom'
 import { ConfigProvider, Layout, Menu, Spin, theme } from 'antd'
 import styled from 'styled-components'
@@ -29,6 +30,10 @@ const Sider = styled(Layout.Sider)`
 `
 
 const MainLayout = () => {
+  const location = useLocation()
+
+  // fist part of the path with the / at the start
+  console.log(location.pathname.match(/^\/\w+/))
   return (
     <Layout className='min-h-full'>
       <Sider className='max-h-full overflow-y' trigger={null}>
@@ -39,13 +44,15 @@ const MainLayout = () => {
         <Menu
           theme='dark'
           mode='inline'
+          selectedKeys={[location.pathname]}
+          defaultOpenKeys={[location.pathname.match(/^\/\w+/)?.[0] || '']}
           items={routesData.map((r) => ({
-            key: r.path,
+            key: `/${r.path}`,
             label: r.sub ? r.name : <Link to={r.path}>{r.name}</Link>,
             children:
               !r.component &&
               r.sub?.map((s) => ({
-                key: `${r.path}-${s.path}`,
+                key: `/${r.path}/${s.path}`,
                 label: <Link to={`${r.path}/${s.path}`}>{s.name}</Link>,
               })),
           }))}

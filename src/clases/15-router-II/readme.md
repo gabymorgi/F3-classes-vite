@@ -7,15 +7,15 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [useParam](https://reactrouter.com/en/main/hooks/use-params)
+- [useParam](https://reactrouter.com/en/main/hooks/use-params)
 
-- [ ] [useNavigate](https://reactrouter.com/en/main/hooks/use-navigate)
+- [useNavigate](https://reactrouter.com/en/main/hooks/use-navigate)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende como realizar rutas dinamicas
+- Aprende como realizar rutas dinamicas
 
-- [ ] Aprende como utilizar `useParams` para obtener los parametros de la ruta
+- Aprende como utilizar `useParams` para obtener los parametros de la ruta
 
 ---
 

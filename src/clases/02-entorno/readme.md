@@ -43,11 +43,11 @@ TypeScript es un lenguaje de programación que es una superconjunto de JavaScrip
 
 > recuerda consultar la documentacion oficial si quieres saber mas o no recuerdas algo
 >
-> - [Empezando en Vite](https://vitejs.dev/guide/)
+> [Empezando en Vite](https://vitejs.dev/guide/)
 >
-> - [Control de Codigo VS code](https://code.visualstudio.com/docs/sourcecontrol/overview)
+> [Control de Codigo VS code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 >
-> - [Crear Proyectos en GitHub](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github)
+> [Crear Proyectos en GitHub](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github)
 
 ---
 

@@ -1,9 +1,17 @@
-function EmptyApp() {
+import Login from "./Components/Login";
+import Navbar from "./Components/Navbar";
+import UserInfo from "./Components/UserInfo";
+import WelcomePage from "./Components/WelcomePage";
+
+function App() {
   return (
-    <div>
-      👀
-    </div>
-  );
+    <>
+      <Navbar />
+      <Login />
+      <WelcomePage />
+      <UserInfo />
+    </>
+  )
 }
 
-export default EmptyApp;
+export default App

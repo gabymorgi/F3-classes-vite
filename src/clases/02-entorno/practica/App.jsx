@@ -5,7 +5,7 @@ function Practica03() {
   console.log('isOdd(3)', isOdd(3))
   return (
     <div>
-      👀
+      👀 open console -&gt; F12
     </div>
   );
 }

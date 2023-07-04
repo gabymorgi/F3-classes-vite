@@ -11,23 +11,23 @@ Para el resto de cosas, puedes usarlas como venian trabajando hasta ahora (archi
 
 En el archivo `index.js` te encontraras con ciertas utilidades de javascript que nos van a servir para el curso y que es importante que conozcas. cada instruccion esta comentada y podras aprender sobre:
 
-- [ ] Tipos de datos
+- Tipos de datos
 
-- [ ] Uso de backlit para crear strings
+- Uso de backlit para crear strings
 
-- [ ] Uso de funciones y callbacks
+- Uso de funciones y callbacks
 
-- [ ] Destructuring
+- Destructuring
 
-- [ ] Spread operator
+- Spread operator
   
   - [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-- [ ] Metodos de arrays
+- Metodos de arrays
 
   - [Documentación de la Clase Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
 
-- [ ] Metodos de objetos
+- Metodos de objetos
 
   - [Iterador Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 

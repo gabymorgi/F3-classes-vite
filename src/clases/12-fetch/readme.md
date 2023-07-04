@@ -7,23 +7,23 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-- [ ] [Funciones asincrónicas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [Funciones asincrónicas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis de `fetch`
+- Aprende la sintaxis de `fetch`
 
-- [ ] Recuerda la sintaxis de las funciones asincronas
+- Recuerda la sintaxis de las funciones asincronas
 
-- [ ] Analiza las ventajas de usar `async await` en vez de `.then`
+- Analiza las ventajas de usar `async await` en vez de `.then`
 
-- [ ] Observa como obtenemos los datos de la API, y como usamos un estado para guardarlos e indicarle a React que debe renderizar nuevamente.
+- Observa como obtenemos los datos de la API, y como usamos un estado para guardarlos e indicarle a React que debe renderizar nuevamente.
 
-- [ ] Observa como utilizamos un estado `loading` para darle feedback al usuario mientras se obtienen los datos.
+- Observa como utilizamos un estado `loading` para darle feedback al usuario mientras se obtienen los datos.
 
-- [ ] Observa como utilizamos un estado `error` para darle feedback al usuario en caso de que ocurra un error.
+- Observa como utilizamos un estado `error` para darle feedback al usuario en caso de que ocurra un error.
 
 ---
 

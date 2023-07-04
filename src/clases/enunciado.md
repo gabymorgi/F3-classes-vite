@@ -10,12 +10,16 @@
 
 1. Crear una carpeta con todos los datos mockeados necesaros:
 
-[user](/src/fakeApi/g)
+[user](/src/fakeApi/ghUser.json)
 [repos](/src/fakeApi/ghRepos.json)
 [repoList](/src/fakeApi/ghRepoDetail.json)
 [repoLanguages](/src/fakeApi/ghLanguages.json)
 
-2. Crear un componente Navbar que renderice un header que internamente tendra 2 bloques
+2. Cree una carpeta utils con las funciones creadas en la clase anterior
+
+## Practica Clase 3
+
+1. Crear un componente Navbar que renderice un header que internamente tendra 2 bloques
 
 por un lado el [logo](/public/hitbug-logo.png) y nombre de la aplicacion
 
@@ -23,13 +27,12 @@ por otro lado 3 span con los siguientes textos: `User Info`, `Repos`, `Log Out`;
 
 No es necesario aplicar estilos aun
 
-## Practica Clase 3
 
-1. Crear componente Login que muestre el logo y el nombre de la aplicacion (el formulario no)
+2. Crear componente Login que muestre el logo y el nombre de la aplicacion (el formulario no)
 
-2. Crear un componente para la Home Page, que muestre Welcome userName (usar la data mockeada)
+3. Crear un componente para la Home Page, que muestre Welcome userName (usar la data mockeada)
 
-3. Crear componente UserInfo que muestre la imagen y nombre del usuario, un link externo al github del usuario, cant Seguidores, cant siguiendo, cant repos, bio
+4. Crear componente UserInfo que muestre la imagen y nombre del usuario, un link externo al github del usuario, cant Seguidores, cant siguiendo, cant repos, bio
 
 No es necesario aplicar estilos aun
 

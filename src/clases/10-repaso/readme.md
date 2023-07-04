@@ -4,7 +4,7 @@
 
 Lee la siguiente documentacion
 
-- [ ] [Pensando en React](https://react.dev/learn/thinking-in-react)
+- [Pensando en React](https://react.dev/learn/thinking-in-react)
 
 Intenta realizar el siguiente ejercicio por tu cuenta
 

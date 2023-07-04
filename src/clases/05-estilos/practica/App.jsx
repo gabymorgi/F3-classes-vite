@@ -14,6 +14,7 @@ const Components = () => {
         <li>Palabras radiantes</li>
         <li>Juramentada</li>
       </ul>
+      <hr />
       <List>
         <Item>Elantris</Item>
         <Item>El camino de los reyes</Item>
@@ -24,6 +25,7 @@ const Components = () => {
         <Item>Palabras radiantes</Item>
         <Item>Juramentada</Item>
       </List>
+      <hr />
       <div className='compact-theme'>
         <List>
           <Item>Elantris</Item>

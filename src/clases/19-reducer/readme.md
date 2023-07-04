@@ -7,11 +7,11 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Convirtiendo estados en reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer)
+- [Convirtiendo estados en reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis para crear un `reducer`.
+- Aprende la sintaxis para crear un `reducer`.
 
   - El primer parametro es la funcion que gestiona el cambio de estado.
 
@@ -19,13 +19,13 @@ Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, 
 
   - El tercer parametro es una funcion que calcula el estado inicial. Es opcional.
 
-- [ ] Observa como nos abstraemos de la logica de gestionar el estado, y como solo nos preocupamos de saber el tipo de accion que queremos realizar. 
+- Observa como nos abstraemos de la logica de gestionar el estado, y como solo nos preocupamos de saber el tipo de accion que queremos realizar. 
 
   - En el componente `Calculator.jsx` solo nos preocupamos de saber si queremos sumar, restar, multiplicar o dividir, y de los parametros que necesita. Pero no nos preocupamos de como se realiza la operacion.
 
   - La funcion `calcReducer` se encarga de gestionar el estado, y de realizar la operacion, a partir de la accion que le pasamos.
 
-- [ ] Recuerda que el `reducer` nos permite simplificar la logica de gestionar un estado muy complejo.
+- Recuerda que el `reducer` nos permite simplificar la logica de gestionar un estado muy complejo.
 
 ---
 

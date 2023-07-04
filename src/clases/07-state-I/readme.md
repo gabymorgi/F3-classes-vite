@@ -7,27 +7,27 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Porque estados y no variables](https://react.dev/learn/state-a-components-memory)
+- [Porque estados y no variables](https://react.dev/learn/state-a-components-memory)
 
-- [ ] [Pasos involucrados en el render (ciclo de vida)](https://react.dev/learn/render-and-commit)
+- [Pasos involucrados en el render (ciclo de vida)](https://react.dev/learn/render-and-commit)
 
-- [ ] [Snapshot en estados](https://react.dev/learn/state-as-a-snapshot)
+- [Snapshot en estados](https://react.dev/learn/state-as-a-snapshot)
 
-- [ ] [Multiples actualizaciones de estado](https://react.dev/learn/queueing-a-series-of-state-updates)
+- [Multiples actualizaciones de estado](https://react.dev/learn/queueing-a-series-of-state-updates)
 
-- [ ] [uso general y ejemplos](https://react.dev/reference/react/useState)
+- [uso general y ejemplos](https://react.dev/reference/react/useState)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis del useState
+- Aprende la sintaxis del useState
 
-- [ ] Entiende el ciclo de actualizacion de un componente
+- Entiende el ciclo de actualizacion de un componente
 
   - Cada vez que se actualiza el estado de un componente, se vuelve a renderizar tanto el componente que declara el useState, como sus hijos.
 
-- [ ] Observa como no podemos decidir cuando se actualiza el estado y se vuelve a renderizar un componente, esto lo decide React.
+- Observa como no podemos decidir cuando se actualiza el estado y se vuelve a renderizar un componente, esto lo decide React.
 
-- [ ] Analiza como podemos usar callbacks para actualizar el estado de un componente padre desde un componente hijo.
+- Analiza como podemos usar callbacks para actualizar el estado de un componente padre desde un componente hijo.
 
 ---
 

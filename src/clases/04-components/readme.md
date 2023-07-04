@@ -7,25 +7,25 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Pasando props a un componente](https://react.dev/learn/passing-props-to-a-component)
+- [Pasando props a un componente](https://react.dev/learn/passing-props-to-a-component)
 
-- [ ] [Renderizado condicional](https://react.dev/learn/conditional-rendering)
+- [Renderizado condicional](https://react.dev/learn/conditional-rendering)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Observa como usamos React Fragment para poder devolver mas de un elemento hermano en el renderizado de un componente.
+- Observa como usamos React Fragment para poder devolver mas de un elemento hermano en el renderizado de un componente.
 
-- [ ] Investiga el componente `Header`, y como lo usamos para encapsular parte del maquetado segun su responsabilidad.
+- Investiga el componente `Header`, y como lo usamos para encapsular parte del maquetado segun su responsabilidad.
 
-- [ ] Investiga el componente `Tag`, y como lo usamos para abstraernos del maquetado y estilos de los tags.
+- Investiga el componente `Tag`, y como lo usamos para abstraernos del maquetado y estilos de los tags.
 
-- [ ] Registra como podemos utilizar el operador ternario para mostrar un componente u otro, dependiendo de una condicion
+- Registra como podemos utilizar el operador ternario para mostrar un componente u otro, dependiendo de una condicion
   
   - Esto se llama renderizado condicional, y es una de las formas mas comunes de mostrar u ocultar elementos en React
 
   - Inspecciona en el navegador como se renderiza el componente dependiendo de la condicion
 
-- [ ] Examina como podemos pasar atributos a los componentes, y como podemos acceder a ellos desde el componente
+- Examina como podemos pasar atributos a los componentes, y como podemos acceder a ellos desde el componente
 
   - Fijate que los atributos se reciben como un objeto, y que podemos acceder a ellos como si fuera un objeto normal
 
@@ -33,7 +33,7 @@ Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, 
 
   - La informacion fluye en una sola direccion, desde el componente padre hacia los hijos (como en la vida real 😅)
 
-- [ ] Percibe como podemos usar el contenido de los componentes como si fuera un atributo mas, llamado `children`
+- Percibe como podemos usar el contenido de los componentes como si fuera un atributo mas, llamado `children`
 
   - Todo lo que este entre el tag de apertura y el de cierre del componente, se pasa como `children`, y lo llamamos de esa forma.
 
@@ -45,7 +45,7 @@ Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, 
 
   - Podemos cerrar el componente con `/>` si no tiene children: `<Componente />`
 
-- [ ] Investiga el componente `Button`:
+- Investiga el componente `Button`:
 
   - Fijate como usamos el spread operator para pasarle todos los props al componente `button` de HTML.
 

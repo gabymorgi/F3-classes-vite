@@ -7,13 +7,13 @@
 
 Lee la siguiente documentacion:
 
-- [ ] [Empezando con React Router](https://reactrouter.com/en/main/start/tutorial)
+- [Empezando con React Router](https://reactrouter.com/en/main/start/tutorial)
 
-- [ ] [repo con ejemplos](https://github.com/remix-run/react-router/tree/dev/examples/basic)
+- [repo con ejemplos](https://github.com/remix-run/react-router/tree/dev/examples/basic)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis de `react-router-dom`
+- Aprende la sintaxis de `react-router-dom`
 
   - `BrowserRouter` es un componente que debe envolver a toda la aplicacion, y que nos permite utilizar las rutas.
 
@@ -23,7 +23,7 @@ Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, 
 
   - `Link` es un componente que nos permite crear un enlace a otra ruta, evitando que se recargue la pagina.
 
-- [ ] Observa como utilizamos `Outlet` para renderizar rutas hijas.
+- Observa como utilizamos `Outlet` para renderizar rutas hijas.
 
 ---
 

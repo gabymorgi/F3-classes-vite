@@ -7,24 +7,24 @@
 
 Lee la siguiente documentacion
 
-- [ ] [localStorage API](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+- [localStorage API](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 
-- [ ] Aprende la sintaxis para guardar y obtener valores del `localStorage`.
+- Aprende la sintaxis para guardar y obtener valores del `localStorage`.
 
-- [ ] Observa como necesitamos un estado para que React vuelva a renderizar el componente cuando cambia el valor del `localStorage`.
+- Observa como necesitamos un estado para que React vuelva a renderizar el componente cuando cambia el valor del `localStorage`.
 
-- [ ] Detesta como el `localStorage` solo guarda strings, y como tenemos que convertir los valores a strings y de strings a valores.
+- Detesta como el `localStorage` solo guarda strings, y como tenemos que convertir los valores a strings y de strings a valores.
 
-- [ ] Recuerda que el `localStorage` es una forma de guardar datos en el navegador, y que estos datos se mantienen incluso cuando cerramos el navegador.
+- Recuerda que el `localStorage` es una forma de guardar datos en el navegador, y que estos datos se mantienen incluso cuando cerramos el navegador.
 
-- [ ] Recuerda que puedes ver los datos que se guardan en el `localStorage` desde el inspector de elementos, en la pestaña de `Application`, en la seccion de `Storage`.
+- Recuerda que puedes ver los datos que se guardan en el `localStorage` desde el inspector de elementos, en la pestaña de `Application`, en la seccion de `Storage`.
 
 
 Si te preocupa la seguridad de tu aplicacion, te puede interesar este articulo. Tambien puedes buscar distintas opiniones para contrastar la informacion.
 
-- [ ] [Que informacion guardar en localStorage](https://www.rdegges.com/2018/please-stop-using-local-storage)
+- [Que informacion guardar en localStorage](https://www.rdegges.com/2018/please-stop-using-local-storage)
 
 ---
 

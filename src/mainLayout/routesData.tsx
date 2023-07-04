@@ -1,6 +1,16 @@
 import { lazy } from 'react'
 
 const ClassComponents = {
+  datos: {
+    teoria: lazy(() => import('@/clases/01-datos/teoria/App.jsx')),
+    practica: lazy(() => import('@/clases/01-datos/practica/App.jsx')),
+    integrador: lazy(() => import('@/clases/01-datos/integrador/App.jsx')),
+  },
+  entorno: {
+    teoria: lazy(() => import('@/clases/02-entorno/teoria/App.jsx')),
+    practica: lazy(() => import('@/clases/02-entorno/practica/App.jsx')),
+    integrador: lazy(() => import('@/clases/02-entorno/integrador/App.jsx')),
+  },
   jsx: {
     teoria: lazy(() => import('@/clases/03-JSX/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/03-JSX/practica/App.jsx')),
@@ -110,6 +120,48 @@ export const routesData: IRoute[] = [
     component: <AppSandbox />,
   },
   {
+    path: 'datos',
+    name: 'Datos',
+    sub: [
+      {
+        path: 'teoria',
+        name: 'Teoria',
+        component: <ClassComponents.datos.teoria />,
+      },
+      {
+        path: 'practica',
+        name: 'Practica',
+        component: <ClassComponents.datos.practica />,
+      },
+      {
+        path: 'integrador',
+        name: 'Integrador',
+        component: <ClassComponents.datos.integrador />,
+      },
+    ],
+  },
+  {
+    path: 'entorno',
+    name: 'Entorno',
+    sub: [
+      {
+        path: 'teoria',
+        name: 'Teoria',
+        component: <ClassComponents.entorno.teoria />,
+      },
+      {
+        path: 'practica',
+        name: 'Practica',
+        component: <ClassComponents.entorno.practica />,
+      },
+      {
+        path: 'integrador',
+        name: 'Integrador',
+        component: <ClassComponents.entorno.integrador />,
+      },
+    ],
+  },
+  {
     path: 'jsx',
     name: 'JSX',
     sub: [
@@ -152,7 +204,7 @@ export const routesData: IRoute[] = [
     ],
   },
   {
-    path: 'styles',
+    path: 'estilos',
     name: 'Estilos',
     sub: [
       {
@@ -257,7 +309,7 @@ export const routesData: IRoute[] = [
     ],
   },
   {
-    path: 'rehearsal',
+    path: 'repaso',
     name: 'Repaso',
     component: <ClassComponents.repaso />,
   },
@@ -409,7 +461,7 @@ export const routesData: IRoute[] = [
     ],
   },
   {
-    path: 'storage',
+    path: 'localStorage',
     name: 'localStorage',
     sub: [
       {
@@ -451,7 +503,7 @@ export const routesData: IRoute[] = [
     ],
   },
   {
-    path: 'custom-hooks',
+    path: 'customHooks',
     name: 'customHooks',
     sub: [
       {
@@ -472,7 +524,7 @@ export const routesData: IRoute[] = [
     ],
   },
   {
-    path: 'ref',
+    path: 'useRef',
     name: 'useRef',
     sub: [
       {
