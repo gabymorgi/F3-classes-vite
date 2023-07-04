@@ -1,0 +1,31 @@
+.class-4-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #111;
+}
+
+.class-4-tag.class-4-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.class-4-tag.class-4-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.class-4-tag.class-4-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.class-4-tag.class-4-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
