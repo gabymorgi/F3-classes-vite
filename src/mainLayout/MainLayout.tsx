@@ -21,10 +21,17 @@ const FullScreenSpinner = styled(Spin)`
   align-items: center;
 `
 
+const Sider = styled(Layout.Sider)`
+  && {
+    position: sticky;
+    top: 0;
+  }
+`
+
 const MainLayout = () => {
   return (
     <Layout className='min-h-full'>
-      <Layout.Sider className='max-h-full overflow-y' trigger={null}>
+      <Sider className='max-h-full overflow-y' trigger={null}>
         <Link to='/' className='flex p-16 items-center'>
           <img src='/sburb.svg' width='50px' height='50px' alt='Sburb' />
           FE3
@@ -43,7 +50,7 @@ const MainLayout = () => {
               })),
           }))}
         />
-      </Layout.Sider>
+      </Sider>
       <Layout>
         <Layout.Content className='p-16'>
           <Suspense fallback={<FullScreenSpinner spinning tip='Cargando...' />}>
