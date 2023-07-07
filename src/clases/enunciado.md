@@ -79,62 +79,37 @@ El footer tiene padding y border top
 - en el body habra un conjunto de componentes info con la siguiente informacion. Descripcion, lenguaje principal, estrellas, y seguidores
 
 
-Clase 7
-Conociendo los hooks en React
-Hooks
+Clase 7 state i
+usar un estado en el header para mostrar la tab active
+
+clase 8 state ii
+mostrar una lista de lenguajes favoritos. Cuando se selecciona uno, se debe mostrar un indicador en todas las cards de repos que tengan ese lenguaje como principal
+la lista de lenguajes la sacaremos de ghLanguages.json
 
 
-Clase 8
-Conociendo los hooks en React
-Eventos y Formularios
-HB-15
+Clase 9
 Crear un formulario que permita ingresar un string, que sera el nombre de usuario. Al hacer click en login, imprimir por consola el valor ingresado
 
-HB-16
-Crear una funcion que haga un get a la api de github. si devuelve info(el user existe), imprimir esa info por consola. Si no, mostrar un mensaje de error
-doc: https://docs.github.com/es/rest/users/users#get-a-user
-ej: https://api.github.com/users/gabymorgi
-
-HB-21
+clase 10
 crear formulario en el componente repolist, que permita ingresar un metodo de ordenamiento y una direccion
 sort: es un select con los siguientes valores: created, updated, pushed, full_name
 direction: es un select con los siguientes valores: asc, desc
 cuando se apreta en el boton order se muestra por consola los valores ingresados
 
-Clase 9
-Conociendo los hooks en React
-Revision y practica
+clase 11
+meter busqueda de datos en useEffect
+Crear una funcion que haga un get a la api de github. si devuelve info(el user existe), imprimir esa info por consola. Si no, mostrar un mensaje de error
+Crear una funcion que reciba nombre de usuario y nombre de repo, y devuelva el detalle de ese repo junto con los lenguajes utilizados
 
+clase fetch
+Crear una funcion que haga un get a la api de github. si devuelve info(el user existe), imprimir esa info por consola. Si no, mostrar un mensaje de error
+doc: https://docs.github.com/es/rest/users/users#get-a-user
+ej: https://api.github.com/users/gabymorgi
 
-Clase 10
-Conociendo los hooks en React
-Repaso general
-
-
-Clase 11
-Conociendo los hooks en React
-Primera evaluacion
-
-
-Clase 12
-Conociendo los hooks en React
-Puesta en comun
-
-
-Clase 13
-Ciclo de vida de los componentes
-Ciclo de vida
-
-
-Clase 14
-Ciclo de vida de los componentes
-Peticiones asincronicas en React
-HB-13
 Crear una funcion que reciba nombre de usuario y nombre de repo, y devuelva el detalle de ese repo junto con los lenguajes utilizados
 doc: https://docs.github.com/es/rest/repos/repos#get-a-repository
 ej: https://api.github.com/repos/gabymorgi/F3-classes-vite
 
-HB-22
 Crear una funcion que reciba *opcionalmente* sort y direction, y devuelva una lista de repos 
 https://docs.github.com/es/rest/repos/repos#list-repositories-for-a-user
 https://api.github.com/users/{username}/repos
@@ -147,17 +122,11 @@ const response = await Axios.get(`${baseUrl}/users/${mockedUser}/repos`, {
    }
 })
 
+clase memo
+guardar en memo el calculo de porcentage de repos
 
-Clase 15
-Ciclo de vida de los componentes
-Revision y practica
-
-
-Clase 16
-Navegacion y testing en React
+Clase
 React Router
-HB-17
-Modificar la funcion de login, para que redirija al home si el usuario ingresado es correcto
 
 HB-23
 Crear estructura de rutas
@@ -165,13 +134,22 @@ Crear estructura de rutas
 /
 --info
 --list
---repo/:repoId
+
+HB-17
+Modificar la funcion de login, para que redirija al home si el usuario ingresado es correcto
+crear rutas protegidas para que si no hay usuario, redirija al login
 
 HB-24
 refactorizar los links internos para que usen router
 
 HB-25
 refactorizar estructura de rutas para que el header este presente en todas las secciones excepto el login (sin replicar el componente en cada seccion)
+
+clase react router 2
+
+agregar ruta
+--repo/:repoId
+utilizar useParams para obtener el id en repo detail, y usarlo para obtener el repo
 
 HB-27
 agregar go back button en el componente repo detail
@@ -180,74 +158,36 @@ HB-28
 utilizar useSearchParams para almacenar los datos del formulario de repolist
 usarlos para buscar los repos con la api
 
-utilizar useParams para obtener el id en repo detail, y usarlo para obtener el repo
+Clase testing
+probar componente lenguajes favs
+- se tiene que renderizar
+- la cantidad de items tiene que ser igual a la de los lenguajes enviados
+- si se el envia una fav, tiene que estar primary
+- on click tiene que llamar a la funcion enviada
 
-Clase 17
-Navegacion y testing en React
-Intro a testing en React
-
-
-Clase 18
-Navegacion y testing en React
-Revision y practica
-
-
-Clase 19
-Manejo de estado global
-Estado global
-
-
-Clase 20
-Manejo de estado global
-Estado global con Storage
+Clase context
 HB-18
 Crear un Contexto que almacene la informacion del usuario, y que exponga dicha informacion, y una funcion de login
 
 HB-19
 Modificar la funcion de login, para que almacene la informacion del usuario ingresado en un contexto
 
-HB-20
-Crear una ruta protegida, que redirija al home si el usuario no esta logueado
-
 HB-26
 refactorizar boton logout para que borre los datos del user al hacer click y redireccione a /login
 
-HB-30
-borrarmocked data. Solucionar errores
+clase local storage
+guardar lenguaje favorito en el storage
 
-Clase 21
-Manejo de estado global
-Revision y practica
+clase reducer
+usar un reducer en el context con las acciones: login, logout
 
+clase custom hook
+useFetch para traer los datos de la api
 
-Clase 22
-Manejo de estado global
-Evaluacion final
+clase useRef
+agregar un boton scroll to top que este sticky
 
-
-Clase 23
-Manejo de estado global
-Custom hooks
-
-
-Clase 24
-Manejo de estado global
-Evaluacion final - entrega
-
-
-Clase 25
-Herramientas
-Mas utilidades en React
-
-
-Clase 26
-Herramientas
-La importancia del testing
-
-
-Clase 27
-Herramientas
-Cierre de la materia
-
+calse antd
+migrar wii
 
 
