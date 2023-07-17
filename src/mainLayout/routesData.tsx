@@ -1,106 +1,130 @@
 import { lazy } from 'react'
+import Readme from './Readme'
 
 const ClassComponents = {
   datos: {
     teoria: lazy(() => import('@/clases/01-datos/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/01-datos/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/01-datos/integrador/App.jsx')),
+    readme: '/src/clases/01-datos/readme.md',
   },
   entorno: {
     teoria: lazy(() => import('@/clases/02-entorno/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/02-entorno/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/02-entorno/integrador/App.jsx')),
+    readme: '/src/clases/02-entorno/readme.md',
   },
   jsx: {
     teoria: lazy(() => import('@/clases/03-JSX/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/03-JSX/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/03-JSX/integrador/App.jsx')),
+    readme: '/src/clases/03-JSX/readme.md',
   },
   components: {
     teoria: lazy(() => import('@/clases/04-components/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/04-components/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/04-components/integrador/App.jsx')),
+    readme: '/src/clases/04-components/readme.md',
   },
   estilos: {
     teoria: lazy(() => import('@/clases/05-estilos/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/05-estilos/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/05-estilos/integrador/App.jsx')),
+    readme: '/src/clases/05-estilos/readme.md',
   },
   keys: {
     teoria: lazy(() => import('@/clases/06-keys/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/06-keys/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/06-keys/integrador/App.jsx')),
+    readme: '/src/clases/06-keys/readme.md',
   },
   stateI: {
     teoria: lazy(() => import('@/clases/07-state-I/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/07-state-I/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/07-state-I/integrador/App.jsx')),
+    readme: '/src/clases/07-state-I/readme.md',
   },
   stateII: {
     teoria: lazy(() => import('@/clases/08-state-II/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/08-state-II/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/08-state-II/integrador/App.jsx')),
+    readme: '/src/clases/08-state-II/readme.md',
   },
   forms: {
     teoria: lazy(() => import('@/clases/09-forms/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/09-forms/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/09-forms/integrador/App.jsx')),
+    readme: '/src/clases/09-forms/readme.md',
   },
-  repaso: lazy(() => import('@/clases/10-repaso/App.jsx')),
+  repaso: {
+    teoria: lazy(() => import('@/clases/10-repaso/App.jsx')),
+    readme: '/src/clases/10-repaso/readme.md',
+  },
   useEffect: {
     teoria: lazy(() => import('@/clases/11-useEffect/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/11-useEffect/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/11-useEffect/integrador/App.jsx')),
+    readme: '/src/clases/11-useEffect/readme.md',
   },
   fetch: {
     teoria: lazy(() => import('@/clases/12-fetch/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/12-fetch/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/12-fetch/integrador/App.jsx')),
+    readme: '/src/clases/12-fetch/readme.md',
   },
   memo: {
     teoria: lazy(() => import('@/clases/13-memo/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/13-memo/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/13-memo/integrador/App.jsx')),
+    readme: '/src/clases/13-memo/readme.md',
   },
   routerI: {
     teoria: lazy(() => import('@/clases/14-router-I/teoria/AppWithComponents.jsx')),
     practica: lazy(() => import('@/clases/14-router-I/practica/AppWithComponents.jsx')),
     integrador: lazy(() => import('@/clases/14-router-I/integrador/AppWithComponents.jsx')),
+    readme: '/src/clases/14-router-I/readme.md',
   },
   routerII: {
     teoria: lazy(() => import('@/clases/15-router-II/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/15-router-II/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/15-router-II/integrador/App.jsx')),
+    readme: '/src/clases/15-router-II/readme.md',
   },
   testing: {
     teoria: lazy(() => import('@/clases/16-testing/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/16-testing/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/16-testing/integrador/App.jsx')),
+    readme: '/src/clases/16-testing/readme.md',
   },
   context: {
     teoria: lazy(() => import('@/clases/17-context/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/17-context/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/17-context/integrador/App.jsx')),
+    readme: '/src/clases/17-context/readme.md',
   },
   localStorage: {
     teoria: lazy(() => import('@/clases/18-localStorage/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/18-localStorage/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/18-localStorage/integrador/App.jsx')),
+    readme: '/src/clases/18-localStorage/readme.md',
   },  
   reducer: {
     teoria: lazy(() => import('@/clases/19-reducer/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/19-reducer/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/19-reducer/integrador/App.jsx')),
+    readme: '/src/clases/19-reducer/readme.md',
   },
   customHooks: {
     teoria: lazy(() => import('@/clases/20-customHooks/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/20-customHooks/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/20-customHooks/integrador/App.jsx')),
+    readme: '/src/clases/20-customHooks/readme.md',
   },
   useRef: {
     teoria: lazy(() => import('@/clases/21-useRef/teoria/App.jsx')),
     practica: lazy(() => import('@/clases/21-useRef/practica/App.jsx')),
     integrador: lazy(() => import('@/clases/21-useRef/integrador/App.jsx')),
+    readme: '/src/clases/21-useRef/readme.md',
   },
 }
 
@@ -138,6 +162,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.datos.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.datos.readme} />,
+      }
     ],
   },
   {
@@ -159,6 +188,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.entorno.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.entorno.readme} />,
+      }
     ],
   },
   {
@@ -180,6 +214,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.jsx.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.jsx.readme} />,
+      }
     ],
   },
   {
@@ -201,6 +240,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.components.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.components.readme} />,
+      }
     ],
   },
   {
@@ -222,6 +266,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.estilos.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.estilos.readme} />,
+      }
     ],
   },
   {
@@ -243,6 +292,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.keys.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.keys.readme} />,
+      }
     ],
   },
   {
@@ -264,6 +318,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.stateI.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.stateI.readme} />,
+      }
     ],
   },
   {
@@ -285,6 +344,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.stateII.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.stateII.readme} />,
+      }
     ],
   },
   {
@@ -306,12 +370,28 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.forms.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.forms.readme} />,
+      }
     ],
   },
   {
     path: 'repaso',
     name: 'Repaso',
-    component: <ClassComponents.repaso />,
+    sub: [
+      {
+        path: 'resolucion',
+        name: 'Resolucion',
+        component: <ClassComponents.repaso.teoria />,
+      },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.repaso.readme} />,
+      }
+    ],
   },
   {
     path: 'effect',
@@ -332,6 +412,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.useEffect.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.useEffect.readme} />,
+      }
     ],
   },
   {
@@ -353,6 +438,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.fetch.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.fetch.readme} />,
+      }
     ],
   },
   {
@@ -374,6 +464,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.memo.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.memo.readme} />,
+      }
     ],
   },
   {
@@ -395,6 +490,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.routerI.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.routerI.readme} />,
+      }
     ],
   },
   {
@@ -416,6 +516,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.routerII.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.routerII.readme} />,
+      }
     ],
   },
   {
@@ -437,6 +542,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.testing.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.testing.readme} />,
+      }
     ],
   },
   {
@@ -458,6 +568,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.context.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.context.readme} />,
+      }
     ],
   },
   {
@@ -479,6 +594,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.localStorage.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.localStorage.readme} />,
+      }
     ],
   },
   {
@@ -500,6 +620,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.reducer.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.reducer.readme} />,
+      }
     ],
   },
   {
@@ -521,6 +646,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.customHooks.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.customHooks.readme} />,
+      }
     ],
   },
   {
@@ -542,6 +672,11 @@ export const routesData: IRoute[] = [
         name: 'Integrador',
         component: <ClassComponents.useRef.integrador />,
       },
+      {
+        path: 'readme',
+        name: 'Readme',
+        component: <Readme default={ClassComponents.useRef.readme} />,
+      }
     ],
   },
 ]

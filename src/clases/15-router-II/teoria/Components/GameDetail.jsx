@@ -11,7 +11,7 @@ const GameDetail = () => {
 
   useEffect(() => {
     const getGame = async () => {
-      const game = await (await fakeFetch(`/api/games/${params.id}`)).json()
+      const game = await (await fakeFetch(`/api/detailedGames/${params.id}`)).json()
       setGame(game)
     }
     getGame()

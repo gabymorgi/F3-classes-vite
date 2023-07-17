@@ -9,8 +9,6 @@ import { SpecialComponents } from 'react-markdown/lib/ast-to-react'
 import rehypeRaw from 'rehype-raw'
 import ExternalLink from './ExternalLink'
 
-const ReadmeUrl = '/README.md'
-
 const components: Partial<
   Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents
 > = {
@@ -27,7 +25,7 @@ const components: Partial<
       } else {
         // Link to project
         if (props.href.endsWith('App.jsx')) {
-          const ruta = props.href.replace(/^\/src\/clases\/\d{2}-|\/App\.jsx$/g, '');
+          const ruta = props.href.replace(/src\/clases\/\d{2}-|\/App\.jsx$/g, '');
           return <Link to={ruta} {...props} />
         } else {
           return <Link to={props.href || ''} {...props} />
@@ -83,7 +81,11 @@ const StyledMarkdown = styled(ReactMarkdown)`
   }
 `
 
-function Readme() {
+interface ReadmeProps {
+  default: string
+}
+
+function Readme(props: ReadmeProps) {
   const [searchParams] = useSearchParams()
   const [loading, setLoading] = useState(false)
   const [markdown, setMarkdown] = useState('')
@@ -102,8 +104,8 @@ function Readme() {
 
   useEffect(() => {
     const path = searchParams.get('path')
-    getMarkdown(path || ReadmeUrl)
-  }, [searchParams.get('path')])
+    getMarkdown(path || props.default)
+  }, [searchParams.get('path'), props.default])
 
   return (
     <Spin spinning={loading}>

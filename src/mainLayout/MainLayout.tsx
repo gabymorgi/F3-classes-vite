@@ -32,8 +32,6 @@ const Sider = styled(Layout.Sider)`
 const MainLayout = () => {
   const location = useLocation()
 
-  // fist part of the path with the / at the start
-  console.log(location.pathname.match(/^\/\w+/))
   return (
     <Layout className='min-h-full'>
       <Sider className='max-h-full overflow-y' trigger={null}>
@@ -76,7 +74,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Readme />,
+        element: <Readme default='/README.md' />,
       },
       {
         path: 'doc/externalLinks.md',
@@ -107,7 +105,7 @@ const MainRoutes = () => {
         algorithm: [darkAlgorithm],
         token: {
           colorPrimary: '#19FE1F',
-          fontSize: 30,
+          // fontSize: 30,
           colorLink: '#6CFF80',
           colorLinkHover: '#4DFF61',
           colorLinkActive: '#2AFF3D',

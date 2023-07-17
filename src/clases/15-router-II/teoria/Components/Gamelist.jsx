@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import FilterForm from "./FilterForm"
 import Card from "../UI/Card"
 import { Link, useSearchParams } from "react-router-dom"
-import gamesData from '@/fakeApi/games.json'
+import { fakeFetch } from '@/fakeApi/server'
 
 const GameList = (props) => {
   const [games, setGames] = useState([])
@@ -15,12 +15,14 @@ const GameList = (props) => {
   async function fetchGames() {
     // searchParams es un poco raro de usar, pero tiene un metodo get
     const name = searchParams.get('name')
-    const filteredGames = name ? gamesData.filter((game) => {
+    const data = await (await fakeFetch(`/api/games`)).json()
+    const filteredGames = name ? data.filter((game) => {
       return game.name.toLowerCase().includes(name.toLowerCase())
-    }) : gamesData
+    }) : data
 
     setGames(filteredGames);
   }
+
   useEffect(() => {
     fetchGames();
   }, [searchParams]);

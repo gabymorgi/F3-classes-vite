@@ -128,3 +128,7 @@ en esta cosa hermosa
   <path fill="none" fill-rule="evenodd" stroke="#74767E" stroke-width="3" d="m1.3 1.3 23.4 23.4m0-23.4L1.3 24.7"/>
 </svg>
 ```
+
+## Recomendacion de la recomendacion
+
+Te dejo tambien las [librerias recomendadas por ant design](https://ant.design/docs/react/recommendation?theme=dark), que, segun su riterio, tienen gran calidad y siguen sus estandares.
