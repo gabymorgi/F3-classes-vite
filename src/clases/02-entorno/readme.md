@@ -89,9 +89,19 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
 ### Practica de github
 
 1. Crea un nuevo repositorio en [Github](https://github.com)
-Asegurate de que el `.gitingore` contenga `node_modules`
 
 2. Sube el proyecto a github
+    
+    > Asegurate de que el `.gitingore` contenga `node_modules`
+
+   ```bash
+    git init
+    git add .
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin [repo url]
+    git push -u origin main
+    ```
 
 3. Realiza cambios en algun archivo y fijate como se visualiza en el source control de vscode
 
