@@ -81,7 +81,7 @@ const ClassComponents = {
   routerI: {
     teoria: lazy(() => import('@/clases/14-router-I/teoria/AppWithComponents.jsx')),
     practica: lazy(() => import('@/clases/14-router-I/practica/AppWithComponents.jsx')),
-    integrador: lazy(() => import('@/clases/14-router-I/integrador/AppWithComponents.jsx')),
+    integrador: lazy(() => import('@/clases/14-router-I/integrador/App.jsx')),
     readme: '/src/clases/14-router-I/readme.md',
   },
   routerII: {
