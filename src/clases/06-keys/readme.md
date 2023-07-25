@@ -64,5 +64,11 @@ Puedes ver la resolucion [aqui](/src/clases/06-keys/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear componente repolist que muestre una grilla de card con la info de cada repo
+- el title de cada card tendra el nombre del repo
+- si el proyecto es un fork, se mostrara un Tag a la derecha
+- el footer tendra un link externo a github
+- en el body habra un conjunto de componentes info con la siguiente informacion. Descripcion, lenguaje principal, estrellas, y seguidores
+
 </details>

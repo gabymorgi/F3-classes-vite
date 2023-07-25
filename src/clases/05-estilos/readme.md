@@ -127,5 +127,16 @@ Puedes ver la resolucion [aqui](/src/clases/05-estilos/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Agregarle estilos a Tag: border, background, border-radius, y padding
+
+2. Agregarle estilos a Info: Y muestre ambos valores verticalmente separados por algunos pixeles, y el label bold
+
+3. Agregarle estilos a la card: border, border radius y un color de fondo
+El title tiene border bottom y padding
+el body tiene padding, y dentro va el children
+El footer tiene padding y border top
+
+4. Agregarle estilos al Header: display flex, justify-content space-between, padding, border-bottom
+
 </details>

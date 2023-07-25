@@ -130,5 +130,35 @@ Puedes ver la resolucion [aqui](/src/clases/12-fetch/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear una funcion que haga un get a la api de github. 
+
+si devuelve info(el user existe), imprimir esa info por consola.
+
+Si no, mostrar un mensaje de error.
+
+> doc: https://docs.github.com/es/rest/users/users#get-a-user
+> ej: https://api.github.com/users/gabymorgi
+
+2. Crear una funcion que reciba nombre de usuario y nombre de repo, y devuelva el detalle de ese repo junto con los lenguajes utilizados
+
+> doc: https://docs.github.com/es/rest/repos/repos#get-a-repository
+> ej: https://api.github.com/repos/gabymorgi/F3-classes-vite
+
+3. Crear una funcion que reciba *opcionalmente* sort y direction, y devuelva una lista de repos 
+
+> https://docs.github.com/es/rest/repos/repos#list-repositories-for-a-user
+> https://api.github.com/users/{username}/repos
+> https://api.github.com/users/{username}/repos?sort=created&direction=asc
+
+o, en el body de la request
+
+```javascript
+const response = await Axios.get(`${baseUrl}/users/${mockedUser}/repos`, {
+   params: {
+      sort: 'full_name',
+      direction: 'desc',
+   }
+})
+```
 </details>

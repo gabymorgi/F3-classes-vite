@@ -80,5 +80,7 @@ Puedes ver la resolucion [aqui](/src/clases/19-reducer/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+Usar un reducer en el context con las acciones: login, logout
+
 </details>

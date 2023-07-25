@@ -71,5 +71,7 @@ Puedes ver la resolucion [aqui](/src/clases/13-memo/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+Guardar en memo el calculo de porcentage de repos
+
 </details>

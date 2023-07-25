@@ -66,5 +66,22 @@ Puedes ver la resolucion [aqui](/src/clases/03-JSX/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear un componente Navbar que renderice un header que internamente tendra 2 bloques
+
+por un lado el [logo](/public/hitbug-logo.png) y nombre de la aplicacion
+
+por otro lado 3 span con los siguientes textos: `User Info`, `Repos`, `Log Out`; y un bloque con el nombre y avatar del [usuario](/src/fakeApi/ghUser.json)
+
+No es necesario aplicar estilos aun
+
+
+2. Crear componente Login que muestre el logo y el nombre de la aplicacion (el formulario no)
+
+3. Crear un componente para la Home Page, que muestre Welcome userName (usar la data mockeada)
+
+4. Crear componente UserInfo que muestre la imagen y nombre del usuario, un link externo al github del usuario, cant Seguidores, cant siguiendo, cant repos, bio
+
+No es necesario aplicar estilos aun
+
 </details>

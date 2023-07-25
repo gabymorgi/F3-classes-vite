@@ -64,5 +64,7 @@ Puedes ver la resolucion [aqui](/src/clases/21-useRef/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+Agregar un boton scroll to top que este sticky
+
 </details>

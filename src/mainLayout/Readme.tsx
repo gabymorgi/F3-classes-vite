@@ -20,7 +20,7 @@ const components: Partial<
       </a>
     } else {
       // Link to other markdown file
-      if (props.href.endsWith('.md')) {
+      if (props.href.endsWith('.md') || props.href.endsWith('.json')) {
         return <Link to={`?path=${props.href}`} {...props} />
       } else {
         // Link to project

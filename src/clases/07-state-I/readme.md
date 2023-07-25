@@ -76,5 +76,7 @@ Puedes ver la resolucion [aqui](/src/clases/07-state-I/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+Usar un estado en el header para mostrar la tab active
+
 </details>

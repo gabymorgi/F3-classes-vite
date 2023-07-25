@@ -90,5 +90,17 @@ Puedes ver la resolucion [aqui](/src/clases/15-router-II/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. agregar ruta
+
+  - repo/:repoId
+
+Utilizar useParams para obtener el id en repo detail, y usarlo para obtener el repo
+
+2. Agregar go back button en el componente repo detail
+
+3. Utilizar useSearchParams para almacenar los datos del formulario de repolist
+
+usarlos para buscar los repos con la api
+
 </details>

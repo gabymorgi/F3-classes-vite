@@ -53,5 +53,11 @@ Puedes ver la resolucion [aqui](/src/clases/17-context/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear un Contexto que almacene la informacion del usuario, y que exponga dicha informacion, y una funcion de login
+
+2. Modificar la funcion de login, para que almacene la informacion del usuario ingresado en un contexto
+
+3. refactorizar boton logout para que borre los datos del user al hacer click y redireccione a /login
+
 </details>

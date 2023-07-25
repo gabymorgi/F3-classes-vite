@@ -118,5 +118,8 @@ Puedes ver la resolucion [aqui](/src/clases/01-datos/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+- Crear funcion que convierta Date en string format "dd/mm/yyyy"
+
+- Crear funcion que convierta un objeto `{[key]: value}` en un array `[{ name: [key], value: value}]`
 </details>

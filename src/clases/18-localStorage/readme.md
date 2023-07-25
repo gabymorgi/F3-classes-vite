@@ -75,5 +75,7 @@ Puedes ver la resolucion [aqui](/src/clases/18-localStorage/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+Guardar lenguaje favorito en el storage
+
 </details>

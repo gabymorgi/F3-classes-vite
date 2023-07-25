@@ -74,5 +74,18 @@ Puedes ver la resolucion [aqui](/src/clases/09-forms/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear un formulario que permita ingresar un string, que sera el nombre de usuario.
+
+Al hacer click en login, imprimir por consola el valor ingresado
+
+
+2. Crear formulario en el componente repolist, que permita ingresar un metodo de ordenamiento y una direccion
+
+- sort: es un select con los siguientes valores: created, updated, pushed, full_name
+
+- direction: es un select con los siguientes valores: asc, desc
+
+cuando se apreta en el boton order se muestra por consola los valores ingresados
+
 </details>

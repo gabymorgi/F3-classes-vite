@@ -70,5 +70,7 @@ Puedes ver la resolucion [aqui](/src/clases/20-customHooks/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+UseFetch para traer los datos de la api
+
 </details>

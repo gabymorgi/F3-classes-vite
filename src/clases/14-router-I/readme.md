@@ -68,5 +68,21 @@ Puedes ver la resolucion [aqui](/src/clases/14-router-I/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear estructura de rutas
+
+- login
+
+  - info
+
+  - list
+
+2. Modificar la funcion de login, para que redirija al home si el usuario ingresado es correcto
+
+Crear rutas protegidas para que si no hay usuario, redirija al login
+
+3. Refactorizar los links internos para que usen router
+
+4. Refactorizar estructura de rutas para que el header este presente en todas las secciones excepto el login (sin replicar el componente en cada seccion)
+
 </details>

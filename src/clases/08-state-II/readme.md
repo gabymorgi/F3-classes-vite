@@ -70,5 +70,11 @@ Puedes ver la resolucion [aqui](/src/clases/08-state-II/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+- Mostrar una lista de lenguajes favoritos.
+
+Cuando se selecciona uno, se debe mostrar un indicador en todas las cards de repos que tengan ese lenguaje como principal
+
+La lista de lenguajes la sacaremos de ghLanguages.json
+
 </details>

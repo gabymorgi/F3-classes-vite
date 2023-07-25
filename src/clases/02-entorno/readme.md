@@ -193,5 +193,14 @@ Puedes ver la resolucion [aqui](/src/clases/02-datos/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear una carpeta con todos los datos mockeados necesaros:
+
+[user](/src/fakeApi/ghUser.json)
+[repos](/src/fakeApi/ghRepos.json)
+[repoList](/src/fakeApi/ghRepoDetail.json)
+[repoLanguages](/src/fakeApi/ghLanguages.json)
+
+2. Cree una carpeta utils con las funciones creadas en la clase anterior
+
 </details>

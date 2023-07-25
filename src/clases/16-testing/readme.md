@@ -111,5 +111,15 @@ Puedes ver la resolucion [aqui](/src/clases/16-testing/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Probar componente lenguajes favs
+
+  - se tiene que renderizar
+
+  - la cantidad de items tiene que ser igual a la de los lenguajes enviados
+
+  - si se el envia una fav, tiene que estar primary
+
+  - on click tiene que llamar a la funcion enviada
+
 </details>

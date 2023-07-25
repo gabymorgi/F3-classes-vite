@@ -187,5 +187,24 @@ Puedes ver la resolucion [aqui](/src/clases/04-components/practica/App.jsx)
 </details>
 <details>
 <summary style="font-size:28px">Integrador</summary>
-WIP: come later
+
+1. Crear componente Card, que reciba props title, children, footer. title y footer son opcionales!!
+
+2. Crear un componente info que reciba props label y value.
+
+3. Crear componente Tag que muestre el children
+
+4. Crear componente RepoDetail para mostrar la info de ghRepoDetail.
+Usa una card solo con body. En la misma se van a mostrar varios componentes Info con la siguiente informacion
+name
+created, update y pushed at (usar utility function creada previamente)
+description
+watchers
+forks
+stars
+link
+languages: usar utility function creada previamente para convertir repoLanguages en array, calcular el porcentaje en base a las lineas totales y **mostrar solo el primer elemento**
+
+5. Modificar UserInfo para que use el componente Card, prop title con la imagen y el userName, y el footer con el link al github del usuario. En el children usaremos varios componentes info para mostrar la informacion restante
+
 </details>
