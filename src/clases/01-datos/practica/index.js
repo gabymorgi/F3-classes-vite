@@ -5,8 +5,8 @@ const practica01 = () => {
   //el 'email' del primer Usuario
   console.log(users[0].email)
 
-  //el 'nombre' del tercer Usuario
-  console.log(users[2].mascotas)
+  //el 'apodo' del tercer Usuario
+  console.log(users[2].apodo)
 
   // el color de la segunda 'mascota' del tercer Usuario
   console.log(users[2].mascotas[1].color)
@@ -19,9 +19,9 @@ const practica01 = () => {
   const { email, mascotas } = first
 
   // spread operator:
-  // haz una copia de las 'mascotas' obtenidas arriba y agregale la mascota '{ "nombre": "Nami", "edad": 2, "color": "negro" }'
+  // haz una copia de las 'mascotas' obtenidas arriba y agregale la mascota '{ "apodo": "Nami", "edad": 2, "color": "negro" }'
 
-  const copia = [...mascotas, { nombre: 'Nami', edad: 2, color: 'negro' }]
+  const copia = [...mascotas, { apodo: 'Nami', edad: 2, color: 'negro' }]
 
   console.log(copia)
 
@@ -36,7 +36,7 @@ const practica01 = () => {
 
   const usersWithMoreThanOnePet = users.filter((user) => user.mascotas.length > 1)
 
-  // usando la operacion 'map' y la funcion anterior, crea un array de strings con el nombre y la cantidad de mascotas de cada Usuario filtrado anteriormente
+  // usando la operacion 'map' y la funcion anterior, crea un array de strings con el apodo y la cantidad de mascotas de cada Usuario filtrado anteriormente
   // Ej:
   // [
   //   "El Usuario Gaby tiene 3 mascotas",

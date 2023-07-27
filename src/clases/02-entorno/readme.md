@@ -35,6 +35,8 @@ La carpeta `public` se utiliza para almacenar archivos estáticos que se pueden 
 ### Prettier
 Prettier es una herramienta de formateo de código que asegura la consistencia del código en todo el proyecto. Formatea el código automáticamente según las reglas especificadas.
 
+Es una extensión de VS Code.
+
 ### ESLint
 ESLint es una herramienta de linting para JavaScript. Ayuda a mantener la calidad del código identificando y reportando patrones de código problemáticos.
 
@@ -105,7 +107,7 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
 
 3. Realiza cambios en algun archivo y fijate como se visualiza en el source control de vscode
 
-4. Agrega un nuevo archivo `.env` en el `src` y vuelve a observar los cambios
+4. Agrega un nuevo archivo `.env` en el root (a la altura del package.json) y vuelve a observar los cambios
 
 5. Agrega `.env` al `.gitignore` y vuelve a observar los cambios
 
@@ -113,7 +115,9 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
 
 ### Practica de ESLint
 
-1. Instala [ESLint](https://eslint.org/docs/latest/use/getting-started)
+1. Instala la extension de ESLint en vscode
+
+2. Instala [ESLint](https://eslint.org/docs/latest/use/getting-started)
 `npm init @eslint/config`
 
     **How would you like to use ESLint?** To check syntax and find problems
@@ -129,7 +133,7 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
     **What format do you want your config file to be in?** JSON
 
 
-2. Mira el archivo App. Tendra errores :(
+3. Mira el archivo App. Tendra errores :(
 
     - Deshabilita la regla `react/react-in-jsx-scope`
 
@@ -139,7 +143,7 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
         "react/react-in-jsx-scope": "off"
         ```
 
-3. Vuelve a mirar el archivo App. los anchors tendran errores ahora.
+4. Vuelve a mirar el archivo App. los anchors tendran errores ahora.
 
     - si no ves esto agrega el siguiente codigo
 
@@ -151,17 +155,17 @@ Para crear un nuevo proyecto con Vite, sigue los siguientes pasos:
 
      - Si hovereas sobre el error veras que te dice que no se puede usar `target="_blank"` sin `rel="noopener noreferrer"`, puedes hacer click en el error si quieres mas informacion.
 
-4. Resuelve el error agregando `rel="noopener noreferrer"` al anchor
+5. Resuelve el error agregando `rel="noopener noreferrer"` al anchor
 
-5. Declara una variable y no la uses, mira el error que te da eslint
+6. Declara una variable y no la uses, mira el error que te da eslint
 
-6. Escribe el siguiente codigo y mira el error que te da eslint
+7. Escribe el siguiente codigo y mira el error que te da eslint
 
     ```js
     <CustomComponent />
     ```
 
-7. Escribe el siguiente codigo y mira el error que te da eslint
+8. Escribe el siguiente codigo y mira el error que te da eslint
 
     ```js
     const ovgekt = {

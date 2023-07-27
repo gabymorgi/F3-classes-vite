@@ -105,7 +105,7 @@ const MainRoutes = () => {
         algorithm: [darkAlgorithm],
         token: {
           colorPrimary: '#19FE1F',
-          // fontSize: 30,
+          fontSize: 20,
           colorLink: '#6CFF80',
           colorLinkHover: '#4DFF61',
           colorLinkActive: '#2AFF3D',

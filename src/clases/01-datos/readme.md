@@ -78,7 +78,7 @@ Usando la lista de [usuarios](/src/fakeApi/users.json)
 
   - Haz una copia de las `mascotas` obtenidas arriba y agregale la mascota
 
-    `{ "nombre": "Nami", "edad": 2, "color": "negro" }`
+    `{ "apodo": "Nami", "edad": 2, "color": "negro" }`
 
     *(Usar console log para verificar que no se modifico el original)*
 
@@ -100,7 +100,7 @@ Usando la lista de [usuarios](/src/fakeApi/users.json)
 
   - Usando la operacion `filter`, crea un array con los Usuarios que tengan **mas** de 1 mascota.
 
-  - Usando la operacion `map` y la funcion del ejercicio 4, crea un array de strings con el nombre y la cantidad de mascotas de cada Usuario filtrado anteriormente. Ej:
+  - Usando la operacion `map` y la funcion del ejercicio 4, crea un array de strings con el apodo y la cantidad de mascotas de cada Usuario filtrado anteriormente. Ej:
 
     ```js
     [
