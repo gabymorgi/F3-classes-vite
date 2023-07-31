@@ -62,6 +62,7 @@ const StyledMarkdown = styled(ReactMarkdown)`
   ul {
     //dotted list
     list-style: disc;
+    margin-left: 20px;
   }
   li {
     //dotted list
