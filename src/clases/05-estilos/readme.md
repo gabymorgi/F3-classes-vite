@@ -5,9 +5,19 @@
 
 ---
 
-Lee la siguiente documentacion:
+Css modules es una tecnica que nos permite escribir estilos modulares, es decir, que no se mezclen entre si, y que no afecten a otros componentes.
 
-- [CSS-modules](https://github.com/css-modules/css-modules)
+Para eso tendremos que realizar los siguiente pasos:
+
+- renombrar los archivos de estilos a `nombre.module.css`
+
+- eliminar los estilos por defecto de los elementos y reemplazarlos por clases
+
+- importar los estilos en el componente con un nombre
+
+- usar los estilos en el JSX como si fueran un objeto
+
+---
 
 Comienza a leer el archivo `App.jsx`, intenta entender el flujo de renderizado, el funcionamiento, y como se relacionan los componentes entre si.
 

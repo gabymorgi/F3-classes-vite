@@ -198,13 +198,15 @@ Puedes ver la resolucion [aqui](/src/clases/02-datos/practica/App.jsx)
 <details>
 <summary style="font-size:28px">Integrador</summary>
 
-1. Crear una carpeta con todos los datos mockeados necesaros:
+1. Crear un proyecto nuevo con Vite
+
+2. Crear una carpeta con todos los datos mockeados necesarios para trabajar en las siguientes clases:
 
 [user](/src/fakeApi/ghUser.json)
 [repos](/src/fakeApi/ghRepos.json)
 [repoList](/src/fakeApi/ghRepoDetail.json)
 [repoLanguages](/src/fakeApi/ghLanguages.json)
 
-2. Cree una carpeta utils con las funciones creadas en la clase anterior
+3. Crear una carpeta utils con las funciones creadas en la clase anterior
 
 </details>
