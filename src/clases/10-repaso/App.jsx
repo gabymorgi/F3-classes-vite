@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu } from './Componentes/Menu'
 import { Pedido } from './Componentes/Pedido'
-import { getId } from '../utils/getId'
+import { getId } from './utils/getId'
 
 const App = () => {
   const [pedidos, setPedidos] = useState([])
