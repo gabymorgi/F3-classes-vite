@@ -51,6 +51,7 @@ Si quieres, puedes ver el ejercicio con el que trabajaremos durante la clase [aq
     Agregar la siguiente linea al archivo:
 
     ```js
+    import { defineConfig } from 'vitest/config' // change 'vitest' to 'vitest/config'
     // vite.config.js
     export default defineConfig({
       // ...
